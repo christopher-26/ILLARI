@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: 0ed62eea302596148bf9be2e112854e9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8250399033656548614
+    second: Trash-walk-trimmed 1_0
+  - first:
+      213: 7982255930257967623
+    second: Trash-walk-trimmed 1_1
+  - first:
+      213: -3708403716398201599
+    second: Trash-walk-trimmed 1_2
+  - first:
+      213: 2932663384737893604
+    second: Trash-walk-trimmed 1_3
+  - first:
+      213: -5717435262829473421
+    second: Trash-walk-trimmed 1_4
+  - first:
+      213: 3969762922035773776
+    second: Trash-walk-trimmed 1_5
+  - first:
+      213: 5417751145283367817
+    second: Trash-walk-trimmed 1_6
+  - first:
+      213: 1567790655359501271
+    second: Trash-walk-trimmed 1_7
+  - first:
+      213: -8041425141395512364
+    second: Trash-walk-trimmed 1_8
+  - first:
+      213: -363252091789988993
+    second: Trash-walk-trimmed 1_9
+  - first:
+      213: 3560801439510017950
+    second: Trash-walk-trimmed 1_10
+  - first:
+      213: -683280554882989649
+    second: Trash-walk-trimmed 1_11
+  - first:
+      213: 3272747526474528430
+    second: Trash-walk-trimmed 1_12
+  - first:
+      213: 8618454663764601363
+    second: Trash-walk-trimmed 1_13
+  - first:
+      213: 5122696900586260112
+    second: Trash-walk-trimmed 1_14
+  - first:
+      213: -5020972530006925412
+    second: Trash-walk-trimmed 1_15
+  - first:
+      213: 7030523228291286669
+    second: Trash-walk-trimmed 1_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Trash-walk-trimmed 1_0
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 575
+        width: 130
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af2eca79ac1b08d80800000000000000
+      internalID: -8250399033656548614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trash-walk-trimmed 1_1
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 575
+        width: 129
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70a084d0a7ba6ce60800000000000000
+      internalID: 7982255930257967623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trash-walk-trimmed 1_2
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 576
+        width: 113
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 105c858c77a198cc0800000000000000
+      internalID: -3708403716398201599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trash-walk-trimmed 1_3
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 578
+        width: 100
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ecc81d7fc9e2b820800000000000000
+      internalID: 2932663384737893604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trash-walk-trimmed 1_4
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 578
+        width: 96
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 371d1c4bbe697a0b0800000000000000
+      internalID: -5717435262829473421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trash-walk-trimmed 1_5
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 636
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 051857a485e671730800000000000000
+      internalID: 3969762922035773776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trash-walk-trimmed 1_6
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 322
+        width: 108
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 983b41056f7bf2b40800000000000000
+      internalID: 5417751145283367817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trash-walk-trimmed 1_7
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 386
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d341e66b49e1c510800000000000000
+      internalID: 1567790655359501271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trash-walk-trimmed 1_8
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 320
+        width: 136
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d3a93f607e176090800000000000000
+      internalID: -8041425141395512364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trash-walk-trimmed 1_9
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 393
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7ba0f8a52875faf0800000000000000
+      internalID: -363252091789988993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trash-walk-trimmed 1_10
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 319
+        width: 127
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e97b1b51b028a6130800000000000000
+      internalID: 3560801439510017950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trash-walk-trimmed 1_11
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 388
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa1844c94ff7486f0800000000000000
+      internalID: -683280554882989649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trash-walk-trimmed 1_12
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 319
+        width: 107
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea67d0b19822b6d20800000000000000
+      internalID: 3272747526474528430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trash-walk-trimmed 1_13
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 383
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31a6f7aaad6ea9770800000000000000
+      internalID: 8618454663764601363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trash-walk-trimmed 1_14
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 319
+        width: 95
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 096407b90b9771740800000000000000
+      internalID: 5122696900586260112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trash-walk-trimmed 1_15
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 63
+        width: 109
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9f51f1161ce15ab0800000000000000
+      internalID: -5020972530006925412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trash-walk-trimmed 1_16
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 63
+        width: 120
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d864f6770af619160800000000000000
+      internalID: 7030523228291286669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Trash-walk-trimmed 1_0: -8250399033656548614
+      Trash-walk-trimmed 1_1: 7982255930257967623
+      Trash-walk-trimmed 1_10: 3560801439510017950
+      Trash-walk-trimmed 1_11: -683280554882989649
+      Trash-walk-trimmed 1_12: 3272747526474528430
+      Trash-walk-trimmed 1_13: 8618454663764601363
+      Trash-walk-trimmed 1_14: 5122696900586260112
+      Trash-walk-trimmed 1_15: -5020972530006925412
+      Trash-walk-trimmed 1_16: 7030523228291286669
+      Trash-walk-trimmed 1_2: -3708403716398201599
+      Trash-walk-trimmed 1_3: 2932663384737893604
+      Trash-walk-trimmed 1_4: -5717435262829473421
+      Trash-walk-trimmed 1_5: 3969762922035773776
+      Trash-walk-trimmed 1_6: 5417751145283367817
+      Trash-walk-trimmed 1_7: 1567790655359501271
+      Trash-walk-trimmed 1_8: -8041425141395512364
+      Trash-walk-trimmed 1_9: -363252091789988993
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

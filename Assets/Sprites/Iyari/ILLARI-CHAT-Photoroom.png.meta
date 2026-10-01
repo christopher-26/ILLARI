@@ -1,0 +1,1378 @@
+fileFormatVersion: 2
+guid: 17da0228ab6d0ec4d9412f71a1006afc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3159733326223459123
+    second: ILLARI-CHAT-Photoroom_0
+  - first:
+      213: 4488370394897388890
+    second: ILLARI-CHAT-Photoroom_1
+  - first:
+      213: 7416630395925900172
+    second: ILLARI-CHAT-Photoroom_2
+  - first:
+      213: 5775428128817260216
+    second: ILLARI-CHAT-Photoroom_3
+  - first:
+      213: 4535840397221570260
+    second: ILLARI-CHAT-Photoroom_4
+  - first:
+      213: -10879130865358198
+    second: ILLARI-CHAT-Photoroom_5
+  - first:
+      213: 2189683534389303398
+    second: ILLARI-CHAT-Photoroom_6
+  - first:
+      213: 6366259221896720161
+    second: ILLARI-CHAT-Photoroom_7
+  - first:
+      213: 6139614129964199557
+    second: ILLARI-CHAT-Photoroom_8
+  - first:
+      213: -7615527583556923349
+    second: ILLARI-CHAT-Photoroom_9
+  - first:
+      213: -6527845452115769264
+    second: ILLARI-CHAT-Photoroom_10
+  - first:
+      213: -9074105103703989568
+    second: ILLARI-CHAT-Photoroom_11
+  - first:
+      213: -5613612744320418838
+    second: ILLARI-CHAT-Photoroom_12
+  - first:
+      213: 6882679001968652650
+    second: ILLARI-CHAT-Photoroom_13
+  - first:
+      213: -6971797875640788415
+    second: ILLARI-CHAT-Photoroom_14
+  - first:
+      213: -5040160818187104067
+    second: ILLARI-CHAT-Photoroom_15
+  - first:
+      213: -6704717483265046285
+    second: ILLARI-CHAT-Photoroom_16
+  - first:
+      213: -2754339105461765097
+    second: ILLARI-CHAT-Photoroom_17
+  - first:
+      213: -3323811570655340982
+    second: ILLARI-CHAT-Photoroom_18
+  - first:
+      213: 6552524976197185628
+    second: ILLARI-CHAT-Photoroom_19
+  - first:
+      213: -2317287118971036167
+    second: ILLARI-CHAT-Photoroom_20
+  - first:
+      213: 7678172439476306507
+    second: ILLARI-CHAT-Photoroom_21
+  - first:
+      213: -2869571068918043072
+    second: ILLARI-CHAT-Photoroom_22
+  - first:
+      213: 4545302866982895056
+    second: ILLARI-CHAT-Photoroom_23
+  - first:
+      213: -7643854811710485246
+    second: ILLARI-CHAT-Photoroom_24
+  - first:
+      213: 5202212438941977961
+    second: ILLARI-CHAT-Photoroom_25
+  - first:
+      213: 2871206707160828389
+    second: ILLARI-CHAT-Photoroom_26
+  - first:
+      213: 5959524385231263298
+    second: ILLARI-CHAT-Photoroom_27
+  - first:
+      213: -6675009990418143443
+    second: ILLARI-CHAT-Photoroom_28
+  - first:
+      213: -3740750440006952978
+    second: ILLARI-CHAT-Photoroom_29
+  - first:
+      213: 4385410313322830919
+    second: ILLARI-CHAT-Photoroom_30
+  - first:
+      213: -2959176533304420278
+    second: ILLARI-CHAT-Photoroom_31
+  - first:
+      213: -7111149196364341860
+    second: ILLARI-CHAT-Photoroom_32
+  - first:
+      213: -8203364581109437272
+    second: ILLARI-CHAT-Photoroom_33
+  - first:
+      213: -8155116515550790337
+    second: ILLARI-CHAT-Photoroom_34
+  - first:
+      213: -9105368028359931265
+    second: ILLARI-CHAT-Photoroom_35
+  - first:
+      213: -110510003095507013
+    second: ILLARI-CHAT-Photoroom_36
+  - first:
+      213: 3448908139543051885
+    second: ILLARI-CHAT-Photoroom_37
+  - first:
+      213: -3753301340968983100
+    second: ILLARI-CHAT-Photoroom_38
+  - first:
+      213: -7381321475810042433
+    second: ILLARI-CHAT-Photoroom_39
+  - first:
+      213: -8869027803698322374
+    second: ILLARI-CHAT-Photoroom_40
+  - first:
+      213: 2984571569542392608
+    second: ILLARI-CHAT-Photoroom_41
+  - first:
+      213: 80074594722802849
+    second: ILLARI-CHAT-Photoroom_42
+  - first:
+      213: -2306537509466383858
+    second: ILLARI-CHAT-Photoroom_43
+  - first:
+      213: 3008840486056623566
+    second: ILLARI-CHAT-Photoroom_44
+  - first:
+      213: 7621159133045348959
+    second: ILLARI-CHAT-Photoroom_45
+  - first:
+      213: 1342832986951764673
+    second: ILLARI-CHAT-Photoroom_46
+  - first:
+      213: -620290211079556561
+    second: ILLARI-CHAT-Photoroom_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1039
+        width: 342
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 333438e18b0a9db20800000000000000
+      internalID: 3159733326223459123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_1
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 1039
+        width: 283
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a551d300815e94e30800000000000000
+      internalID: 4488370394897388890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_2
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 824
+        width: 145
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8b2783dc0a2de660800000000000000
+      internalID: 7416630395925900172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_3
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 821
+        width: 107
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b6a3fb9841762050800000000000000
+      internalID: 5775428128817260216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 821
+        width: 103
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d622423fca82fe30800000000000000
+      internalID: 4535840397221570260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_5
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 821
+        width: 105
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8a2e45fc7959dff0800000000000000
+      internalID: -10879130865358198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 821
+        width: 105
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 668dbc5b291536e10800000000000000
+      internalID: 2189683534389303398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_7
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 826
+        width: 123
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12f653d480f795850800000000000000
+      internalID: 6366259221896720161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_8
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 829
+        width: 143
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58e2c7aa58a443550800000000000000
+      internalID: 6139614129964199557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_9
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 823
+        width: 147
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2096e4f206305690800000000000000
+      internalID: -7615527583556923349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_10
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 824
+        width: 132
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0588df5b52f6865a0800000000000000
+      internalID: -6527845452115769264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_11
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 824
+        width: 138
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c22a2f1c7d421280800000000000000
+      internalID: -9074105103703989568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_12
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 824
+        width: 127
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aebfc2483f07812b0800000000000000
+      internalID: -5613612744320418838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_13
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 766
+        width: 195
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a61b1671610348f50800000000000000
+      internalID: 6882679001968652650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_14
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 600
+        width: 110
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14a9b9035c23f3f90800000000000000
+      internalID: -6971797875640788415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_15
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 618
+        width: 109
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db09d159070cd0ab0800000000000000
+      internalID: -5040160818187104067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_16
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 766
+        width: 376
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f8c2aad8fe04f2a0800000000000000
+      internalID: -6704717483265046285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_17
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 553
+        width: 118
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71cfbfb3d2f96c9d0800000000000000
+      internalID: -2754339105461765097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_18
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 563
+        width: 183
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4651ce9cf27fd1d0800000000000000
+      internalID: -3323811570655340982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_19
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 565
+        width: 175
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c50bb14cfbe3fea50800000000000000
+      internalID: 6552524976197185628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_20
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 692
+        width: 64
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fd942f84a757dfd0800000000000000
+      internalID: -2317287118971036167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_21
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 575
+        width: 175
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b420e2b27295e8a60800000000000000
+      internalID: 7678172439476306507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_22
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 540
+        width: 120
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04ee663015c3d28d0800000000000000
+      internalID: -2869571068918043072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_23
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 540
+        width: 119
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dd741f10e8241f30800000000000000
+      internalID: 4545302866982895056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_24
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 540
+        width: 123
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20d06513c829be590800000000000000
+      internalID: -7643854811710485246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_25
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 483
+        width: 219
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96d414596a8f13840800000000000000
+      internalID: 5202212438941977961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_26
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 492
+        width: 294
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e94a01b94398d720800000000000000
+      internalID: 2871206707160828389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_27
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 295
+        width: 144
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 246dcfb7adb74b250800000000000000
+      internalID: 5959524385231263298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_28
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 295
+        width: 214
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2761f887c99d53a0800000000000000
+      internalID: -6675009990418143443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_29
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 297
+        width: 124
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee7dffd4b4f261cc0800000000000000
+      internalID: -3740750440006952978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_30
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 295
+        width: 115
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74c11ffe17b1cdc30800000000000000
+      internalID: 4385410313322830919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_31
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 305
+        width: 151
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a48d7b01f94eee6d0800000000000000
+      internalID: -2959176533304420278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_32
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 308
+        width: 250
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9d16ed7b7f105d90800000000000000
+      internalID: -7111149196364341860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_33
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 319
+        width: 117
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ac63f3706bc72e80800000000000000
+      internalID: -8203364581109437272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_34
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 308
+        width: 121
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3d7cac9cb433de80800000000000000
+      internalID: -8155116515550790337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_35
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 234
+        width: 263
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7a4860450c33a180800000000000000
+      internalID: -9105368028359931265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_36
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 234
+        width: 214
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbf6d59dcb3677ef0800000000000000
+      internalID: -110510003095507013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6eba680eabfcdf20800000000000000
+      internalID: 3448908139543051885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_38
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 209
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c5eb84f05899ebc0800000000000000
+      internalID: -3753301340968983100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_39
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 44
+        width: 144
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbd5165c937409990800000000000000
+      internalID: -7381321475810042433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_40
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 44
+        width: 133
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a34af71e332eae480800000000000000
+      internalID: -8869027803698322374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_41
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 46
+        width: 123
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02bed4197045b6920800000000000000
+      internalID: 2984571569542392608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_42
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 59
+        width: 135
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ac6cfd6b6b7c1100800000000000000
+      internalID: 80074594722802849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_43
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 50
+        width: 168
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0a542f0b588dffd0800000000000000
+      internalID: -2306537509466383858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_44
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 169
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecdf7350b7c81c920800000000000000
+      internalID: 3008840486056623566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_45
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 49
+        width: 187
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5a54e55adbc3c960800000000000000
+      internalID: 7621159133045348959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_46
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 49
+        width: 167
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cacfebac73b2a210800000000000000
+      internalID: 1342832986951764673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ILLARI-CHAT-Photoroom_47
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 0
+        width: 110
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2273f6e6594467f0800000000000000
+      internalID: -620290211079556561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ILLARI-CHAT-Photoroom_0: 3159733326223459123
+      ILLARI-CHAT-Photoroom_1: 4488370394897388890
+      ILLARI-CHAT-Photoroom_10: -6527845452115769264
+      ILLARI-CHAT-Photoroom_11: -9074105103703989568
+      ILLARI-CHAT-Photoroom_12: -5613612744320418838
+      ILLARI-CHAT-Photoroom_13: 6882679001968652650
+      ILLARI-CHAT-Photoroom_14: -6971797875640788415
+      ILLARI-CHAT-Photoroom_15: -5040160818187104067
+      ILLARI-CHAT-Photoroom_16: -6704717483265046285
+      ILLARI-CHAT-Photoroom_17: -2754339105461765097
+      ILLARI-CHAT-Photoroom_18: -3323811570655340982
+      ILLARI-CHAT-Photoroom_19: 6552524976197185628
+      ILLARI-CHAT-Photoroom_2: 7416630395925900172
+      ILLARI-CHAT-Photoroom_20: -2317287118971036167
+      ILLARI-CHAT-Photoroom_21: 7678172439476306507
+      ILLARI-CHAT-Photoroom_22: -2869571068918043072
+      ILLARI-CHAT-Photoroom_23: 4545302866982895056
+      ILLARI-CHAT-Photoroom_24: -7643854811710485246
+      ILLARI-CHAT-Photoroom_25: 5202212438941977961
+      ILLARI-CHAT-Photoroom_26: 2871206707160828389
+      ILLARI-CHAT-Photoroom_27: 5959524385231263298
+      ILLARI-CHAT-Photoroom_28: -6675009990418143443
+      ILLARI-CHAT-Photoroom_29: -3740750440006952978
+      ILLARI-CHAT-Photoroom_3: 5775428128817260216
+      ILLARI-CHAT-Photoroom_30: 4385410313322830919
+      ILLARI-CHAT-Photoroom_31: -2959176533304420278
+      ILLARI-CHAT-Photoroom_32: -7111149196364341860
+      ILLARI-CHAT-Photoroom_33: -8203364581109437272
+      ILLARI-CHAT-Photoroom_34: -8155116515550790337
+      ILLARI-CHAT-Photoroom_35: -9105368028359931265
+      ILLARI-CHAT-Photoroom_36: -110510003095507013
+      ILLARI-CHAT-Photoroom_37: 3448908139543051885
+      ILLARI-CHAT-Photoroom_38: -3753301340968983100
+      ILLARI-CHAT-Photoroom_39: -7381321475810042433
+      ILLARI-CHAT-Photoroom_4: 4535840397221570260
+      ILLARI-CHAT-Photoroom_40: -8869027803698322374
+      ILLARI-CHAT-Photoroom_41: 2984571569542392608
+      ILLARI-CHAT-Photoroom_42: 80074594722802849
+      ILLARI-CHAT-Photoroom_43: -2306537509466383858
+      ILLARI-CHAT-Photoroom_44: 3008840486056623566
+      ILLARI-CHAT-Photoroom_45: 7621159133045348959
+      ILLARI-CHAT-Photoroom_46: 1342832986951764673
+      ILLARI-CHAT-Photoroom_47: -620290211079556561
+      ILLARI-CHAT-Photoroom_5: -10879130865358198
+      ILLARI-CHAT-Photoroom_6: 2189683534389303398
+      ILLARI-CHAT-Photoroom_7: 6366259221896720161
+      ILLARI-CHAT-Photoroom_8: 6139614129964199557
+      ILLARI-CHAT-Photoroom_9: -7615527583556923349
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
