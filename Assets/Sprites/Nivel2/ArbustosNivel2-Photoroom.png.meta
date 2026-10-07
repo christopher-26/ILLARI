@@ -1,0 +1,410 @@
+fileFormatVersion: 2
+guid: 3bcb2eb571cb0284c8d4b64ca9b29838
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4843734054868944157
+    second: ArbustosNivel2-Photoroom_0
+  - first:
+      213: 254977386505619959
+    second: ArbustosNivel2-Photoroom_1
+  - first:
+      213: 2542367129157612041
+    second: ArbustosNivel2-Photoroom_2
+  - first:
+      213: 2328898790778411657
+    second: ArbustosNivel2-Photoroom_3
+  - first:
+      213: 5425275861594690898
+    second: ArbustosNivel2-Photoroom_4
+  - first:
+      213: -1614253175839338783
+    second: ArbustosNivel2-Photoroom_5
+  - first:
+      213: 916375678225289555
+    second: ArbustosNivel2-Photoroom_6
+  - first:
+      213: 4188731212276473709
+    second: ArbustosNivel2-Photoroom_7
+  - first:
+      213: -1547767454108508083
+    second: ArbustosNivel2-Photoroom_8
+  - first:
+      213: -5820304909995322065
+    second: ArbustosNivel2-Photoroom_9
+  - first:
+      213: 3460490490306299340
+    second: ArbustosNivel2-Photoroom_10
+  - first:
+      213: 6122327040723456491
+    second: ArbustosNivel2-Photoroom_11
+  - first:
+      213: -3128431782690830121
+    second: ArbustosNivel2-Photoroom_12
+  - first:
+      213: 8434855520328556957
+    second: ArbustosNivel2-Photoroom_13
+  - first:
+      213: -3466388844352287174
+    second: ArbustosNivel2-Photoroom_14
+  - first:
+      213: 8829747334422371703
+    second: ArbustosNivel2-Photoroom_15
+  - first:
+      213: -7720056063412200476
+    second: ArbustosNivel2-Photoroom_16
+  - first:
+      213: -5772312812166729723
+    second: ArbustosNivel2-Photoroom_17
+  - first:
+      213: -7992560223640245223
+    second: Retama_Neutro
+  - first:
+      213: -6677062216427079480
+    second: Retama_Inclinacion
+  - first:
+      213: -5313498061051379297
+    second: Retama_MaxInclinacion
+  - first:
+      213: 5680274420792674300
+    second: Retama_Regreso
+  - first:
+      213: 1940004138278801544
+    second: Matorral_Neutro
+  - first:
+      213: 5193155531079676657
+    second: Matorral_Inclinacion
+  - first:
+      213: 6161814028243051088
+    second: Matorral_MaxInclinacion
+  - first:
+      213: 5083715900397362339
+    second: Matorral_Regreso
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Retama_Neutro
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 532
+        width: 418
+        height: 332
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91ca100b2d8b41190800000000000000
+      internalID: -7992560223640245223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Retama_Inclinacion
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 532
+        width: 418
+        height: 332
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c87eae6a4f4653a0800000000000000
+      internalID: -6677062216427079480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Retama_MaxInclinacion
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 532
+        width: 418
+        height: 332
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f914e446aa9a246b0800000000000000
+      internalID: -5313498061051379297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Retama_Regreso
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 532
+        width: 418
+        height: 332
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf7c5168d7364de40800000000000000
+      internalID: 5680274420792674300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Matorral_Neutro
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 95
+        width: 418
+        height: 255
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88055e43c774cea10800000000000000
+      internalID: 1940004138278801544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Matorral_Inclinacion
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 95
+        width: 418
+        height: 255
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f2fb55e07bc11840800000000000000
+      internalID: 5193155531079676657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Matorral_MaxInclinacion
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 95
+        width: 418
+        height: 255
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05222754639238550800000000000000
+      internalID: 6161814028243051088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Matorral_Regreso
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 95
+        width: 418
+        height: 255
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ac903e3dacfc8640800000000000000
+      internalID: 5083715900397362339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ArbustosNivel2-Photoroom_0: -4843734054868944157
+      ArbustosNivel2-Photoroom_1: 254977386505619959
+      ArbustosNivel2-Photoroom_10: 3460490490306299340
+      ArbustosNivel2-Photoroom_11: 6122327040723456491
+      ArbustosNivel2-Photoroom_12: -3128431782690830121
+      ArbustosNivel2-Photoroom_13: 8434855520328556957
+      ArbustosNivel2-Photoroom_14: -3466388844352287174
+      ArbustosNivel2-Photoroom_15: 8829747334422371703
+      ArbustosNivel2-Photoroom_16: -7720056063412200476
+      ArbustosNivel2-Photoroom_17: -5772312812166729723
+      ArbustosNivel2-Photoroom_2: 2542367129157612041
+      ArbustosNivel2-Photoroom_3: 2328898790778411657
+      ArbustosNivel2-Photoroom_4: 5425275861594690898
+      ArbustosNivel2-Photoroom_5: -1614253175839338783
+      ArbustosNivel2-Photoroom_6: 916375678225289555
+      ArbustosNivel2-Photoroom_7: 4188731212276473709
+      ArbustosNivel2-Photoroom_8: -1547767454108508083
+      ArbustosNivel2-Photoroom_9: -5820304909995322065
+      Matorral_Inclinacion: 5193155531079676657
+      Matorral_MaxInclinacion: 6161814028243051088
+      Matorral_Neutro: 1940004138278801544
+      Matorral_Regreso: 5083715900397362339
+      Retama_Inclinacion: -6677062216427079480
+      Retama_MaxInclinacion: -5313498061051379297
+      Retama_Neutro: -7992560223640245223
+      Retama_Regreso: 5680274420792674300
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

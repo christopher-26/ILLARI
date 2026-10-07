@@ -60,6 +60,7 @@ public class GeneradorNivelColonial : MonoBehaviour
 
         CargarSprites();
         ConfigurarCamara();
+        AudioManager.AsegurarInstancia();
         ConstruirFondosParqueModerno();
 
         GameObject contenedor = new GameObject(CONTENEDOR_NIVEL);
@@ -160,6 +161,17 @@ public class GeneradorNivelColonial : MonoBehaviour
         }
     }
 
+    public static void EscalarFondoManteniendoAspecto(GameObject objFondo, SpriteRenderer sr, float anchoMinimo, float altoMinimo)
+    {
+        if (objFondo == null || sr == null || sr.sprite == null) return;
+        float w = sr.sprite.rect.width / sr.sprite.pixelsPerUnit;
+        float h = sr.sprite.rect.height / sr.sprite.pixelsPerUnit;
+        if (w <= 0.001f || h <= 0.001f) return;
+
+        float escalaUniforme = Mathf.Max(anchoMinimo / w, altoMinimo / h);
+        objFondo.transform.localScale = new Vector3(escalaUniforme, escalaUniforme, 1f);
+    }
+
     private void ConfigurarCamara()
     {
         Camera cam = Camera.main;
@@ -176,37 +188,43 @@ public class GeneradorNivelColonial : MonoBehaviour
                 cf.ConfigurarLimites(-6f, 133f, -2.0f, 3.5f);
             }
 
+            if (cam.GetComponent<AudioListener>() == null)
+            {
+                cam.gameObject.AddComponent<AudioListener>();
+            }
+
             cam.transform.position = new Vector3(-6f, -1.8f, -10f);
         }
     }
 
     /// <summary>
-    /// Panorámica continua del Parque de la Identidad Huanca 2026 sin personas.
-    /// 4 Paneles secuenciales auténticos (Portada, Puente La Huanca, Fuente Cántaros, Castillo).
-    /// Proporción 16:9 nativa exacta (40.0m x 22.5m). CERO repetición, progresión continua de Metal Slug.
+    /// Panorámica continua auténtica del Parque de la Identidad Huanca 2026.
+    /// Un único fondo panorámico sin espejados ni cortes que sigue horizontalmente al jugador.
     /// </summary>
     private void ConstruirFondosParqueModerno()
     {
         GameObject contFondos = new GameObject(CONTENEDOR_FONDOS);
-        contFondos.transform.position = Vector3.zero;
+        contFondos.transform.position = new Vector3(-6f, -2.5f, 12f);
 
-        float anchoPanel = 32.25f;
-        float altoPanel = 18.0f;
-        float inicioX = -10.0f;
-        int cantidadPaneles = 7;
+        SpriteRenderer sr = contFondos.AddComponent<SpriteRenderer>();
+        sr.sprite = spriteFondo1;
+        sr.sortingOrder = -20;
+        // Fondo más opaco / contrastado para resaltar el plano jugable (directiva usuario)
+        sr.color = new Color(0.68f, 0.68f, 0.72f, 1.0f);
 
-        for (int i = 0; i < cantidadPaneles; i++)
-        {
-            GameObject panel = new GameObject($"Fondo_Panel_{i}");
-            panel.transform.SetParent(contFondos.transform);
-            panel.transform.position = new Vector3(inicioX + (i * anchoPanel), 0f, 10f);
+        // Relación de aspecto uniforme exacta sin distorsión (directiva usuario)
+        EscalarFondoManteniendoAspecto(contFondos, sr, 46.0f, 26.0f);
 
-            SpriteRenderer sr = panel.AddComponent<SpriteRenderer>();
-            sr.sprite = spriteFondo1;
-            sr.sortingOrder = -20;
-
-            AjustarEscalaVisual(panel, sr, anchoPanel, altoPanel);
-        }
+        var seguidor = contFondos.AddComponent<FondoSigueJugador>();
+        seguidor.camaraPrincipal = Camera.main;
+        seguidor.posYBase = -2.5f;
+        seguidor.camYReferencia = -2.9f;
+        seguidor.offsetZ = 12f;
+        seguidor.usarParallaxNivel = true;
+        seguidor.recorridoParallaxX = 6.0f;
+        seguidor.limiteNivelMinX = -6f;
+        seguidor.limiteNivelMaxX = 133f;
+        seguidor.factorSeguimientoY = 0.25f;
     }
 
     private Transform CrearGrupo(Transform padre, string nombre)
@@ -231,14 +249,21 @@ public class GeneradorNivelColonial : MonoBehaviour
     }
 
     /// <summary>
-    /// Construye suelo con texturizado TILED continuo:
-    /// Las texturas se repiten a escala 1:1 real, eliminando totalmente el estiramiento visual.
+    /// Construye suelo con cimientos profundos hasta -26.0f para que no haya vacío inferior.
     /// </summary>
     private void CrearBloqueSuelo(Transform padre, string nombre, Vector2 centro, Vector2 tamano)
     {
+        float ySuperficie = centro.y + (tamano.y / 2f);
+        float yProfundidad = -26.0f;
+        float altoSolido = ySuperficie - yProfundidad;
+        float nuevoCentroY = yProfundidad + (altoSolido / 2f);
+
+        Vector2 centroSolido = new Vector2(centro.x, nuevoCentroY);
+        Vector2 tamanoSolido = new Vector2(tamano.x, altoSolido);
+
         GameObject bloque = new GameObject(nombre);
         bloque.transform.SetParent(padre);
-        bloque.transform.position = centro;
+        bloque.transform.position = centroSolido;
         bloque.transform.localScale = Vector3.one;
         bloque.tag = tagSuelo;
 
@@ -246,7 +271,7 @@ public class GeneradorNivelColonial : MonoBehaviour
         if (layerGround != -1) bloque.layer = layerGround;
 
         BoxCollider2D col = bloque.AddComponent<BoxCollider2D>();
-        col.size = tamano;
+        col.size = tamanoSolido;
 
         // Visual unificado de muro de piedra labrada huanca con remate de césped natural (TILED 1:1)
         GameObject visual = new GameObject("Visual");
@@ -258,8 +283,8 @@ public class GeneradorNivelColonial : MonoBehaviour
         sr.sprite = (spritePisoHuanca != null) ? spritePisoHuanca : spritePrototipo;
         sr.drawMode = SpriteDrawMode.Tiled;
         sr.tileMode = SpriteTileMode.Continuous;
-        sr.size = tamano;
-        sr.sortingOrder = 0;
+        sr.size = tamanoSolido;
+        sr.sortingOrder = 1;
     }
 
     private void CrearMuroTope(Transform padre, string nombre, float posX)
@@ -271,7 +296,7 @@ public class GeneradorNivelColonial : MonoBehaviour
         muro.tag = tagSuelo;
 
         BoxCollider2D col = muro.AddComponent<BoxCollider2D>();
-        col.size = new Vector2(1f, 22f);
+        col.size = new Vector2(1f, 40f);
     }
 
     private void ConstruirLagosToxicos(Transform padre)
@@ -312,6 +337,35 @@ public class GeneradorNivelColonial : MonoBehaviour
             visual.transform.localScale = new Vector3(tamano.x, tamano.y, 1f);
         }
         sr.sortingOrder = 2;
+
+        // Lecho profundo del pozo (Roca/Fango oscuro) que llega hasta -26.0f sin dejar vacíos
+        float yFondoLago = posicion.y - (tamano.y / 2f);
+        float yProfundidad = -26.0f;
+        float altoLecho = yFondoLago - yProfundidad;
+        if (altoLecho > 0.4f)
+        {
+            GameObject lecho = new GameObject("Lecho_Pozo_Profundo");
+            lecho.transform.SetParent(lago.transform);
+            lecho.transform.position = new Vector3(0f, yProfundidad + (altoLecho / 2f) - posicion.y, 0f);
+            lecho.tag = tagSuelo;
+            int layerGround = LayerMask.NameToLayer("Ground");
+            if (layerGround != -1) lecho.layer = layerGround;
+
+            BoxCollider2D colLecho = lecho.AddComponent<BoxCollider2D>();
+            colLecho.size = new Vector2(tamano.x, altoLecho);
+
+            GameObject visualLecho = new GameObject("VisualLecho");
+            visualLecho.transform.SetParent(lecho.transform);
+            visualLecho.transform.localPosition = Vector3.zero;
+
+            SpriteRenderer srLecho = visualLecho.AddComponent<SpriteRenderer>();
+            srLecho.sprite = (spritePisoHuanca != null) ? spritePisoHuanca : spritePrototipo;
+            srLecho.color = new Color(0.20f, 0.18f, 0.16f);
+            srLecho.drawMode = SpriteDrawMode.Tiled;
+            srLecho.tileMode = SpriteTileMode.Continuous;
+            srLecho.size = new Vector2(tamano.x, altoLecho);
+            srLecho.sortingOrder = 0;
+        }
     }
 
     private void ConstruirPlataformasEspaciosas(Transform padre)
@@ -364,10 +418,14 @@ public class GeneradorNivelColonial : MonoBehaviour
         int layerGround = LayerMask.NameToLayer("Ground");
         if (layerGround != -1) plat.layer = layerGround;
 
-        BoxCollider2D col = plat.AddComponent<BoxCollider2D>();
-        col.size = tamano;
+        float altoVisual = 1.20f;
+        float altoSolido = 0.40f;
 
-        // Visual unificado de plataforma de parque (TILED continuo)
+        BoxCollider2D col = plat.AddComponent<BoxCollider2D>();
+        col.size = new Vector2(tamano.x * 0.98f, altoSolido);
+        col.offset = new Vector2(0f, (altoVisual - altoSolido) / 2f);
+
+        // Visual unificado de plataforma de parque con ménsulas talladas incas
         GameObject visual = new GameObject("Visual");
         visual.transform.SetParent(plat.transform);
         visual.transform.localPosition = Vector3.zero;
@@ -375,10 +433,9 @@ public class GeneradorNivelColonial : MonoBehaviour
 
         SpriteRenderer sr = visual.AddComponent<SpriteRenderer>();
         sr.sprite = (spritePlataforma != null) ? spritePlataforma : (spritePisoHuanca != null ? spritePisoHuanca : spritePrototipo);
-        sr.drawMode = SpriteDrawMode.Tiled;
-        sr.tileMode = SpriteTileMode.Continuous;
-        sr.size = tamano;
-        sr.sortingOrder = 1;
+        sr.drawMode = SpriteDrawMode.Simple;
+        sr.sortingOrder = 3;
+        AjustarEscalaVisual(visual, sr, tamano.x, altoVisual);
     }
 
     private void ConstruirCajas(Transform padre)
@@ -507,7 +564,13 @@ public class GeneradorNivelColonial : MonoBehaviour
             sr.sortingOrder = 5;
 
             visual.AddComponent<RotadorBotella>();
-            bot.AddComponent<BotellaVidrio>();
+            var bv = bot.AddComponent<BotellaVidrio>();
+#if UNITY_EDITOR
+            var soB = new UnityEditor.SerializedObject(bv);
+            AudioClip sfxBotella = UnityEditor.AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audio/SFX/SFX_BotellaCristal.wav");
+            if (sfxBotella != null) soB.FindProperty("sonidoRecoleccion").objectReferenceValue = sfxBotella;
+            soB.ApplyModifiedProperties();
+#endif
         }
     }
 
@@ -533,7 +596,8 @@ public class GeneradorNivelColonial : MonoBehaviour
         enemigo.tag = tagEnemigo;
 
         BoxCollider2D col = enemigo.AddComponent<BoxCollider2D>();
-        col.size = new Vector2(1.1f, 1.3f);
+        col.size = new Vector2(1.10f, 1.30f);
+        col.offset = new Vector2(0f, 0.65f);
 
         Rigidbody2D rb = enemigo.AddComponent<Rigidbody2D>();
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
@@ -548,13 +612,13 @@ public class GeneradorNivelColonial : MonoBehaviour
         if (spriteMonstruoBarro != null)
         {
             sr.sprite = spriteMonstruoBarro;
-            AjustarEscalaVisual(visual, sr, 1.4f, 1.4f);
+            AjustarEscalaVisual(visual, sr, 1.45f, 1.45f);
         }
         else
         {
             sr.sprite = spritePrototipo;
             sr.color = new Color(0.48f, 0.32f, 0.18f);
-            visual.transform.localScale = new Vector3(1.2f, 1.2f, 1f);
+            visual.transform.localScale = new Vector3(1.45f, 1.45f, 1f);
         }
         sr.sortingOrder = 4;
 
@@ -602,6 +666,8 @@ public class GeneradorNivelColonial : MonoBehaviour
 #if UNITY_EDITOR
         UnityEditor.SerializedObject so = new UnityEditor.SerializedObject(cm);
         so.FindProperty("botellasRequeridas").intValue = 15;
+        AudioClip sfxPurif = UnityEditor.AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audio/SFX/SFX_VictoriaPurificacion.wav");
+        if (sfxPurif != null) so.FindProperty("sonidoVictoria").objectReferenceValue = sfxPurif;
         so.ApplyModifiedProperties();
 #endif
 

@@ -46,13 +46,16 @@ public class IllariPlatformer : MonoBehaviour
     public enum TipoPoder
     {
         Normal,
-        DisparoTriple
+        DisparoTriple,
+        LaserAgua,
+        BombaAgua
     }
 
     [Header("Sistema de Poderes y Mejoras")]
     [SerializeField] private TipoPoder poderActivo = TipoPoder.Normal;
     [SerializeField] private int disparosPoderRestantes = 0;
     [SerializeField] private bool tieneEscudo = false;
+    [SerializeField] private float tiempoSuperVelocidadRestante = 0f;
     private float tiempoCargaDisparo = 0f;
     private const float TIEMPO_CARGA_MEGA = 0.70f;
     private GameObject objEscudoVisual;
@@ -130,6 +133,17 @@ public class IllariPlatformer : MonoBehaviour
     {
         if (estaMuerta) return;
 
+        if (tiempoSuperVelocidadRestante > 0f)
+        {
+            tiempoSuperVelocidadRestante -= Time.deltaTime;
+            if (tiempoSuperVelocidadRestante <= 0f && GameManagerIyari.Instancia != null)
+            {
+                tiempoSuperVelocidadRestante = 0f;
+                string hudNom = (poderActivo == TipoPoder.Normal) ? "NORMAL" : (poderActivo == TipoPoder.DisparoTriple ? "TRIPLE" : (poderActivo == TipoPoder.LaserAgua ? "LASER" : "BOMBA"));
+                GameManagerIyari.Instancia.ActualizarPoderHUD(hudNom, disparosPoderRestantes);
+            }
+        }
+
         ProcesarEntrada();
         VerificarSuelo();
         GestionarSaltoParkour();
@@ -147,7 +161,8 @@ public class IllariPlatformer : MonoBehaviour
             return;
         }
 
-        rb.linearVelocity = new Vector2(inputHorizontal * velocidad, rb.linearVelocity.y);
+        float velEfectiva = (tiempoSuperVelocidadRestante > 0f) ? (velocidad * 1.35f) : velocidad;
+        rb.linearVelocity = new Vector2(inputHorizontal * velEfectiva, rb.linearVelocity.y);
     }
 
     private void ProcesarEntrada()
@@ -239,6 +254,7 @@ public class IllariPlatformer : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaSalto);
             contadorBufferSalto = 0f;
             contadorCoyote = 0f;
+            AudioManager.Instancia?.ReproducirSFX("salto");
             if (animator != null)
             {
                 animator.SetBool("estaEnAire", true);
@@ -249,6 +265,7 @@ public class IllariPlatformer : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaDobleSalto);
             puedeDobleSalto = false;
             contadorBufferSalto = 0f;
+            AudioManager.Instancia?.ReproducirSFX("salto");
             if (animator != null)
             {
                 animator.SetBool("estaEnAire", true);
@@ -355,6 +372,7 @@ public class IllariPlatformer : MonoBehaviour
     private void DispararProyectil()
     {
         if (prefabProyectilAgua == null) return;
+        AudioManager.Instancia?.ReproducirSFX("disparo");
 
         bool haciaArriba = apuntandoArriba;
         bool esDiagonal = haciaArriba && Mathf.Abs(inputHorizontal) > 0.2f;
@@ -386,17 +404,45 @@ public class IllariPlatformer : MonoBehaviour
             if (disparosPoderRestantes <= 0)
             {
                 poderActivo = TipoPoder.Normal;
-                if (GameManagerIyari.Instancia != null)
-                {
-                    GameManagerIyari.Instancia.ActualizarPoderHUD("NORMAL", 0);
-                }
+                if (GameManagerIyari.Instancia != null) GameManagerIyari.Instancia.ActualizarPoderHUD("NORMAL", 0);
             }
-            else
+            else if (GameManagerIyari.Instancia != null)
             {
-                if (GameManagerIyari.Instancia != null)
-                {
-                    GameManagerIyari.Instancia.ActualizarPoderHUD("TRIPLE", disparosPoderRestantes);
-                }
+                GameManagerIyari.Instancia.ActualizarPoderHUD("TRIPLE", disparosPoderRestantes);
+            }
+        }
+        else if (poderActivo == TipoPoder.LaserAgua && disparosPoderRestantes > 0)
+        {
+            disparosPoderRestantes--;
+            GameObject balaObj = Instantiate(prefabProyectilAgua, puntoSpawn, Quaternion.identity);
+            Bala bala = balaObj.GetComponent<Bala>();
+            if (bala != null) bala.InicializarLaser(direccion, 2);
+
+            if (disparosPoderRestantes <= 0)
+            {
+                poderActivo = TipoPoder.Normal;
+                if (GameManagerIyari.Instancia != null) GameManagerIyari.Instancia.ActualizarPoderHUD("NORMAL", 0);
+            }
+            else if (GameManagerIyari.Instancia != null)
+            {
+                GameManagerIyari.Instancia.ActualizarPoderHUD("LASER", disparosPoderRestantes);
+            }
+        }
+        else if (poderActivo == TipoPoder.BombaAgua && disparosPoderRestantes > 0)
+        {
+            disparosPoderRestantes--;
+            GameObject balaObj = Instantiate(prefabProyectilAgua, puntoSpawn, Quaternion.identity);
+            Bala bala = balaObj.GetComponent<Bala>();
+            if (bala != null) bala.InicializarGranada(direccion, 3, 2.6f);
+
+            if (disparosPoderRestantes <= 0)
+            {
+                poderActivo = TipoPoder.Normal;
+                if (GameManagerIyari.Instancia != null) GameManagerIyari.Instancia.ActualizarPoderHUD("NORMAL", 0);
+            }
+            else if (GameManagerIyari.Instancia != null)
+            {
+                GameManagerIyari.Instancia.ActualizarPoderHUD("BOMBA", disparosPoderRestantes);
             }
         }
         else
@@ -436,6 +482,7 @@ public class IllariPlatformer : MonoBehaviour
     private void DispararMegaBala()
     {
         if (prefabProyectilAgua == null) return;
+        AudioManager.Instancia?.ReproducirSFX("disparo");
 
         bool haciaArriba = apuntandoArriba;
         bool esDiagonal = haciaArriba && Mathf.Abs(inputHorizontal) > 0.2f;
@@ -535,6 +582,36 @@ public class IllariPlatformer : MonoBehaviour
         if (GameManagerIyari.Instancia != null)
         {
             GameManagerIyari.Instancia.ActualizarPoderHUD("TRIPLE", disparosPoderRestantes);
+        }
+    }
+
+    public void ActivarPoderLaserAgua(int cantidad = 25)
+    {
+        poderActivo = TipoPoder.LaserAgua;
+        disparosPoderRestantes = cantidad;
+        if (GameManagerIyari.Instancia != null)
+        {
+            GameManagerIyari.Instancia.ActualizarPoderHUD("LASER", disparosPoderRestantes);
+        }
+    }
+
+    public void ActivarPoderBombaAgua(int cantidad = 15)
+    {
+        poderActivo = TipoPoder.BombaAgua;
+        disparosPoderRestantes = cantidad;
+        if (GameManagerIyari.Instancia != null)
+        {
+            GameManagerIyari.Instancia.ActualizarPoderHUD("BOMBA", disparosPoderRestantes);
+        }
+    }
+
+    public void ActivarSuperVelocidad(float duracion = 18f)
+    {
+        tiempoSuperVelocidadRestante = duracion;
+        permitirDobleSalto = true;
+        if (GameManagerIyari.Instancia != null)
+        {
+            GameManagerIyari.Instancia.ActualizarPoderHUD("TURBO", (int)duracion);
         }
     }
 
@@ -646,6 +723,7 @@ public class IllariPlatformer : MonoBehaviour
         if (estaMuerta) return;
         estaMuerta = true;
         rb.linearVelocity = Vector2.zero;
+        AudioManager.Instancia?.ReproducirSFX("danio");
 
         if (animator != null)
         {

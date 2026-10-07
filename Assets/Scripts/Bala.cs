@@ -21,6 +21,8 @@ public class Bala : MonoBehaviour
     [SerializeField] private bool esMegaBala = false;
     [SerializeField] private bool esPenetrante = false;
     [SerializeField] private int penetracionesRestantes = 3;
+    [SerializeField] private bool esGranada = false;
+    [SerializeField] private float radioExplosionArea = 2.6f;
 
     [Header("Animación de Gota de Agua")]
     [SerializeField] private Sprite[] spritesGotaAgua;
@@ -158,6 +160,44 @@ public class Bala : MonoBehaviour
         }
     }
 
+    public void InicializarLaser(Vector2 direccion, int danioBeam = 2)
+    {
+        danio = danioBeam;
+        esPenetrante = true;
+        penetracionesRestantes = 8;
+        velocidad = 32f;
+        Inicializar(direccion, false);
+
+        transform.localScale = new Vector3(2.8f, 0.75f, 1f);
+        if (sr != null)
+        {
+            sr.color = new Color(0.1f, 0.95f, 1f, 1f);
+        }
+    }
+
+    public void InicializarGranada(Vector2 direccion, int danioArea = 3, float radioArea = 2.6f)
+    {
+        if (rb == null) rb = GetComponent<Rigidbody2D>();
+        danio = danioArea;
+        esGranada = true;
+        radioExplosionArea = radioArea;
+
+        esBalaEnemiga = false;
+        CargarSpritesSiEsNecesario();
+        ActualizarVisual();
+
+        rb.gravityScale = 2.4f;
+        float velX = direccion.x * 12f;
+        float velY = direccion.y > 0.5f ? 14f : 8f;
+        rb.linearVelocity = new Vector2(velX, velY);
+
+        transform.localScale = new Vector3(1.6f, 1.6f, 1f);
+        if (sr != null)
+        {
+            sr.color = new Color(0.2f, 0.85f, 1f, 1f);
+        }
+    }
+
     public void ConfigurarDireccion(Vector2 direccion)
     {
         Inicializar(direccion, true);
@@ -250,15 +290,68 @@ public class Bala : MonoBehaviour
     {
         impactado = true;
 
-        // Instanciar splash animado de agua si es proyectil purificador
-        if (!esBalaEnemiga && spritesSplash != null && spritesSplash.Length > 0 && spritesSplash[0] != null)
+        if (esGranada)
         {
-            GameObject splash = new GameObject("Splash_Agua_Impacto");
-            splash.transform.position = transform.position;
-            var eff = splash.AddComponent<EfectoSplashAgua>();
-            eff.Configurar(spritesSplash);
+            DetonarExplosionArea();
+        }
+        else
+        {
+            // Instanciar splash animado de agua si es proyectil purificador
+            if (!esBalaEnemiga && spritesSplash != null && spritesSplash.Length > 0 && spritesSplash[0] != null)
+            {
+                GameObject splash = new GameObject("Splash_Agua_Impacto");
+                splash.transform.position = transform.position;
+                var eff = splash.AddComponent<EfectoSplashAgua>();
+                eff.Configurar(spritesSplash);
+            }
         }
 
         Destroy(gameObject);
+    }
+
+    private void DetonarExplosionArea()
+    {
+        Collider2D[] colisiones = Physics2D.OverlapCircleAll(transform.position, radioExplosionArea);
+        foreach (var c in colisiones)
+        {
+            if (c.CompareTag("Enemy"))
+            {
+                var enemigo = c.GetComponent<EnemyManager>();
+                if (enemigo != null) enemigo.RecibirDanio(danio);
+
+                var volador = c.GetComponent<EnemyFlyingManager>();
+                if (volador != null) volador.RecibirDanio(danio);
+
+                var blindado = c.GetComponent<EnemyArmored>();
+                if (blindado != null) blindado.RecibirDanio(danio, (c.transform.position - transform.position).normalized);
+
+                var titan = c.GetComponent<BossTitanManager>();
+                if (titan != null) titan.RecibirDanio(danio);
+
+                var canionero = c.GetComponent<EnemyCannoneer>();
+                if (canionero != null) canionero.RecibirDanio(danio);
+
+                var supremo = c.GetComponent<BossSupremeHuaytapallana>();
+                if (supremo != null) supremo.RecibirDanio(danio);
+            }
+            else if (c.GetComponent<CharcoToxico>() != null)
+            {
+                c.GetComponent<CharcoToxico>().RecibirAguaPurificadora(3);
+            }
+        }
+
+        // Crear efecto de múltiple salpicadura en cruz
+        if (spritesSplash != null && spritesSplash.Length > 0 && spritesSplash[0] != null)
+        {
+            Vector3[] offsets = new Vector3[] { Vector3.zero, new Vector3(0.5f, 0.4f, 0f), new Vector3(-0.5f, 0.4f, 0f) };
+            foreach (var off in offsets)
+            {
+                GameObject splash = new GameObject("Splash_Granada_Explosion");
+                splash.transform.position = transform.position + off;
+                splash.transform.localScale = new Vector3(1.5f, 1.5f, 1f);
+                var eff = splash.AddComponent<EfectoSplashAgua>();
+                eff.Configurar(spritesSplash);
+            }
+        }
     }
 }

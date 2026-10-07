@@ -1,0 +1,346 @@
+fileFormatVersion: 2
+guid: 179d4d9cc9f47064c96532f007deb0ed
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1456061005348120242
+    second: Arbusto-Nivel1-Photoroom_0
+  - first:
+      213: -7565111121495750953
+    second: Arbusto-Nivel1-Photoroom_1
+  - first:
+      213: -1694639470799560114
+    second: Arbusto-Nivel1-Photoroom_2
+  - first:
+      213: -825592847250552618
+    second: Arbusto-Nivel1-Photoroom_3
+  - first:
+      213: 7970534518295164850
+    second: Arbusto-Nivel1-Photoroom_4
+  - first:
+      213: 2405097782803077996
+    second: Arbusto-Nivel1-Photoroom_5
+  - first:
+      213: 3267208957285952038
+    second: Arbusto-Nivel1-Photoroom_6
+  - first:
+      213: -6542932182748992798
+    second: Arbusto-Nivel1-Photoroom_7
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cantuta_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 459
+        width: 365
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00000000000000000000000000000010
+      internalID: -2000000000000000000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cantuta_1
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 459
+        width: 382
+        height: 371
+      alignment: 0
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00000000000000000000000000000011
+      internalID: -2000002222222222222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cantuta_2
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 459
+        width: 380
+        height: 346
+      alignment: 0
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00000000000000000000000000000012
+      internalID: -2000004444444444444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cantuta_3
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 459
+        width: 365
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00000000000000000000000000000013
+      internalID: -2000006666666666666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ichu_0
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 86
+        width: 361
+        height: 291
+      alignment: 0
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00000000000000000000000000000014
+      internalID: -2000008888888888888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ichu_1
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 86
+        width: 378
+        height: 276
+      alignment: 0
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00000000000000000000000000000015
+      internalID: -2000011111111111110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ichu_2
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 86
+        width: 386
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00000000000000000000000000000016
+      internalID: -2000013333333333332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ichu_3
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 86
+        width: 362
+        height: 292
+      alignment: 0
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00000000000000000000000000000017
+      internalID: -2000015555555555554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7d683e44483530790800000000000000
+    internalID: -7565111121495750953
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Arbusto-Nivel1-Photoroom_0: 1456061005348120242
+      Arbusto-Nivel1-Photoroom_1: -7565111121495750953
+      Arbusto-Nivel1-Photoroom_2: -1694639470799560114
+      Arbusto-Nivel1-Photoroom_3: -825592847250552618
+      Arbusto-Nivel1-Photoroom_4: 7970534518295164850
+      Arbusto-Nivel1-Photoroom_5: 2405097782803077996
+      Arbusto-Nivel1-Photoroom_6: 3267208957285952038
+      Arbusto-Nivel1-Photoroom_7: -6542932182748992798
+      Cantuta_0: -2000000000000000000
+      Cantuta_1: -2000002222222222222
+      Cantuta_2: -2000004444444444444
+      Cantuta_3: -2000006666666666666
+      Ichu_0: -2000008888888888888
+      Ichu_1: -2000011111111111110
+      Ichu_2: -2000013333333333332
+      Ichu_3: -2000015555555555554
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

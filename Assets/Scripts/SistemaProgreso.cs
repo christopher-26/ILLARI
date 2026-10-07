@@ -41,12 +41,12 @@ public static class SistemaProgreso
     public static readonly string[] NOMBRES_NIVELES = new string[]
     {
         "",
-        "Parque Identidad Huanca",
-        "Cerrito de la Libertad",
+        "Bosque Dorado de Paccha",
+        "Bosque de Eucaliptos de Ocopilla",
         "Parque Túpac Amaru",
         "Parque de los Sombreros",
         "Plaza Constitución",
-        "Bosque Dorado de Paccha",
+        "Parque Identidad Huanca",
         "Ribera Río Shullcas",
         "Formaciones Torre Torre",
         "Nevado Huaytapallana"
@@ -97,6 +97,7 @@ public static class SistemaProgreso
     public static int ObtenerIndiceNivelActual()
     {
         string escena = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        if (escena == "Nivel1") return 1;
         for (int i = 1; i <= TOTAL_NIVELES; i++)
         {
             if (ESCENAS_NIVELES[i] == escena) return i;
@@ -175,6 +176,22 @@ public static class SistemaProgreso
             return true;
         }
         return false;
+    }
+
+    public static void ReiniciarTodo()
+    {
+        for (int i = 2; i <= TOTAL_NIVELES; i++)
+        {
+            PlayerPrefs.DeleteKey(KEY_NIVEL_DESBLOQUEADO + i);
+        }
+        PlayerPrefs.SetInt(KEY_NIVEL_MAX_ALCANZADO, 1);
+        PlayerPrefs.DeleteKey(KEY_HAY_PARTIDA);
+        PlayerPrefs.DeleteKey(KEY_ESCENA);
+        PlayerPrefs.DeleteKey(KEY_VIDA);
+        PlayerPrefs.DeleteKey(KEY_BOTELLAS);
+        PlayerPrefs.DeleteKey(KEY_RESTAURAR_EN_CARGA);
+        PlayerPrefs.Save();
+        Debug.Log("<color=#FF5555><b>[PROGRESO]</b> Progreso reiniciado a Nivel 1 conservando audio.</color>");
     }
 
     public static void BorrarTodoElProgreso()

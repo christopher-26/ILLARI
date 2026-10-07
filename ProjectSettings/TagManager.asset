@@ -45,5 +45,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background_Sky
+    uniqueID: 200002
+    locked: 0
+  - name: Props_Back
+    uniqueID: 200003
+    locked: 0
+  - name: Playground
+    uniqueID: 200004
+    locked: 0
+  - name: Props_Front
+    uniqueID: 200005
+    locked: 0
   m_RenderingLayers:
   - Default

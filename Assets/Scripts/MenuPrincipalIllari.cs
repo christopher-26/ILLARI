@@ -2,340 +2,252 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.EventSystems;
 
 /// <summary>
-/// Controlador Arcade del Menú Principal de 'Illari' (Huancayo 2026).
-/// - Conecta de forma garantizada los botones principales y modales (runtime + persistente).
-/// - Gestiona paneles modales: Selección de 9 Niveles, Controles/Guía, y Misión Ecológica ODS 15.
-/// - Sistema de desbloqueo dinámico con SistemaProgreso.
-/// - Animación flotante del logo y transiciones suaves de escena.
-/// - Feedback visual al pasar el cursor o hacer clic sobre los botones.
+/// Controlador Arcade del Menú Principal de 'Iyari' (Huancayo 2026).
+/// Gestiona de forma limpia y receptiva:
+/// 1. "Iniciar Aventura": Resetea progreso y carga el Nivel 1 (Parque de la Identidad Huanca).
+/// 2. "Selector de Misiones / Parques": Modal con acceso a los 9 niveles de Huancayo.
+/// 3. "Registro ODS 12 & 15": Modal educativo con datos reales de la crisis ambiental en Huancayo.
+/// 4. "Ajustes de Sonido": Sliders de Volumen Master, Música (BGM) y SFX conectados a AudioManager.
+/// 5. "Guía de Controles": Overlay visual con la distribución de teclas arcade.
+/// 6. "Salir": Cierra el juego de forma segura.
 /// </summary>
 public class MenuPrincipalIllari : MonoBehaviour
 {
+    public static MenuPrincipalIllari Instancia { get; private set; }
+
     [Header("Paneles Principales")]
     [SerializeField] private GameObject panelInicio;
     [SerializeField] private GameObject panelSeleccion;
+    [SerializeField] private GameObject panelODS;
+    [SerializeField] private GameObject panelSonido;
     [SerializeField] private GameObject panelControles;
-    [SerializeField] private GameObject panelODS15;
 
-    [Header("Botones Principales")]
-    [SerializeField] private Button botonJugar;
-    [SerializeField] private Button botonSeleccion;
-    [SerializeField] private Button botonControles;
-    [SerializeField] private Button botonODS15;
-    [SerializeField] private Button botonSalir;
+    [Header("Sliders de Audio")]
+    [SerializeField] private Slider sliderMaster;
+    [SerializeField] private Slider sliderMusica;
+    [SerializeField] private Slider sliderSFX;
 
-    [Header("Botones de Cierre de Modales")]
-    [SerializeField] private Button botonCerrarSeleccion;
-    [SerializeField] private Button botonCerrarControles;
-    [SerializeField] private Button botonCerrarODS15;
+    [Header("Textos de Porcentaje de Audio")]
+    [SerializeField] private Text txtValorMaster;
+    [SerializeField] private Text txtValorMusica;
+    [SerializeField] private Text txtValorSFX;
 
-    [Header("Elementos de Animación")]
+    [Header("Animación de Logo")]
     [SerializeField] private RectTransform rectLogo;
-    [SerializeField] private CanvasGroup canvasGroupTransicion;
-
-    [Header("Botones de Niveles (1 al 9)")]
-    [SerializeField] private Button[] botonesNiveles = new Button[9];
-    [SerializeField] private Text[] textosNiveles = new Text[9];
-
     private Vector2 posOriginalLogo;
-    private bool estaTransicionando = false;
-
-    private static Sprite sprBlanco;
-
-    public static Sprite ObtenerSpriteBlanco()
-    {
-        if (sprBlanco == null)
-            sprBlanco = Resources.Load<Sprite>("UI/Blanco");
-        if (sprBlanco == null)
-        {
-#if UNITY_EDITOR
-            sprBlanco = UnityEditor.AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprites/UI/Blanco.png");
-#endif
-        }
-        return sprBlanco;
-    }
-
-    public static Sprite CargarSpriteUI(string nombre)
-    {
-        Sprite s = Resources.Load<Sprite>("UI/" + nombre);
-        if (s == null)
-        {
-#if UNITY_EDITOR
-            s = UnityEditor.AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprites/UI/" + nombre + ".png");
-#endif
-        }
-        return s;
-    }
-
-    private void GarantizarEventSystem()
-    {
-        var es = Object.FindFirstObjectByType<UnityEngine.EventSystems.EventSystem>();
-        if (es == null)
-        {
-            GameObject esObj = new GameObject("EventSystem");
-            es = esObj.AddComponent<UnityEngine.EventSystems.EventSystem>();
-        }
-
-        var inputModType = System.Type.GetType("UnityEngine.InputSystem.UI.InputSystemUIInputModule, Unity.InputSystem");
-        if (inputModType != null)
-        {
-            if (es.GetComponent(inputModType) == null)
-            {
-                var sim = es.GetComponent<UnityEngine.EventSystems.StandaloneInputModule>();
-                if (sim != null) DestroyImmediate(sim);
-                es.gameObject.AddComponent(inputModType);
-            }
-        }
-        else
-        {
-            if (es.GetComponent<UnityEngine.EventSystems.StandaloneInputModule>() == null)
-            {
-                es.gameObject.AddComponent<UnityEngine.EventSystems.StandaloneInputModule>();
-            }
-        }
-    }
 
     private void Awake()
     {
-        Time.timeScale = 1f;
+        Instancia = this;
+        AsegurarAudioManager();
+    }
 
-        GarantizarEventSystem();
-        VincularReferencias();
-        ConectarTodosLosBotones();
+    private void AsegurarAudioManager()
+    {
+        if (AudioManager.Instancia == null)
+        {
+            AudioManager amExistente = Object.FindAnyObjectByType<AudioManager>();
+            if (amExistente == null)
+            {
+                GameObject amObj = new GameObject("AudioManager");
+                amObj.AddComponent<AudioManager>();
+            }
+        }
     }
 
     private void Start()
     {
+        // Asegurar que el tiempo de juego esté activo
+        Time.timeScale = 1.0f;
+
         if (rectLogo != null)
-        {
             posOriginalLogo = rectLogo.anchoredPosition;
-        }
 
-        // Re-conectar botones en Start para máxima redundancia
-        ConectarTodosLosBotones();
-        CerrarTodosLosModales();
-        ActualizarGridSeleccionNiveles();
+        // Mostrar solo el panel de inicio
+        MostrarSoloInicio();
+
+        // Inicializar sliders de audio con valores de AudioManager
+        InicializarSlidersAudio();
+
+        // Animar logo flotante
+        StartCoroutine(RutinaFlotarLogo());
     }
 
-    private void Update()
+    private void InicializarSlidersAudio()
     {
-        // Animación suave de flotación del logo de Illari
-        if (rectLogo != null)
+        if (AudioManager.Instancia != null)
         {
-            float offset = Mathf.Sin(Time.unscaledTime * 2.2f) * 10f;
-            rectLogo.anchoredPosition = new Vector2(posOriginalLogo.x, posOriginalLogo.y + offset);
-        }
-
-        // Tecla Escape para cerrar modales abiertos
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (panelSeleccion != null && panelSeleccion.activeSelf) CerrarTodosLosModales();
-            else if (panelControles != null && panelControles.activeSelf) CerrarTodosLosModales();
-            else if (panelODS15 != null && panelODS15.activeSelf) CerrarTodosLosModales();
-        }
-    }
-
-    // ==========================================
-    // VINCULACIÓN ROBUSTA DE REFERENCIAS
-    // ==========================================
-    public void VincularReferencias()
-    {
-        Transform canvas = transform.root.GetComponentInChildren<Canvas>()?.transform;
-        if (canvas == null) canvas = transform;
-
-        // Paneles
-        if (panelInicio == null)
-        {
-            Transform t = canvas.Find("Contenedor_Botones_Principales");
-            if (t != null) panelInicio = t.gameObject;
-        }
-
-        if (panelSeleccion == null)
-        {
-            Transform t = canvas.Find("Panel_SeleccionNiveles");
-            if (t != null) panelSeleccion = t.gameObject;
-        }
-
-        if (panelControles == null)
-        {
-            Transform t = canvas.Find("Panel_Controles");
-            if (t != null) panelControles = t.gameObject;
-        }
-
-        if (panelODS15 == null)
-        {
-            Transform t = canvas.Find("Panel_ODS15");
-            if (t != null) panelODS15 = t.gameObject;
-        }
-
-        if (rectLogo == null)
-        {
-            Transform t = canvas.Find("Logo_Illari");
-            if (t != null) rectLogo = t.GetComponent<RectTransform>();
-        }
-
-        if (canvasGroupTransicion == null)
-        {
-            Transform t = canvas.Find("Overlay_Transicion");
-            if (t != null) canvasGroupTransicion = t.GetComponent<CanvasGroup>();
-        }
-
-        // Botones Principales
-        if (panelInicio != null)
-        {
-            Transform pt = panelInicio.transform;
-            if (botonJugar == null) botonJugar = pt.Find("Boton_Jugar")?.GetComponent<Button>();
-            if (botonSeleccion == null) botonSeleccion = pt.Find("Boton_SeleccionNiveles")?.GetComponent<Button>();
-            if (botonControles == null) botonControles = pt.Find("Boton_Controles")?.GetComponent<Button>();
-            if (botonODS15 == null) botonODS15 = pt.Find("Boton_ODS15")?.GetComponent<Button>();
-            if (botonSalir == null) botonSalir = pt.Find("Boton_Salir")?.GetComponent<Button>();
-        }
-
-        // Botones Cerrar Modales
-        if (panelSeleccion != null && botonCerrarSeleccion == null)
-            botonCerrarSeleccion = panelSeleccion.transform.Find("Ventana/Boton_Cerrar_Seleccion")?.GetComponent<Button>();
-
-        if (panelControles != null && botonCerrarControles == null)
-            botonCerrarControles = panelControles.transform.Find("Ventana/Boton_Cerrar_Controles")?.GetComponent<Button>();
-
-        if (panelODS15 != null && botonCerrarODS15 == null)
-            botonCerrarODS15 = panelODS15.transform.Find("Ventana/Boton_Cerrar_ODS15")?.GetComponent<Button>();
-
-        // Botones de niveles (1..9)
-        if (panelSeleccion != null)
-        {
-            Transform grid = panelSeleccion.transform.Find("Ventana/Grid_Niveles");
-            if (grid != null)
+            if (sliderMaster != null)
             {
-                for (int i = 0; i < 9; i++)
-                {
-                    Transform card = grid.Find($"Card_Nivel_{i + 1}");
-                    if (card != null)
-                    {
-                        Button btn = card.GetComponent<Button>();
-                        if (btn != null) botonesNiveles[i] = btn;
-
-                        Transform txtT = card.Find("Texto_Nivel");
-                        if (txtT != null) textosNiveles[i] = txtT.GetComponent<Text>();
-                    }
-                }
+                sliderMaster.value = AudioManager.Instancia.VolumenMaster;
+                ActualizarTextoMaster(sliderMaster.value);
+                sliderMaster.onValueChanged.AddListener(OnSliderMasterChanged);
+            }
+            if (sliderMusica != null)
+            {
+                sliderMusica.value = AudioManager.Instancia.VolumenMusica;
+                ActualizarTextoMusica(sliderMusica.value);
+                sliderMusica.onValueChanged.AddListener(OnSliderMusicaChanged);
+            }
+            if (sliderSFX != null)
+            {
+                sliderSFX.value = AudioManager.Instancia.VolumenSFX;
+                ActualizarTextoSFX(sliderSFX.value);
+                sliderSFX.onValueChanged.AddListener(OnSliderSFXChanged);
             }
         }
     }
 
-    // ==========================================
-    // CONEXIÓN OBLIGATORIA DE LISTENERS
-    // ==========================================
-    public void ConectarTodosLosBotones()
+    private void ActualizarTextoMaster(float val)
     {
-        VincularReferencias();
-
-        // Conectar botones principales
-        ConectarBoton(botonJugar, IniciarAventura);
-        ConectarBoton(botonSeleccion, AbrirSeleccionNiveles);
-        ConectarBoton(botonControles, AbrirControles);
-        ConectarBoton(botonODS15, AbrirODS15);
-        ConectarBoton(botonSalir, SalirDelJuego);
-
-        // Conectar botones de modales
-        ConectarBoton(botonCerrarSeleccion, CerrarTodosLosModales);
-        ConectarBoton(botonCerrarControles, CerrarTodosLosModales);
-        ConectarBoton(botonCerrarODS15, CerrarTodosLosModales);
+        if (txtValorMaster != null)
+            txtValorMaster.text = $"{Mathf.RoundToInt(val * 100f)}%";
     }
 
-    private void ConectarBoton(Button btn, UnityEngine.Events.UnityAction accion)
+    private void ActualizarTextoMusica(float val)
     {
-        if (btn == null) return;
+        if (txtValorMusica != null)
+            txtValorMusica.text = $"{Mathf.RoundToInt(val * 100f)}%";
+    }
 
-        btn.interactable = true;
-        btn.onClick.RemoveListener(accion);
-        btn.onClick.AddListener(accion);
+    private void ActualizarTextoSFX(float val)
+    {
+        if (txtValorSFX != null)
+            txtValorSFX.text = $"{Mathf.RoundToInt(val * 100f)}%";
+    }
 
-        // Añadir componente de hover y click táctil si no existe
-        if (btn.GetComponent<BotonArcadeEfecto>() == null)
+    public void OnSliderMasterChanged(float val)
+    {
+        ActualizarTextoMaster(val);
+        if (AudioManager.Instancia != null)
+            AudioManager.Instancia.SetMasterVolume(val);
+    }
+
+    public void OnSliderMusicaChanged(float val)
+    {
+        ActualizarTextoMusica(val);
+        if (AudioManager.Instancia != null)
+            AudioManager.Instancia.SetMusicVolume(val);
+    }
+
+    public void OnSliderSFXChanged(float val)
+    {
+        ActualizarTextoSFX(val);
+        if (AudioManager.Instancia != null)
         {
-            btn.gameObject.AddComponent<BotonArcadeEfecto>();
+            AudioManager.Instancia.SetSFXVolume(val);
+            AudioManager.Instancia.ReproducirSFX("click");
         }
     }
 
-    // ==========================================
-    // ACCIONES DE BOTONES PRINCIPALES
-    // ==========================================
-    public void IniciarAventura()
+    public void MostrarSoloInicio()
     {
-        if (estaTransicionando) return;
-        Debug.Log("<color=#00FF88><b>[MENU]</b> ¡Iniciando Aventura! Cargando parque...</color>");
-
-        int nivelAIniciar = 1;
-        if (PlayerPrefs.GetInt("Illari_HayPartida", 0) == 1)
-        {
-            string escenaGuardada = PlayerPrefs.GetString("Illari_EscenaGuardada", "");
-            if (!string.IsNullOrEmpty(escenaGuardada))
-            {
-                IniciarCargaEscena(escenaGuardada);
-                return;
-            }
-        }
-
-        IniciarCargaEscena(SistemaProgreso.ESCENAS_NIVELES[nivelAIniciar]);
-    }
-
-    public void AbrirSeleccionNiveles()
-    {
-        Debug.Log("<color=#00FFE0><b>[MENU]</b> Abriendo Selección de Parques...</color>");
-        CerrarTodosLosModales();
-        ActualizarGridSeleccionNiveles();
-        if (panelSeleccion != null) panelSeleccion.SetActive(true);
-        if (panelInicio != null) panelInicio.SetActive(false);
-    }
-
-    public void AbrirControles()
-    {
-        Debug.Log("<color=#00FFE0><b>[MENU]</b> Abriendo Guía de Controles...</color>");
-        CerrarTodosLosModales();
-        if (panelControles != null) panelControles.SetActive(true);
-        if (panelInicio != null) panelInicio.SetActive(false);
-    }
-
-    public void AbrirODS15()
-    {
-        Debug.Log("<color=#00FFE0><b>[MENU]</b> Abriendo Misión ODS 15...</color>");
-        CerrarTodosLosModales();
-        if (panelODS15 != null) panelODS15.SetActive(true);
-        if (panelInicio != null) panelInicio.SetActive(false);
-    }
-
-    public void CerrarTodosLosModales()
-    {
-        if (panelSeleccion != null) panelSeleccion.SetActive(false);
-        if (panelControles != null) panelControles.SetActive(false);
-        if (panelODS15 != null) panelODS15.SetActive(false);
         if (panelInicio != null) panelInicio.SetActive(true);
+        if (panelSeleccion != null) panelSeleccion.SetActive(false);
+        if (panelODS != null) panelODS.SetActive(false);
+        if (panelSonido != null) panelSonido.SetActive(false);
+        if (panelControles != null) panelControles.SetActive(false);
     }
 
-    public void SeleccionarNivel(int nivel)
+    // 1. INICIAR AVENTURA
+    public void BotonIniciarAventura()
     {
-        if (estaTransicionando) return;
-        if (nivel < 1 || nivel > SistemaProgreso.TOTAL_NIVELES) return;
+        ReproducirClick();
+        SistemaProgreso.ReiniciarTodo();
+        SistemaGuardado.ReiniciarPartida();
 
-        if (SistemaProgreso.EsNivelDesbloqueado(nivel))
+        // Cargar Nivel 1 (Parque de la Identidad Huanca)
+        CargarEscenaSegura("NivelParqueColonial", "Nivel1");
+    }
+
+    // 2. SELECTOR DE MISIONES
+    public void BotonAbrirSelectorMisiones()
+    {
+        ReproducirClick();
+        if (panelInicio != null) panelInicio.SetActive(false);
+        if (panelSeleccion != null) panelSeleccion.SetActive(true);
+    }
+
+    public void CargarMision(int numeroNivel)
+    {
+        ReproducirClick();
+        string[] nombresEscenas = new string[]
         {
-            string escena = SistemaProgreso.ESCENAS_NIVELES[nivel];
-            Debug.Log($"<color=#00FF88><b>[MENU]</b> Cargando {SistemaProgreso.NOMBRES_NIVELES[nivel]} (Nivel {nivel})...</color>");
-            IniciarCargaEscena(escena);
-        }
-        else
+            "NivelParqueColonial",
+            "Nivel2_CerritoLibertad",
+            "Nivel3_ParqueTupacAmaru",
+            "Nivel4_ParqueSombreros",
+            "Nivel5_PlazaConstitucion",
+            "Nivel6_BosqueDorado",
+            "Nivel7_RioShullcas",
+            "Nivel8_TorreTorre",
+            "Nivel9_NevadoHuaytapallana"
+        };
+
+        if (numeroNivel >= 1 && numeroNivel <= nombresEscenas.Length)
         {
-            Debug.Log($"<color=#FFAA00><b>[MENU]</b> El Nivel {nivel} aún está bloqueado. Supera el parque anterior.</color>");
+            string escena = nombresEscenas[numeroNivel - 1];
+            if (numeroNivel == 1)
+                CargarEscenaSegura(escena, "Nivel1");
+            else
+                SceneManager.LoadScene(escena);
         }
     }
 
-    public void SalirDelJuego()
+    // 3. REGISTRO ODS 12 & 15
+    public void BotonAbrirODS()
     {
-        Debug.Log("<color=#FF4444><b>[MENU]</b> Saliendo del juego...</color>");
+        ReproducirClick();
+        if (panelODS != null) panelODS.SetActive(true);
+    }
+
+    public void BotonCerrarODS()
+    {
+        ReproducirClick();
+        if (panelODS != null) panelODS.SetActive(false);
+    }
+
+    // 4. AJUSTES DE SONIDO
+    public void BotonAbrirAjustesSonido()
+    {
+        ReproducirClick();
+        if (panelSonido != null)
+        {
+            panelSonido.SetActive(true);
+            if (AudioManager.Instancia != null)
+            {
+                if (sliderMaster != null) sliderMaster.value = AudioManager.Instancia.VolumenMaster;
+                if (sliderMusica != null) sliderMusica.value = AudioManager.Instancia.VolumenMusica;
+                if (sliderSFX != null) sliderSFX.value = AudioManager.Instancia.VolumenSFX;
+            }
+        }
+    }
+
+    public void BotonCerrarAjustesSonido()
+    {
+        ReproducirClick();
+        if (panelSonido != null) panelSonido.SetActive(false);
+    }
+
+    // 5. GUÍA DE CONTROLES
+    public void BotonAbrirControles()
+    {
+        ReproducirClick();
+        if (panelControles != null) panelControles.SetActive(true);
+    }
+
+    public void BotonCerrarControles()
+    {
+        ReproducirClick();
+        if (panelControles != null) panelControles.SetActive(false);
+    }
+
+    // 6. SALIR
+    public void BotonSalir()
+    {
+        ReproducirClick();
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
@@ -343,66 +255,38 @@ public class MenuPrincipalIllari : MonoBehaviour
 #endif
     }
 
-    // ==========================================
-    // ACTUALIZACIÓN DE ESTADO DE NIVELES
-    // ==========================================
-    public void ActualizarGridSeleccionNiveles()
+    public void BotonVolverAlInicio()
     {
-        Sprite sprBtnNormal = CargarSpriteUI("BotonArcade_Normal");
-        Sprite sprBtnHover = CargarSpriteUI("BotonArcade_Hover");
-        Sprite sprBtnPressed = CargarSpriteUI("BotonArcade_Pressed");
-
-        for (int i = 0; i < 9; i++)
-        {
-            int nivel = i + 1;
-            bool desbloqueado = SistemaProgreso.EsNivelDesbloqueado(nivel);
-            string nombreNivel = (nivel < SistemaProgreso.NOMBRES_NIVELES.Length) ? SistemaProgreso.NOMBRES_NIVELES[nivel] : $"Parque {nivel}";
-            string icono = (nivel < SistemaProgreso.ICONOS_NIVELES.Length) ? SistemaProgreso.ICONOS_NIVELES[nivel] : "★";
-
-            if (botonesNiveles[i] != null)
-            {
-                botonesNiveles[i].interactable = desbloqueado;
-                int nCapture = nivel;
-                botonesNiveles[i].onClick.RemoveAllListeners();
-                botonesNiveles[i].onClick.AddListener(() => SeleccionarNivel(nCapture));
-
-                if (botonesNiveles[i].GetComponent<BotonArcadeEfecto>() == null && desbloqueado)
-                {
-                    botonesNiveles[i].gameObject.AddComponent<BotonArcadeEfecto>();
-                }
-
-                Image imgBtn = botonesNiveles[i].GetComponent<Image>();
-                if (imgBtn != null)
-                {
-                    imgBtn.color = desbloqueado ? Color.white : new Color(0.40f, 0.40f, 0.40f, 0.70f);
-                }
-            }
-
-            if (textosNiveles[i] != null)
-            {
-                if (desbloqueado)
-                {
-                    textosNiveles[i].text = $"{icono} <b>NIVEL {nivel}</b>\n<size=15>{nombreNivel}</size>\n<size=13><color=#00FFE0>♻ 15 Botellas</color></size>";
-                    textosNiveles[i].color = Color.white;
-                }
-                else
-                {
-                    textosNiveles[i].text = $"🔒 <b>NIVEL {nivel}</b>\n<size=14><color=#AAAAAA>BLOQUEADO</color></size>\n<size=12><color=#777777>Supera Nivel {nivel - 1}</color></size>";
-                    textosNiveles[i].color = new Color(0.7f, 0.7f, 0.7f, 0.8f);
-                }
-            }
-        }
+        ReproducirClick();
+        MostrarSoloInicio();
     }
 
-    // ==========================================
-    // TRANSICIÓN FLUIDA DE ESCENA
-    // ==========================================
-    private void IniciarCargaEscena(string nombreEscena)
+    private void ReproducirClick()
     {
-        if (estaTransicionando) return;
-        estaTransicionando = true;
-        Time.timeScale = 1f;
-        Debug.Log($"<color=#00FF88><b>[MENU]</b> Cargando escena: {nombreEscena}</color>");
-        SceneManager.LoadScene(nombreEscena);
+        if (AudioManager.Instancia != null)
+            AudioManager.Instancia.ReproducirSFX("click");
+    }
+
+    private void CargarEscenaSegura(string principal, string fallback)
+    {
+        if (Application.CanStreamedLevelBeLoaded(principal))
+            SceneManager.LoadScene(principal);
+        else if (Application.CanStreamedLevelBeLoaded(fallback))
+            SceneManager.LoadScene(fallback);
+        else
+            SceneManager.LoadScene(1);
+    }
+
+    private IEnumerator RutinaFlotarLogo()
+    {
+        if (rectLogo == null) yield break;
+        float t = 0f;
+        while (true)
+        {
+            t += Time.deltaTime * 2.2f;
+            float offY = Mathf.Sin(t) * 8f;
+            rectLogo.anchoredPosition = posOriginalLogo + new Vector2(0f, offY);
+            yield return null;
+        }
     }
 }

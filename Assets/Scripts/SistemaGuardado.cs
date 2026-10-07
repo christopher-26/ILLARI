@@ -107,4 +107,9 @@ public static class SistemaGuardado
         PlayerPrefs.DeleteKey(KEY_RESTAURAR_EN_CARGA);
         PlayerPrefs.Save();
     }
+
+    public static void ReiniciarPartida()
+    {
+        BorrarPartida();
+    }
 }

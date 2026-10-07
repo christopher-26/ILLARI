@@ -79,35 +79,31 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private float cadenciaDisparo = 2.5f;
 
     [SerializeField] private GameObject prefabBalaEnemiga;
-
     [SerializeField] private Transform puntoDisparo;
 
-
+    [Header("Sprites de Animación Flipbook")]
+    [SerializeField] private Sprite[] spritesCaminar;
+    [SerializeField] private Sprite[] spritesReposo;
+    [SerializeField] private Sprite[] spritesDisparo;
+    [SerializeField] private Sprite[] spritesDanio;
+    [SerializeField] private Sprite[] spritesMuerte;
 
     private Rigidbody2D rb;
-
     private Collider2D col;
-
     private SpriteRenderer spriteRenderer;
-
     private Transform transformJugador;
 
-
-
     private EstadoPatrulla estadoActual = EstadoPatrulla.Patrullando;
-
     private float direccionX = 1f;
-
     private float tiempoProximoDisparo = 0f;
-
     private Vector3 escalaInicial;
-
-
 
     private Transform transVisual;
     private bool estaMuerto = false;
-
-
+    private bool estaDisparando = false;
+    private bool estaEnDanio = false;
+    private float timerAnim = 0f;
+    private int indiceFrameAnim = 0;
 
     private void Awake()
 
@@ -210,7 +206,7 @@ public class EnemyManager : MonoBehaviour
 
 
         AnimarCaminataLodo();
-
+        ActualizarFlipbookSprites();
     }
 
 
@@ -531,100 +527,175 @@ public class EnemyManager : MonoBehaviour
 
 
 
-    private void DispararBalaEnemiga(Vector2 direccion)
-
+    private void ActualizarFlipbookSprites()
     {
+        if (spriteRenderer == null || estaMuerto || estaEnDanio || estaDisparando) return;
 
+        bool enMovimiento = (tipo == TipoEnemigo.Patrullero) && Mathf.Abs(rb.linearVelocity.x) > 0.05f;
+        Sprite[] grupoActivo = (enMovimiento && spritesCaminar != null && spritesCaminar.Length > 0) ? spritesCaminar : spritesReposo;
+
+        if (grupoActivo != null && grupoActivo.Length > 0)
+        {
+            float intervalo = enMovimiento ? 0.11f : 0.18f;
+            timerAnim += Time.deltaTime;
+            if (timerAnim >= intervalo)
+            {
+                timerAnim = 0f;
+                indiceFrameAnim = (indiceFrameAnim + 1) % grupoActivo.Length;
+                spriteRenderer.sprite = grupoActivo[indiceFrameAnim];
+            }
+        }
+    }
+
+    private void DispararBalaEnemiga(Vector2 direccion)
+    {
         if (estaMuerto) return;
 
+        if (spritesDisparo != null && spritesDisparo.Length > 0)
+        {
+            StartCoroutine(RutinaDisparoVisual(direccion));
+        }
+        else
+        {
+            EjecutarDisparoBala(direccion);
+        }
+    }
 
+    private System.Collections.IEnumerator RutinaDisparoVisual(Vector2 direccion)
+    {
+        estaDisparando = true;
+        int frameDisparo = Mathf.Max(1, spritesDisparo.Length / 2);
 
+        for (int i = 0; i < spritesDisparo.Length; i++)
+        {
+            if (estaMuerto) yield break;
+            if (spriteRenderer != null) spriteRenderer.sprite = spritesDisparo[i];
+            if (i == frameDisparo)
+            {
+                EjecutarDisparoBala(direccion);
+            }
+            yield return new WaitForSeconds(0.08f);
+        }
 
+        estaDisparando = false;
+    }
 
-        if (prefabBalaEnemiga == null) return;
-
-
+    private void EjecutarDisparoBala(Vector2 direccion)
+    {
+        if (prefabBalaEnemiga == null || estaMuerto) return;
 
         Vector2 origen = (puntoDisparo != null) ? (Vector2)puntoDisparo.position : (Vector2)transform.position + direccion * 0.7f;
-
         GameObject balaObj = Instantiate(prefabBalaEnemiga, origen, Quaternion.identity);
 
-
-
         Bala bala = balaObj.GetComponent<Bala>();
-
         if (bala != null)
-
         {
-
             bala.Inicializar(direccion, true);
-
         }
-
     }
-
-
 
     private void OnCollisionEnter2D(Collision2D collision)
-
     {
-
         if (tipo == TipoEnemigo.Patrullero && collision.gameObject.CompareTag("Player"))
-
         {
-
             IllariPlatformer jugador = collision.gameObject.GetComponent<IllariPlatformer>();
-
             if (jugador != null)
-
             {
-
                 jugador.RecibirDanio(danioContacto);
-
             }
-
         }
-
     }
 
-
-
     public void RecibirDanio(int cantidad)
-
     {
+        if (estaMuerto) return;
 
         salud -= cantidad;
-
-
+        AudioManager.Instancia?.ReproducirSFX("danio");
 
         if (salud <= 0)
-
         {
-
-            if (prefabBotellaDrop != null)
-
+            estaMuerto = true;
+            if (spritesMuerte != null && spritesMuerte.Length > 0)
             {
-
-                Instantiate(prefabBotellaDrop, transform.position + Vector3.up * 0.4f, Quaternion.identity);
-
+                StartCoroutine(RutinaMuerte());
             }
-
-
-
-            if (prefabEfectoMuerte != null)
-
+            else
             {
-
-                Instantiate(prefabEfectoMuerte, transform.position, Quaternion.identity);
-
+                FinalizarMuerte();
             }
+        }
+        else
+        {
+            if (spritesDanio != null && spritesDanio.Length > 0)
+            {
+                StartCoroutine(RutinaDanioVisual());
+            }
+        }
+    }
 
+    private System.Collections.IEnumerator RutinaDanioVisual()
+    {
+        estaEnDanio = true;
+        Color colOriginal = (spriteRenderer != null) ? spriteRenderer.color : Color.white;
 
-
-            Destroy(gameObject);
-
+        for (int i = 0; i < spritesDanio.Length; i++)
+        {
+            if (estaMuerto) yield break;
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.sprite = spritesDanio[i];
+                spriteRenderer.color = new Color(1f, 0.4f, 0.4f, 1f);
+            }
+            yield return new WaitForSeconds(0.12f);
         }
 
+        if (spriteRenderer != null) spriteRenderer.color = colOriginal;
+        estaEnDanio = false;
+    }
+
+    private System.Collections.IEnumerator RutinaMuerte()
+    {
+        estaMuerto = true;
+        rb.linearVelocity = Vector2.zero;
+        if (col != null) col.enabled = false;
+
+        for (int i = 0; i < spritesMuerte.Length; i++)
+        {
+            if (spriteRenderer != null) spriteRenderer.sprite = spritesMuerte[i];
+            yield return new WaitForSeconds(0.08f);
+        }
+
+        FinalizarMuerte();
+    }
+
+    private void FinalizarMuerte()
+    {
+        if (prefabBotellaDrop != null)
+        {
+            GameObject objBotella = Instantiate(prefabBotellaDrop, transform.position + Vector3.up * 0.4f, Quaternion.identity);
+            BotellaVidrio bv = objBotella.GetComponent<BotellaVidrio>();
+            if (bv != null)
+            {
+                bv.IniciarDropFisico(new Vector2(Random.Range(-0.8f, 0.8f), 4.2f));
+            }
+            else
+            {
+                Rigidbody2D rbDrop = objBotella.GetComponent<Rigidbody2D>();
+                if (rbDrop != null)
+                {
+                    rbDrop.bodyType = RigidbodyType2D.Dynamic;
+                    rbDrop.linearVelocity = new Vector2(Random.Range(-0.8f, 0.8f), 4.2f);
+                }
+            }
+        }
+
+        if (prefabEfectoMuerte != null)
+        {
+            Instantiate(prefabEfectoMuerte, transform.position, Quaternion.identity);
+        }
+
+        Destroy(gameObject);
     }
 
 }

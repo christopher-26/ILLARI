@@ -198,4 +198,38 @@ public class CharcoToxico : MonoBehaviour
             jugador.RecibirDanio(danio);
         }
     }
+
+    /// <summary>
+    /// Permite purificar y evaporar el charco tóxico con agua pura o bombas hidráulicas.
+    /// </summary>
+    public void RecibirAguaPurificadora(int cantidad = 1)
+    {
+        StartCoroutine(RutinaPurificar());
+    }
+
+    private System.Collections.IEnumerator RutinaPurificar()
+    {
+        if (col != null) col.enabled = false;
+        if (sr != null) sr.color = new Color(0.2f, 0.9f, 1f, 0.9f);
+
+        float duracion = 0.35f;
+        float elapsed = 0f;
+        Vector3 escalaInicial = transform.localScale;
+
+        while (elapsed < duracion)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / duracion;
+            transform.localScale = Vector3.Lerp(escalaInicial, new Vector3(escalaInicial.x, 0.05f, escalaInicial.z), t);
+            if (sr != null)
+            {
+                Color c = sr.color;
+                c.a = 1f - t;
+                sr.color = c;
+            }
+            yield return null;
+        }
+
+        Destroy(gameObject);
+    }
 }

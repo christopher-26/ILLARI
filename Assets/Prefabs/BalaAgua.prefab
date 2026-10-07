@@ -173,6 +173,11 @@ MonoBehaviour:
   tiempoDeVida: 3
   danio: 1
   esBalaEnemiga: 0
+  esMegaBala: 0
+  esPenetrante: 0
+  penetracionesRestantes: 3
+  esGranada: 0
+  radioExplosionArea: 2.6
   spritesGotaAgua:
   - {fileID: 21300000, guid: 6d0dce3ebf9f66143badb3ade7b6069a, type: 3}
   - {fileID: 21300000, guid: 0af0dcccd0a82a84398d7fa0a5199325, type: 3}

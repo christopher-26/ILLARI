@@ -26,21 +26,36 @@ public class EnemyFlyingManager : MonoBehaviour
     [SerializeField] private float rangoAtaqueVertical = 8f;
     [SerializeField] private GameObject prefabBalaBarro;
 
+    [Header("Sprites de Animación Flipbook")]
+    [SerializeField] private Sprite[] spritesVuelo;
+    [SerializeField] private Sprite[] spritesPicada;
+    [SerializeField] private Sprite[] spritesDanio;
+    [SerializeField] private Sprite[] spritesMuerte;
+
     private Rigidbody2D rb;
+    private Collider2D col;
     private Transform visualTrans;
+    private SpriteRenderer spriteRenderer;
     private Transform transformJugador;
     private Vector2 posicionInicial;
     private float direccionX = 1f;
     private float tiempoProximoDisparo = 0f;
+    private float timerAnim = 0f;
+    private int indiceFrameVuelo = 0;
+    private bool estaAtacando = false;
+    private bool estaEnDanio = false;
+    private bool estaMuerto = false;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Kinematic;
         rb.gravityScale = 0f;
+        col = GetComponent<Collider2D>();
 
         visualTrans = transform.Find("Visual");
         if (visualTrans == null) visualTrans = transform;
+        spriteRenderer = visualTrans.GetComponent<SpriteRenderer>();
         posicionInicial = transform.position;
     }
 
@@ -52,8 +67,27 @@ public class EnemyFlyingManager : MonoBehaviour
 
     private void Update()
     {
+        if (estaMuerto) return;
+
         PatrullaAerea();
         VerificarAtaqueVertical();
+        ActualizarFlipbookVuelo();
+    }
+
+    private void ActualizarFlipbookVuelo()
+    {
+        if (spriteRenderer == null || estaAtacando || estaEnDanio || estaMuerto) return;
+
+        if (spritesVuelo != null && spritesVuelo.Length > 0)
+        {
+            timerAnim += Time.deltaTime;
+            if (timerAnim >= 0.10f)
+            {
+                timerAnim = 0f;
+                indiceFrameVuelo = (indiceFrameVuelo + 1) % spritesVuelo.Length;
+                spriteRenderer.sprite = spritesVuelo[indiceFrameVuelo];
+            }
+        }
     }
 
     private void PatrullaAerea()
@@ -78,20 +112,45 @@ public class EnemyFlyingManager : MonoBehaviour
         float distHoriz = Mathf.Abs(transformJugador.position.x - transform.position.x);
         float distVert = transform.position.y - transformJugador.position.y;
 
-        // Si el jugador está directamente debajo
         if (distHoriz < 2.0f && distVert > 0f && distVert <= rangoAtaqueVertical)
         {
             if (Time.time >= tiempoProximoDisparo)
             {
                 tiempoProximoDisparo = Time.time + cadenciaDisparo;
-                DispararHaciaAbajo();
+                if (spritesPicada != null && spritesPicada.Length > 0)
+                {
+                    StartCoroutine(RutinaPicadaVisual());
+                }
+                else
+                {
+                    DispararHaciaAbajo();
+                }
             }
         }
     }
 
+    private IEnumerator RutinaPicadaVisual()
+    {
+        estaAtacando = true;
+        int frameDisparo = Mathf.Max(1, spritesPicada.Length / 2);
+
+        for (int i = 0; i < spritesPicada.Length; i++)
+        {
+            if (estaMuerto) yield break;
+            if (spriteRenderer != null) spriteRenderer.sprite = spritesPicada[i];
+            if (i == frameDisparo)
+            {
+                DispararHaciaAbajo();
+            }
+            yield return new WaitForSeconds(0.08f);
+        }
+
+        estaAtacando = false;
+    }
+
     private void DispararHaciaAbajo()
     {
-        if (prefabBalaBarro == null) return;
+        if (prefabBalaBarro == null || estaMuerto) return;
 
         GameObject bala = Instantiate(prefabBalaBarro, transform.position + Vector3.down * 0.6f, Quaternion.identity);
         Bala compBala = bala.GetComponent<Bala>();
@@ -108,27 +167,81 @@ public class EnemyFlyingManager : MonoBehaviour
 
     public void RecibirDanio(int cantidad = 1)
     {
+        if (estaMuerto) return;
+
         salud -= cantidad;
-        StartCoroutine(FlashDanio());
 
         if (salud <= 0)
         {
-            Morir();
+            estaMuerto = true;
+            if (spritesMuerte != null && spritesMuerte.Length > 0)
+            {
+                StartCoroutine(RutinaMuerteVolador());
+            }
+            else
+            {
+                FinalizarMuerteVolador();
+            }
         }
+        else
+        {
+            if (spritesDanio != null && spritesDanio.Length > 0)
+            {
+                StartCoroutine(RutinaDanioVisual());
+            }
+            else
+            {
+                StartCoroutine(FlashDanio());
+            }
+        }
+    }
+
+    private IEnumerator RutinaDanioVisual()
+    {
+        estaEnDanio = true;
+        Color colOriginal = (spriteRenderer != null) ? spriteRenderer.color : Color.white;
+
+        for (int i = 0; i < spritesDanio.Length; i++)
+        {
+            if (estaMuerto) yield break;
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.sprite = spritesDanio[i];
+                spriteRenderer.color = new Color(1f, 0.4f, 0.4f, 1f);
+            }
+            yield return new WaitForSeconds(0.12f);
+        }
+
+        if (spriteRenderer != null) spriteRenderer.color = colOriginal;
+        estaEnDanio = false;
     }
 
     private IEnumerator FlashDanio()
     {
-        SpriteRenderer sr = visualTrans.GetComponent<SpriteRenderer>();
-        if (sr != null)
+        if (spriteRenderer != null)
         {
-            sr.color = Color.cyan;
+            spriteRenderer.color = Color.cyan;
             yield return new WaitForSeconds(0.1f);
-            sr.color = Color.white;
+            spriteRenderer.color = Color.white;
         }
     }
 
-    private void Morir()
+    private IEnumerator RutinaMuerteVolador()
+    {
+        estaMuerto = true;
+        rb.linearVelocity = Vector2.zero;
+        if (col != null) col.enabled = false;
+
+        for (int i = 0; i < spritesMuerte.Length; i++)
+        {
+            if (spriteRenderer != null) spriteRenderer.sprite = spritesMuerte[i];
+            yield return new WaitForSeconds(0.08f);
+        }
+
+        FinalizarMuerteVolador();
+    }
+
+    private void FinalizarMuerteVolador()
     {
         if (prefabBotellaDrop != null)
         {

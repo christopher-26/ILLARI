@@ -16,8 +16,10 @@ public class ItemMejora : MonoBehaviour
     public enum TipoMejora
     {
         DisparoTriple,
+        LaserAgua,
+        BombaAgua,
         EscudoAcuatico,
-        DobleSalto,
+        SuperVelocidad,
         CuracionVida
     }
 
@@ -94,20 +96,28 @@ public class ItemMejora : MonoBehaviour
         switch (tipo)
         {
             case TipoMejora.DisparoTriple:
-                colorOrbe = new Color(0f, 0.95f, 1f, 0.85f); // Cian agua
+                colorOrbe = new Color(0f, 0.95f, 1f, 0.88f); // Cian agua
+                sprIcono = CargarSprite("IconoBotellaHUD");
+                break;
+            case TipoMejora.LaserAgua:
+                colorOrbe = new Color(0.1f, 0.45f, 1f, 0.92f); // Azul eléctrico zafiro
+                sprIcono = CargarSprite("IconoBotellaHUD");
+                break;
+            case TipoMejora.BombaAgua:
+                colorOrbe = new Color(1f, 0.55f, 0.1f, 0.92f); // Ámbar explosivo
                 sprIcono = CargarSprite("IconoBotellaHUD");
                 break;
             case TipoMejora.EscudoAcuatico:
-                colorOrbe = new Color(0.2f, 0.6f, 1f, 0.85f); // Azul zafiro
+                colorOrbe = new Color(0.2f, 0.75f, 1f, 0.85f); // Azul burbuja protectora
                 sprIcono = CargarSprite("IconoBotellaHUD");
                 break;
-            case TipoMejora.DobleSalto:
-                colorOrbe = new Color(1f, 0.85f, 0.2f, 0.85f); // Dorado brillante
+            case TipoMejora.SuperVelocidad:
+                colorOrbe = new Color(1f, 0.85f, 0.15f, 0.90f); // Dorado turbo
                 sprIcono = CargarSprite("IconoBotellaHUD");
                 break;
             case TipoMejora.CuracionVida:
             default:
-                colorOrbe = new Color(0.2f, 1f, 0.4f, 0.85f); // Verde esmeralda curativo
+                colorOrbe = new Color(0.2f, 1f, 0.4f, 0.88f); // Verde esmeralda curativo
                 sprIcono = CargarSprite("CorazonLleno");
                 break;
         }
@@ -196,6 +206,7 @@ public class ItemMejora : MonoBehaviour
         if (jugador == null) return;
 
         recolectado = true;
+        AudioManager.Instancia?.ReproducirSFX("purificacion");
         AplicarMejora(jugador);
         StartCoroutine(RutinaEfectoRecoleccion());
     }
@@ -208,7 +219,23 @@ public class ItemMejora : MonoBehaviour
                 jugador.ActivarPoderDisparoTriple(cantidadMunicion);
                 if (GameManagerIyari.Instancia != null)
                 {
-                    GameManagerIyari.Instancia.MostrarMensajeAviso("💦 ¡DISPARO TRIPLE OBTENIDO!\nRáfaga en abanico para limpiar grupos de monstruos.");
+                    GameManagerIyari.Instancia.MostrarMensajeAviso("¡DISPARO TRIPLE OBTENIDO!\nRáfaga en abanico (x30) para limpiar grupos de monstruos.");
+                }
+                break;
+
+            case TipoMejora.LaserAgua:
+                jugador.ActivarPoderLaserAgua(25);
+                if (GameManagerIyari.Instancia != null)
+                {
+                    GameManagerIyari.Instancia.MostrarMensajeAviso("¡LÁSER PURIFICADOR OBTENIDO!\nChorro penetrante continuo de alta presión (x25).");
+                }
+                break;
+
+            case TipoMejora.BombaAgua:
+                jugador.ActivarPoderBombaAgua(15);
+                if (GameManagerIyari.Instancia != null)
+                {
+                    GameManagerIyari.Instancia.MostrarMensajeAviso("¡BOMBA HIDRÁULICA OBTENIDA!\nGranada con arco parabólico que detona en área purificando lodo (x15).");
                 }
                 break;
 
@@ -216,15 +243,15 @@ public class ItemMejora : MonoBehaviour
                 jugador.ActivarEscudoAcuatico();
                 if (GameManagerIyari.Instancia != null)
                 {
-                    GameManagerIyari.Instancia.MostrarMensajeAviso("🛡 ¡ESCUDO ACUÁTICO ACTIVADO!\nInmunidad contra charcos tóxicos y absorbe 1 impacto.");
+                    GameManagerIyari.Instancia.MostrarMensajeAviso("¡ESCUDO ACUÁTICO ACTIVADO!\nInmunidad contra charcos tóxicos y absorbe 1 impacto.");
                 }
                 break;
 
-            case TipoMejora.DobleSalto:
-                jugador.ActivarDobleSalto();
+            case TipoMejora.SuperVelocidad:
+                jugador.ActivarSuperVelocidad(20f);
                 if (GameManagerIyari.Instancia != null)
                 {
-                    GameManagerIyari.Instancia.MostrarMensajeAviso("🦘 ¡BOTAS HIDRÁULICAS ACTIVADAS!\nSalto acrobático doble para alcanzar plataformas altas.");
+                    GameManagerIyari.Instancia.MostrarMensajeAviso("¡TURBO ACUÁTICO ACTIVADO!\nVelocidad +35% y salto potenciado durante 20 segundos.");
                 }
                 break;
 
@@ -232,7 +259,7 @@ public class ItemMejora : MonoBehaviour
                 if (GameManagerIyari.Instancia != null)
                 {
                     GameManagerIyari.Instancia.ModificarVida(1);
-                    GameManagerIyari.Instancia.MostrarMensajeAviso("💖 ¡VIDA PURIFICADA!\n+1 Corazón de salud restaurado.");
+                    GameManagerIyari.Instancia.MostrarMensajeAviso("¡VIDA PURIFICADA!\n+1 Corazón de salud restaurado.");
                 }
                 break;
         }
