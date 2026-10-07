@@ -9363,6 +9363,7 @@ MonoBehaviour:
   textoBotellasLegacy: {fileID: 0}
   textoBotellasTMP: {fileID: 1211730327}
   textoPoderLegacy: {fileID: 0}
+  textoPoderTMP: {fileID: 1564375301}
   textoNivelLegacy: {fileID: 0}
   textoNivelTMP: {fileID: 1701140096}
   panelAviso: {fileID: 75593941}
