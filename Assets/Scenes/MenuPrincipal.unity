@@ -1864,6 +1864,8 @@ MonoBehaviour:
   audioSourceSFX: {fileID: 456988524}
   musicaMenu: {fileID: 8300000, guid: 563388de14c9ec04886e239cbe92784f, type: 3}
   musicaNivel1: {fileID: 0}
+  musicaNivel2: {fileID: 8300000, guid: 80802b3acd6bd354db2a0e101be4c404, type: 3}
+  musicaNivel3: {fileID: 8300000, guid: d2a701b9b89f5db4e80e804619f62d58, type: 3}
   musicaNivelIdentidad: {fileID: 8300000, guid: b4dbde3c1f4342a4c9e1e8c1f8ddf550, type: 3}
   musicaNivelCerrito: {fileID: 8300000, guid: 4e86da570c2a48449b6cacf6bd14e810, type: 3}
   musicaNivelBosqueDorado: {fileID: 8300000, guid: daa52c6ab5f79cc4fb07320cca797f5e, type: 3}
@@ -5695,7 +5697,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1123740086
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5998,7 +6000,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1171843622
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6805,7 +6807,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1376811326
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7160,7 +7162,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1455695213
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8539,7 +8541,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1831119611
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8708,7 +8710,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1881466682
 RectTransform:
   m_ObjectHideFlags: 0

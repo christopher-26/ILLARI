@@ -17,22 +17,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nivel3_ParqueTupacAmaru.unity
     guid: 92708b8848e9113459c90440adb14566
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Nivel4_ParqueSombreros.unity
     guid: bf77e9208f3a12b47a6a96ebf1c98331
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Nivel5_PlazaConstitucion.unity
     guid: 0736350bc9f18774c95a1f2bc2f53a1f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Nivel6_BosqueDorado.unity
     guid: 50e3bb6ed8dcdc049bcc5c795b2cea88
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Nivel7_RioShullcas.unity
     guid: 39d249a3dbc8ca641921403cb9ca687c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Nivel8_TorreTorre.unity
     guid: 55bbc9bec1e19d947b33835dd7b3625b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Nivel9_NevadoHuaytapallana.unity
     guid: e1dc67cbedb27be4ab46fc824387c9cd
   m_configObjects:

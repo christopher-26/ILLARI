@@ -22,6 +22,8 @@ public class AudioManager : MonoBehaviour
     [Header("Banda Sonora por Niveles de Huancayo")]
     [SerializeField] private AudioClip musicaMenu;
     [SerializeField] private AudioClip musicaNivel1;
+    [SerializeField] private AudioClip musicaNivel2;
+    [SerializeField] private AudioClip musicaNivel3;
     [SerializeField] private AudioClip musicaNivelIdentidad;
     [SerializeField] private AudioClip musicaNivelCerrito;
     [SerializeField] private AudioClip musicaNivelBosqueDorado;
@@ -135,6 +137,20 @@ public class AudioManager : MonoBehaviour
         if (musicaNivel1 == null)
             musicaNivel1 = UnityEditor.AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audio/Music/Musica_NivelBosqueDorado.wav");
 
+        if (musicaNivel2 == null)
+            musicaNivel2 = UnityEditor.AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audio/Music/MusicaNivel2.mp3");
+        if (musicaNivel2 == null)
+            musicaNivel2 = UnityEditor.AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audio/Music/Nivel2.mp3");
+        if (musicaNivel2 == null)
+            musicaNivel2 = UnityEditor.AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audio/Music/Musica_NivelCerrito.wav");
+
+        if (musicaNivel3 == null)
+            musicaNivel3 = UnityEditor.AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audio/Music/MusicaNivel3.mp3");
+        if (musicaNivel3 == null)
+            musicaNivel3 = UnityEditor.AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audio/Music/Nivel3.mp3");
+        if (musicaNivel3 == null)
+            musicaNivel3 = UnityEditor.AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audio/Music/Musica_NivelBosqueDorado.wav");
+
         if (musicaNivelIdentidad == null)
             musicaNivelIdentidad = UnityEditor.AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audio/Music/Nivel1.mp3");
         if (musicaNivelIdentidad == null)
@@ -229,13 +245,25 @@ public class AudioManager : MonoBehaviour
         {
             ReproducirMusicaPista("TorreTorre", musicaNivelTorreTorre != null ? musicaNivelTorreTorre : ObtenerProcedural("Musica_TorreTorre"));
         }
-        else if (nombre.Contains("Nivel3") || nombre.Contains("Nivel6") || nombre.Contains("Nivel7") || nombre.Contains("Bosque") || nombre.Contains("Shullcas") || nombre.Contains("Tupac"))
+        else if (nombre.Contains("Nivel2") || nombre.Contains("Cerrito"))
+        {
+            // Nivel 2: Cerrito de la Libertad
+            AudioClip clipNivel2 = musicaNivel2 != null ? musicaNivel2 : (musicaNivelCerrito != null ? musicaNivelCerrito : ObtenerProcedural("Musica_Cerrito"));
+            ReproducirMusicaPista("Nivel2", clipNivel2);
+        }
+        else if (nombre.Contains("Nivel3") || nombre.Contains("Tupac") || nombre.Contains("Shullcas"))
+        {
+            // Nivel 3: Parque Túpac Amaru / Bosque Ribereño Río Shullcas
+            AudioClip clipNivel3 = musicaNivel3 != null ? musicaNivel3 : (musicaNivelBosqueDorado != null ? musicaNivelBosqueDorado : ObtenerProcedural("Musica_BosqueDorado"));
+            ReproducirMusicaPista("Nivel3", clipNivel3);
+        }
+        else if (nombre.Contains("Nivel6") || nombre.Contains("Bosque"))
         {
             ReproducirMusicaPista("BosqueDorado", musicaNivelBosqueDorado != null ? musicaNivelBosqueDorado : ObtenerProcedural("Musica_BosqueDorado"));
         }
-        else if (nombre.Contains("Nivel2") || nombre.Contains("Nivel4") || nombre.Contains("Cerrito") || nombre.Contains("Sombreros"))
+        else if (nombre.Contains("Nivel4") || nombre.Contains("Sombreros"))
         {
-            ReproducirMusicaPista("Cerrito", musicaNivelCerrito != null ? musicaNivelCerrito : ObtenerProcedural("Musica_Cerrito"));
+            ReproducirMusicaPista("Sombreros", musicaNivelCerrito != null ? musicaNivelCerrito : ObtenerProcedural("Musica_Cerrito"));
         }
         else
         {

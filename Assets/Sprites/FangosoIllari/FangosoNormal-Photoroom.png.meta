@@ -1,0 +1,2288 @@
+fileFormatVersion: 2
+guid: e7606ea634d1af648ab6a3683d7a54ff
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5475972678757070095
+    second: FangosoNormal-Photoroom_0
+  - first:
+      213: -8636637358332178054
+    second: FangosoNormal-Photoroom_1
+  - first:
+      213: -2255510507923712112
+    second: FangosoNormal-Photoroom_2
+  - first:
+      213: 5929973701960719833
+    second: FangosoNormal-Photoroom_3
+  - first:
+      213: -952978759230351541
+    second: FangosoNormal-Photoroom_4
+  - first:
+      213: 6394135707424346627
+    second: FangosoNormal-Photoroom_5
+  - first:
+      213: 2717710099554824832
+    second: FangosoNormal-Photoroom_6
+  - first:
+      213: -5803296135935907775
+    second: FangosoNormal-Photoroom_7
+  - first:
+      213: 6786292962392797225
+    second: FangosoNormal-Photoroom_8
+  - first:
+      213: -3041394552164579328
+    second: FangosoNormal-Photoroom_9
+  - first:
+      213: 5328425770612836983
+    second: FangosoNormal-Photoroom_10
+  - first:
+      213: -6038761077264438226
+    second: FangosoNormal-Photoroom_11
+  - first:
+      213: -1803678067576608800
+    second: FangosoNormal-Photoroom_12
+  - first:
+      213: -8600388305406155262
+    second: FangosoNormal-Photoroom_13
+  - first:
+      213: 2962123191796773198
+    second: FangosoNormal-Photoroom_14
+  - first:
+      213: 1857133824003802281
+    second: FangosoNormal-Photoroom_15
+  - first:
+      213: -434403525347772594
+    second: FangosoNormal-Photoroom_16
+  - first:
+      213: 7884334658088715545
+    second: FangosoNormal-Photoroom_17
+  - first:
+      213: -5445634537522186889
+    second: FangosoNormal-Photoroom_18
+  - first:
+      213: -7693839363939419362
+    second: FangosoNormal-Photoroom_19
+  - first:
+      213: 2920118855140550119
+    second: FangosoNormal-Photoroom_20
+  - first:
+      213: 986011081752195525
+    second: FangosoNormal-Photoroom_21
+  - first:
+      213: -20549135082818138
+    second: FangosoNormal-Photoroom_22
+  - first:
+      213: -494145713416998918
+    second: FangosoNormal-Photoroom_23
+  - first:
+      213: -442832287892733774
+    second: FangosoNormal-Photoroom_24
+  - first:
+      213: 6098415129128730842
+    second: FangosoNormal-Photoroom_25
+  - first:
+      213: -5119567659303562803
+    second: FangosoNormal-Photoroom_26
+  - first:
+      213: -4811206554574718642
+    second: FangosoNormal-Photoroom_27
+  - first:
+      213: -7292248858242245346
+    second: FangosoNormal-Photoroom_28
+  - first:
+      213: 8846607980507285886
+    second: FangosoNormal-Photoroom_29
+  - first:
+      213: -8457095185335482753
+    second: FangosoNormal-Photoroom_30
+  - first:
+      213: -5664666434438152910
+    second: FangosoNormal-Photoroom_31
+  - first:
+      213: -5054472805816712861
+    second: FangosoNormal-Photoroom_32
+  - first:
+      213: 268882378513213934
+    second: FangosoNormal-Photoroom_33
+  - first:
+      213: -6321651396264102515
+    second: FangosoNormal-Photoroom_34
+  - first:
+      213: 4764985550352304017
+    second: FangosoNormal-Photoroom_35
+  - first:
+      213: -3376063585581450957
+    second: FangosoNormal-Photoroom_36
+  - first:
+      213: 6861610409544024178
+    second: FangosoNormal-Photoroom_37
+  - first:
+      213: 1671028017734375963
+    second: FangosoNormal-Photoroom_38
+  - first:
+      213: 5546023418813472448
+    second: FangosoNormal-Photoroom_39
+  - first:
+      213: 3159811960392278970
+    second: FangosoNormal-Photoroom_40
+  - first:
+      213: -7015116361794246849
+    second: FangosoNormal-Photoroom_41
+  - first:
+      213: -7935606219456175513
+    second: FangosoNormal-Photoroom_42
+  - first:
+      213: -7546548297148534386
+    second: FangosoNormal-Photoroom_43
+  - first:
+      213: 5019976382466668159
+    second: FangosoNormal-Photoroom_44
+  - first:
+      213: 8823645737908582022
+    second: FangosoNormal-Photoroom_45
+  - first:
+      213: 5340905280608631949
+    second: FangosoNormal-Photoroom_46
+  - first:
+      213: -886459856675810889
+    second: FangosoNormal-Photoroom_47
+  - first:
+      213: 3200546689299960961
+    second: FangosoNormal-Photoroom_48
+  - first:
+      213: -2340340203933206205
+    second: FangosoNormal-Photoroom_49
+  - first:
+      213: 5069682462764470102
+    second: FangosoNormal-Photoroom_50
+  - first:
+      213: 2977567678761893442
+    second: FangosoNormal-Photoroom_51
+  - first:
+      213: -8944314864393943060
+    second: FangosoNormal-Photoroom_52
+  - first:
+      213: 553255339210098912
+    second: FangosoNormal-Photoroom_53
+  - first:
+      213: 802647086211824523
+    second: FangosoNormal-Photoroom_54
+  - first:
+      213: 2947579404180013119
+    second: FangosoNormal-Photoroom_55
+  - first:
+      213: 4357698871401159185
+    second: FangosoNormal-Photoroom_56
+  - first:
+      213: -1820453900321730829
+    second: FangosoNormal-Photoroom_57
+  - first:
+      213: -6049367444586514256
+    second: FangosoNormal-Photoroom_58
+  - first:
+      213: -7062702128347529642
+    second: FangosoNormal-Photoroom_59
+  - first:
+      213: -8344230940225795859
+    second: FangosoNormal-Photoroom_60
+  - first:
+      213: -1544187346442651220
+    second: FangosoNormal-Photoroom_61
+  - first:
+      213: -3187982099420131047
+    second: FangosoNormal-Photoroom_62
+  - first:
+      213: 3180209109130082871
+    second: FangosoNormal-Photoroom_63
+  - first:
+      213: -6198404112974809166
+    second: FangosoNormal-Photoroom_64
+  - first:
+      213: -4214535467636344979
+    second: FangosoNormal-Photoroom_65
+  - first:
+      213: 9132005211123689292
+    second: FangosoNormal-Photoroom_66
+  - first:
+      213: 4772453126165504209
+    second: FangosoNormal-Photoroom_67
+  - first:
+      213: 4830586325286992831
+    second: FangosoNormal-Photoroom_68
+  - first:
+      213: -4152654403294140578
+    second: FangosoNormal-Photoroom_69
+  - first:
+      213: -5455003806493598949
+    second: FangosoNormal-Photoroom_70
+  - first:
+      213: 4584374600463548192
+    second: FangosoNormal-Photoroom_71
+  - first:
+      213: -7164769959938911276
+    second: FangosoNormal-Photoroom_72
+  - first:
+      213: 747090182434598357
+    second: FangosoNormal-Photoroom_73
+  - first:
+      213: -2281866612525544108
+    second: FangosoNormal-Photoroom_74
+  - first:
+      213: 3949996150506788028
+    second: FangosoNormal-Photoroom_75
+  - first:
+      213: -8887198237497259541
+    second: FangosoNormal-Photoroom_76
+  - first:
+      213: -3539190087419656047
+    second: FangosoNormal-Photoroom_77
+  - first:
+      213: -2425467476371618865
+    second: FangosoNormal-Photoroom_78
+  - first:
+      213: 5937695493388458702
+    second: FangosoNormal-Photoroom_79
+  - first:
+      213: 2168125600210268748
+    second: FangosoNormal-Photoroom_80
+  - first:
+      213: -8807638724458200993
+    second: FangosoNormal-Photoroom_81
+  - first:
+      213: 1355556488944125232
+    second: FangosoNormal-Photoroom_82
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 7
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 883
+        width: 270
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fac0f29cdf6104b0800000000000000
+      internalID: -5475972678757070095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_1
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 863
+        width: 25
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a711ebad410842880800000000000000
+      internalID: -8636637358332178054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_2
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 682
+        width: 250
+        height: 203
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 097db0ca421d2b0e0800000000000000
+      internalID: -2255510507923712112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_3
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 682
+        width: 244
+        height: 207
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ddd6c0e9af7b4250800000000000000
+      internalID: 5929973701960719833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 682
+        width: 466
+        height: 259
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4715991ed656c2f0800000000000000
+      internalID: -952978759230351541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_5
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 871
+        width: 24
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3025bae5c888cb850800000000000000
+      internalID: 6394135707424346627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_6
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 682
+        width: 233
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 082f47ebfee37b520800000000000000
+      internalID: 2717710099554824832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_7
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 813
+        width: 19
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 148a42b59ec867fa0800000000000000
+      internalID: -5803296135935907775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_8
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 777
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 920f7257e71cd2e50800000000000000
+      internalID: 6786292962392797225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_9
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 773
+        width: 17
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0080c60d4cbcac5d0800000000000000
+      internalID: -3041394552164579328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_10
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 778
+        width: 15
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77a4a65d10f52f940800000000000000
+      internalID: 5328425770612836983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_11
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 751
+        width: 11
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2ca2328bc2023ca0800000000000000
+      internalID: -6038761077264438226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_12
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 618
+        width: 392
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e7eee49a5c08f6e0800000000000000
+      internalID: -1803678067576608800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_13
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 464
+        width: 291
+        height: 179
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 206a7dd276845a880800000000000000
+      internalID: -8600388305406155262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_14
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 464
+        width: 291
+        height: 179
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e413ef359539b1920800000000000000
+      internalID: 2962123191796773198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_15
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 464
+        width: 267
+        height: 177
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a40c189f5dd5c910800000000000000
+      internalID: 1857133824003802281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_16
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 558
+        width: 13
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e47f7769b40b8f9f0800000000000000
+      internalID: -434403525347772594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_17
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 514
+        width: 11
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 915cda93998ca6d60800000000000000
+      internalID: 7884334658088715545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_18
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 514
+        width: 16
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77534668d383d64b0800000000000000
+      internalID: -5445634537522186889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_19
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 514
+        width: 11
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1b3979bcddf93590800000000000000
+      internalID: -7693839363939419362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_20
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 527
+        width: 17
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e5a29690a8568820800000000000000
+      internalID: 2920118855140550119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_21
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 477
+        width: 18
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c13070dad30fad00800000000000000
+      internalID: 986011081752195525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_22
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 409
+        width: 388
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a572f6abaef6bff0800000000000000
+      internalID: -20549135082818138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_23
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 252
+        width: 245
+        height: 168
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aff6f7c77117429f0800000000000000
+      internalID: -494145713416998918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_24
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 251
+        width: 334
+        height: 170
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b08411616ebad9f0800000000000000
+      internalID: -442832287892733774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_25
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 389
+        width: 25
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad00698cf3ce1a450800000000000000
+      internalID: 6098415129128730842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_26
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 245
+        width: 259
+        height: 191
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc112a7a654a3f8b0800000000000000
+      internalID: -5119567659303562803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_27
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 393
+        width: 27
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e49fa8521292b3db0800000000000000
+      internalID: -4811206554574718642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_28
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 373
+        width: 32
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1d19b6ac4abcca90800000000000000
+      internalID: -7292248858242245346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_29
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 379
+        width: 14
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e79c541461775ca70800000000000000
+      internalID: 8846607980507285886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_30
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 383
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f76896e8cbc52aa80800000000000000
+      internalID: -8457095185335482753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_31
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 379
+        width: 21
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23d3c3cf3ef0361b0800000000000000
+      internalID: -5664666434438152910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_32
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 377
+        width: 10
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3614c6a43c7ead9b0800000000000000
+      internalID: -5054472805816712861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_33
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 291
+        width: 173
+        height: 104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee964a149134bb300800000000000000
+      internalID: 268882378513213934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_34
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 380
+        width: 29
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8573d37c8bf448a0800000000000000
+      internalID: -6321651396264102515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_35
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 382
+        width: 9
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1974e90bc11a02240800000000000000
+      internalID: 4764985550352304017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_36
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 352
+        width: 18
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 339394a5e00d521d0800000000000000
+      internalID: -3376063585581450957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_37
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 354
+        width: 27
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2708ef72056593f50800000000000000
+      internalID: 6861610409544024178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_38
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 360
+        width: 14
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1a58cee02fa03710800000000000000
+      internalID: 1671028017734375963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_39
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 327
+        width: 27
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cedf525aee67fc40800000000000000
+      internalID: 5546023418813472448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_40
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 343
+        width: 10
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab366309c38e9db20800000000000000
+      internalID: 3159811960392278970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_41
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 320
+        width: 6
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f37293d26dc45ae90800000000000000
+      internalID: -7015116361794246849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_42
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 317
+        width: 34
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7622fe320301fd190800000000000000
+      internalID: -7935606219456175513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_43
+      rect:
+        serializedVersion: 2
+        x: 1507
+        y: 323
+        width: 20
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e81f12c9e46454790800000000000000
+      internalID: -7546548297148534386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_44
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 304
+        width: 10
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f76b6c14ce98aa540800000000000000
+      internalID: 5019976382466668159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_45
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 303
+        width: 11
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6863ee78c03e37a70800000000000000
+      internalID: 8823645737908582022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_46
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 299
+        width: 33
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8c7fad2e05be1a40800000000000000
+      internalID: 5340905280608631949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_47
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 313
+        width: 12
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b1d13ff479a2b3f0800000000000000
+      internalID: -886459856675810889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_48
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 301
+        width: 21
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 184d6c6b140aa6c20800000000000000
+      internalID: 3200546689299960961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_49
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 304
+        width: 11
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 349fef2fbf0758fd0800000000000000
+      internalID: -2340340203933206205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_50
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 265
+        width: 16
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65f8a1de6512b5640800000000000000
+      internalID: 5069682462764470102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_51
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 266
+        width: 16
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24e794b2702725920800000000000000
+      internalID: 2977567678761893442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_52
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 259
+        width: 21
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce78d8415096fd380800000000000000
+      internalID: -8944314864393943060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 401
+        height: 250
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e8c4bbbcce8da700800000000000000
+      internalID: 553255339210098912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_54
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 22
+        width: 252
+        height: 184
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8b78a5b543932b00800000000000000
+      internalID: 802647086211824523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_55
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 203
+        width: 15
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f304865e9d7e7e820800000000000000
+      internalID: 2947579404180013119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_56
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 194
+        width: 21
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11a9cf31908a97c30800000000000000
+      internalID: 4357698871401159185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_57
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 194
+        width: 15
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fe4955a2d27cb6e0800000000000000
+      internalID: -1820453900321730829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_58
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 19
+        width: 268
+        height: 183
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b8bb9d2c545c0ca0800000000000000
+      internalID: -6049367444586514256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_59
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 155
+        width: 33
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65e337585dd3cfd90800000000000000
+      internalID: -7062702128347529642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_60
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 175
+        width: 23
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de884046b26533c80800000000000000
+      internalID: -8344230940225795859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_61
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 180
+        width: 11
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca9f1a43ac1f19ae0800000000000000
+      internalID: -1544187346442651220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_62
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 178
+        width: 11
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91152c5db2302c3d0800000000000000
+      internalID: -3187982099420131047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_63
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 181
+        width: 15
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73af825d55f522c20800000000000000
+      internalID: 3180209109130082871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_64
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 154
+        width: 29
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b7f0dfbc48daf9a0800000000000000
+      internalID: -6198404112974809166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_65
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 133
+        width: 30
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d67304e5256f285c0800000000000000
+      internalID: -4214535467636344979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_66
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 140
+        width: 6
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c472b082b566bbe70800000000000000
+      internalID: 9132005211123689292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_67
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 143
+        width: 21
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d02c4c25d82b3240800000000000000
+      internalID: 4772453126165504209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_68
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 19
+        width: 275
+        height: 159
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbb37975ba0b90340800000000000000
+      internalID: 4830586325286992831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_69
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 139
+        width: 27
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e57e0b862dece56c0800000000000000
+      internalID: -4152654403294140578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_70
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 143
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1b9b8990feeb44b0800000000000000
+      internalID: -5455003806493598949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_71
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 121
+        width: 26
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02ff3f9f868fe9f30800000000000000
+      internalID: 4584374600463548192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_72
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 118
+        width: 12
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d393789eaf919c90800000000000000
+      internalID: -7164769959938911276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_73
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 122
+        width: 13
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dd223b00923e5a00800000000000000
+      internalID: 747090182434598357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_74
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 92
+        width: 42
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45d479fd76e2550e0800000000000000
+      internalID: -2281866612525544108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_75
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 108
+        width: 18
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb41e17229431d630800000000000000
+      internalID: 3949996150506788028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_76
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 94
+        width: 19
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be98f751a445aa480800000000000000
+      internalID: -8887198237497259541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_77
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 88
+        width: 13
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19884ceed5542eec0800000000000000
+      internalID: -3539190087419656047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_78
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 0
+        width: 415
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc34b905e22075ed0800000000000000
+      internalID: -2425467476371618865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_79
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 85
+        width: 31
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eca5bdb879ee66250800000000000000
+      internalID: 5937695493388458702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_80
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 56
+        width: 28
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c42b6f40fbab61e10800000000000000
+      internalID: 2168125600210268748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_81
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 47
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f50c1b6be3bf4c580800000000000000
+      internalID: -8807638724458200993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoNormal-Photoroom_82
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 40
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0358d74d177efc210800000000000000
+      internalID: 1355556488944125232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FangosoNormal-Photoroom_0: -5475972678757070095
+      FangosoNormal-Photoroom_1: -8636637358332178054
+      FangosoNormal-Photoroom_10: 5328425770612836983
+      FangosoNormal-Photoroom_11: -6038761077264438226
+      FangosoNormal-Photoroom_12: -1803678067576608800
+      FangosoNormal-Photoroom_13: -8600388305406155262
+      FangosoNormal-Photoroom_14: 2962123191796773198
+      FangosoNormal-Photoroom_15: 1857133824003802281
+      FangosoNormal-Photoroom_16: -434403525347772594
+      FangosoNormal-Photoroom_17: 7884334658088715545
+      FangosoNormal-Photoroom_18: -5445634537522186889
+      FangosoNormal-Photoroom_19: -7693839363939419362
+      FangosoNormal-Photoroom_2: -2255510507923712112
+      FangosoNormal-Photoroom_20: 2920118855140550119
+      FangosoNormal-Photoroom_21: 986011081752195525
+      FangosoNormal-Photoroom_22: -20549135082818138
+      FangosoNormal-Photoroom_23: -494145713416998918
+      FangosoNormal-Photoroom_24: -442832287892733774
+      FangosoNormal-Photoroom_25: 6098415129128730842
+      FangosoNormal-Photoroom_26: -5119567659303562803
+      FangosoNormal-Photoroom_27: -4811206554574718642
+      FangosoNormal-Photoroom_28: -7292248858242245346
+      FangosoNormal-Photoroom_29: 8846607980507285886
+      FangosoNormal-Photoroom_3: 5929973701960719833
+      FangosoNormal-Photoroom_30: -8457095185335482753
+      FangosoNormal-Photoroom_31: -5664666434438152910
+      FangosoNormal-Photoroom_32: -5054472805816712861
+      FangosoNormal-Photoroom_33: 268882378513213934
+      FangosoNormal-Photoroom_34: -6321651396264102515
+      FangosoNormal-Photoroom_35: 4764985550352304017
+      FangosoNormal-Photoroom_36: -3376063585581450957
+      FangosoNormal-Photoroom_37: 6861610409544024178
+      FangosoNormal-Photoroom_38: 1671028017734375963
+      FangosoNormal-Photoroom_39: 5546023418813472448
+      FangosoNormal-Photoroom_4: -952978759230351541
+      FangosoNormal-Photoroom_40: 3159811960392278970
+      FangosoNormal-Photoroom_41: -7015116361794246849
+      FangosoNormal-Photoroom_42: -7935606219456175513
+      FangosoNormal-Photoroom_43: -7546548297148534386
+      FangosoNormal-Photoroom_44: 5019976382466668159
+      FangosoNormal-Photoroom_45: 8823645737908582022
+      FangosoNormal-Photoroom_46: 5340905280608631949
+      FangosoNormal-Photoroom_47: -886459856675810889
+      FangosoNormal-Photoroom_48: 3200546689299960961
+      FangosoNormal-Photoroom_49: -2340340203933206205
+      FangosoNormal-Photoroom_5: 6394135707424346627
+      FangosoNormal-Photoroom_50: 5069682462764470102
+      FangosoNormal-Photoroom_51: 2977567678761893442
+      FangosoNormal-Photoroom_52: -8944314864393943060
+      FangosoNormal-Photoroom_53: 553255339210098912
+      FangosoNormal-Photoroom_54: 802647086211824523
+      FangosoNormal-Photoroom_55: 2947579404180013119
+      FangosoNormal-Photoroom_56: 4357698871401159185
+      FangosoNormal-Photoroom_57: -1820453900321730829
+      FangosoNormal-Photoroom_58: -6049367444586514256
+      FangosoNormal-Photoroom_59: -7062702128347529642
+      FangosoNormal-Photoroom_6: 2717710099554824832
+      FangosoNormal-Photoroom_60: -8344230940225795859
+      FangosoNormal-Photoroom_61: -1544187346442651220
+      FangosoNormal-Photoroom_62: -3187982099420131047
+      FangosoNormal-Photoroom_63: 3180209109130082871
+      FangosoNormal-Photoroom_64: -6198404112974809166
+      FangosoNormal-Photoroom_65: -4214535467636344979
+      FangosoNormal-Photoroom_66: 9132005211123689292
+      FangosoNormal-Photoroom_67: 4772453126165504209
+      FangosoNormal-Photoroom_68: 4830586325286992831
+      FangosoNormal-Photoroom_69: -4152654403294140578
+      FangosoNormal-Photoroom_7: -5803296135935907775
+      FangosoNormal-Photoroom_70: -5455003806493598949
+      FangosoNormal-Photoroom_71: 4584374600463548192
+      FangosoNormal-Photoroom_72: -7164769959938911276
+      FangosoNormal-Photoroom_73: 747090182434598357
+      FangosoNormal-Photoroom_74: -2281866612525544108
+      FangosoNormal-Photoroom_75: 3949996150506788028
+      FangosoNormal-Photoroom_76: -8887198237497259541
+      FangosoNormal-Photoroom_77: -3539190087419656047
+      FangosoNormal-Photoroom_78: -2425467476371618865
+      FangosoNormal-Photoroom_79: 5937695493388458702
+      FangosoNormal-Photoroom_8: 6786292962392797225
+      FangosoNormal-Photoroom_80: 2168125600210268748
+      FangosoNormal-Photoroom_81: -8807638724458200993
+      FangosoNormal-Photoroom_82: 1355556488944125232
+      FangosoNormal-Photoroom_9: -3041394552164579328
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

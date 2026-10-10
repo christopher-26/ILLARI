@@ -15,9 +15,22 @@ public static class SistemaProgreso
     private const string KEY_VIDA = "Illari_VidaGuardada";
     private const string KEY_BOTELLAS = "Illari_BotellasGuardadas";
     private const string KEY_RESTAURAR_EN_CARGA = "Illari_RestaurarEnCarga";
+    public const int TOTAL_NIVELES = 3;
+    public const int MAX_NIVELES_REGISTRADOS = 9;
 
-    public const int TOTAL_NIVELES = 9;
-
+    static SistemaProgreso()
+    {
+        // Bloqueo estricto: Asegurar que niveles 4 al 9 jamás estén desbloqueados
+        for (int i = 4; i <= MAX_NIVELES_REGISTRADOS; i++)
+        {
+            PlayerPrefs.DeleteKey(KEY_NIVEL_DESBLOQUEADO + i);
+        }
+        if (PlayerPrefs.GetInt(KEY_NIVEL_MAX_ALCANZADO, 1) > TOTAL_NIVELES)
+        {
+            PlayerPrefs.SetInt(KEY_NIVEL_MAX_ALCANZADO, TOTAL_NIVELES);
+        }
+        PlayerPrefs.Save();
+    }
     /// <summary>
     /// Mapeo de índice de nivel (1..9) a nombre de escena.
     /// </summary>
@@ -43,7 +56,7 @@ public static class SistemaProgreso
         "",
         "Bosque Dorado de Paccha",
         "Bosque de Eucaliptos de Ocopilla",
-        "Parque Túpac Amaru",
+        "Bosque Ribereño y Quebrada del Río Shullcas",
         "Parque de los Sombreros",
         "Plaza Constitución",
         "Parque Identidad Huanca",
@@ -58,8 +71,8 @@ public static class SistemaProgreso
     public static readonly string[] ICONOS_NIVELES = new string[]
     {
         "",
-        "🌺", "🏔", "🦆", "🎩",
-        "⛪", "🌿", "🌊", "🗿", "❄"
+        "[1]", "[2]", "[3]", "[4]",
+        "[5]", "[6]", "[7]", "[8]", "[9]"
     };
 
     /// <summary>
@@ -180,7 +193,7 @@ public static class SistemaProgreso
 
     public static void ReiniciarTodo()
     {
-        for (int i = 2; i <= TOTAL_NIVELES; i++)
+        for (int i = 2; i <= MAX_NIVELES_REGISTRADOS; i++)
         {
             PlayerPrefs.DeleteKey(KEY_NIVEL_DESBLOQUEADO + i);
         }

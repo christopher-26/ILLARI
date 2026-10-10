@@ -21,8 +21,10 @@ public class EfectoSplashAgua : MonoBehaviour
     {
         SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
         if (sr == null) sr = gameObject.AddComponent<SpriteRenderer>();
-        sr.sortingOrder = 15;
+        sr.sortingLayerName = "Props_Front";
+        sr.sortingOrder = 115;
         sr.color = Color.white;
+        transform.localScale = new Vector3(1.35f, 1.35f, 1f);
 
         if (frames != null && frames.Length > 0)
         {

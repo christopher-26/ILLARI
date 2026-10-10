@@ -96,6 +96,8 @@ public class IllariPlatformer : MonoBehaviour
             visualSpriteRenderer = visualTransform.gameObject.AddComponent<SpriteRenderer>();
         }
 
+        AsegurarCapasRenderizado();
+
         if (animator == null)
         {
             animator = GetComponent<Animator>();
@@ -104,11 +106,54 @@ public class IllariPlatformer : MonoBehaviour
 
         escalaVisualOriginal = visualTransform.localScale;
 
+        if (visualTransform != null && visualTransform != transform)
+        {
+            // Garantizar centrado horizontal absoluto del transform visual con respecto al BoxCollider2D
+            visualTransform.localPosition = new Vector3(0f, visualTransform.localPosition.y, visualTransform.localPosition.z);
+        }
+
         // Físicas Unity 6
         rb.gravityScale = gravedadEstandar;
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         rb.interpolation = RigidbodyInterpolation2D.Interpolate;
         rb.freezeRotation = true;
+
+        if (col != null && col.sharedMaterial == null)
+        {
+            var matFriccion = Resources.Load<PhysicsMaterial2D>("Frictionless2D");
+            if (matFriccion == null)
+            {
+                matFriccion = new PhysicsMaterial2D("Illari_CeroFriccion") { friction = 0f, bounciness = 0f };
+            }
+            col.sharedMaterial = matFriccion;
+        }
+
+        // Garantizar que capaSuelo detecte tanto la capa 'Ground' como 'Default' (para objetos con tag Ground)
+        int capaGroundIdx = LayerMask.NameToLayer("Ground");
+        if (capaGroundIdx != -1)
+        {
+            capaSuelo |= (1 << capaGroundIdx);
+        }
+        capaSuelo |= (1 << 0); // Capa 0 (Default)
+    }
+
+    public void AsegurarCapasRenderizado()
+    {
+        if (visualSpriteRenderer != null)
+        {
+            visualSpriteRenderer.sortingLayerName = "Props_Front";
+            visualSpriteRenderer.sortingOrder = 100;
+        }
+        else if (visualTransform != null)
+        {
+            var sr = visualTransform.GetComponent<SpriteRenderer>();
+            if (sr != null)
+            {
+                visualSpriteRenderer = sr;
+                sr.sortingLayerName = "Props_Front";
+                sr.sortingOrder = 100;
+            }
+        }
     }
 
     private void Start()
@@ -117,6 +162,7 @@ public class IllariPlatformer : MonoBehaviour
         {
             escalaVisualOriginal = visualTransform.localScale;
         }
+        AsegurarCapasRenderizado();
     }
 
     public void ConfigurarEscalaVisual(Vector3 escala)
@@ -189,22 +235,18 @@ public class IllariPlatformer : MonoBehaviour
         }
         inputVertical = vertical;
 
-        // Detectar si está apuntando hacia arriba (W, Flecha Arriba o cursor apuntando alto)
-        apuntandoArriba = inputVertical > 0.4f;
-        if (!apuntandoArriba && Camera.main != null && (Input.GetKey(KeyCode.Mouse0) || Input.GetKeyUp(KeyCode.Mouse0)))
-        {
-            Vector3 mouseMundo = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 deltaMouse = (Vector2)mouseMundo - (Vector2)transform.position;
-            if (deltaMouse.y > 0.9f && Mathf.Abs(deltaMouse.x) < deltaMouse.y * 0.95f)
-            {
-                apuntandoArriba = true;
-            }
-        }
+        // Detectar si el jugador presiona botón de salto (Espacio, W, Flecha Arriba o botón configurado Jump)
+        bool saltoPresionado = Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetButtonDown("Jump");
+        bool saltoSoltado = Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow) || Input.GetButtonUp("Jump");
+
+        // Detectar si está apuntando hacia arriba con teclado (solo si no es un intento de salto)
+        bool teclaArribaPresionada = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow);
+        apuntandoArriba = teclaArribaPresionada && !saltoPresionado && isGrounded && Mathf.Abs(inputHorizontal) < 0.1f;
 
         if (inputHorizontal > 0.01f) mirandoDerecha = true;
         else if (inputHorizontal < -0.01f) mirandoDerecha = false;
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (saltoPresionado)
         {
             contadorBufferSalto = tiempoBufferSalto;
         }
@@ -213,7 +255,7 @@ public class IllariPlatformer : MonoBehaviour
             contadorBufferSalto -= Time.deltaTime;
         }
 
-        if (Input.GetKeyUp(KeyCode.Space) && rb.linearVelocity.y > 0f)
+        if (saltoSoltado && rb.linearVelocity.y > 0f)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.55f);
         }
@@ -223,16 +265,18 @@ public class IllariPlatformer : MonoBehaviour
     {
         Bounds bounds = col.bounds;
         Vector2 centro = bounds.center;
-        float anchoMitad = bounds.extents.x * 0.8f;
+        float anchoMitad = bounds.extents.x * 0.78f;
 
         Vector2 origenIzq = new Vector2(centro.x - anchoMitad, bounds.min.y);
+        Vector2 origenCentro = new Vector2(centro.x, bounds.min.y);
         Vector2 origenDer = new Vector2(centro.x + anchoMitad, bounds.min.y);
 
-        RaycastHit2D hitIzq = Physics2D.Raycast(origenIzq, Vector2.down, distanciaRaycastSuelo, capaSuelo);
-        RaycastHit2D hitDer = Physics2D.Raycast(origenDer, Vector2.down, distanciaRaycastSuelo, capaSuelo);
+        float distanciaChequeo = Mathf.Max(distanciaRaycastSuelo, 0.35f);
 
-        bool tocando = (hitIzq.collider != null && hitIzq.collider.CompareTag(tagSuelo)) ||
-                       (hitDer.collider != null && hitDer.collider.CompareTag(tagSuelo));
+        bool tocando = RaycastDetectaSuelo(origenIzq, distanciaChequeo) ||
+                       RaycastDetectaSuelo(origenCentro, distanciaChequeo) ||
+                       RaycastDetectaSuelo(origenDer, distanciaChequeo) ||
+                       VerificarColisionDirectaSuelo();
 
         isGrounded = tocando;
 
@@ -247,6 +291,45 @@ public class IllariPlatformer : MonoBehaviour
         }
     }
 
+    private bool RaycastDetectaSuelo(Vector2 origen, float distancia)
+    {
+        RaycastHit2D[] hits = Physics2D.RaycastAll(origen, Vector2.down, distancia, capaSuelo);
+        for (int i = 0; i < hits.Length; i++)
+        {
+            RaycastHit2D hit = hits[i];
+            if (hit.collider == null || hit.collider.gameObject == gameObject || hit.collider.isTrigger)
+                continue;
+
+            if (hit.collider.CompareTag(tagSuelo)) return true;
+
+            int capaGround = LayerMask.NameToLayer("Ground");
+            if (capaGround != -1 && hit.collider.gameObject.layer == capaGround) return true;
+
+            if (hit.collider.GetComponent<PlatformEffector2D>() != null) return true;
+        }
+        return false;
+    }
+
+    private bool VerificarColisionDirectaSuelo()
+    {
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.useLayerMask = true;
+        filter.layerMask = capaSuelo;
+        filter.useTriggers = false;
+        RaycastHit2D[] castHits = new RaycastHit2D[8];
+        int count = col.Cast(Vector2.down, filter, castHits, 0.18f);
+        for (int i = 0; i < count; i++)
+        {
+            var hCol = castHits[i].collider;
+            if (hCol == null || hCol.gameObject == gameObject || hCol.isTrigger) continue;
+            if (hCol.CompareTag(tagSuelo)) return true;
+            int capaGround = LayerMask.NameToLayer("Ground");
+            if (capaGround != -1 && hCol.gameObject.layer == capaGround) return true;
+            if (hCol.GetComponent<PlatformEffector2D>() != null) return true;
+        }
+        return false;
+    }
+
     private void GestionarSaltoParkour()
     {
         if (contadorBufferSalto > 0f && contadorCoyote > 0f)
@@ -258,6 +341,7 @@ public class IllariPlatformer : MonoBehaviour
             if (animator != null)
             {
                 animator.SetBool("estaEnAire", true);
+                animator.Play("Iyari_Jump", -1, 0f);
             }
         }
         else if (contadorBufferSalto > 0f && permitirDobleSalto && puedeDobleSalto && !isGrounded)
@@ -289,8 +373,8 @@ public class IllariPlatformer : MonoBehaviour
             velocidadAnimSmooth = Mathf.Lerp(velocidadAnimSmooth, velTarget, Time.deltaTime * 14f);
             animator.SetFloat("velocidadX", velocidadAnimSmooth);
 
-            // Postura de apuntado vertical en reposo
-            if (isGrounded && apuntandoArriba && Mathf.Abs(inputHorizontal) < 0.1f && !animator.GetCurrentAnimatorStateInfo(0).IsName("Iyari_ShootUp"))
+            // Postura de apuntado vertical en reposo (solo si no está saltando y está firme en suelo)
+            if (isGrounded && apuntandoArriba && Mathf.Abs(inputHorizontal) < 0.1f && contadorBufferSalto <= 0f && !animator.GetCurrentAnimatorStateInfo(0).IsName("Iyari_ShootUp"))
             {
                 animator.Play("Iyari_ShootUp", 0, 0f);
             }
@@ -313,17 +397,39 @@ public class IllariPlatformer : MonoBehaviour
 
     private void GestionarDisparo()
     {
-        // Si el puntero está sobre la interfaz gráfica (ej: botón de pausa), ignorar clic para no disparar
+        // Solo consideramos bloqueo de ratón si el cursor está sobre un elemento UI
+        bool mouseSobreUI = false;
         if (UnityEngine.EventSystems.EventSystem.current != null && UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
         {
-            tiempoCargaDisparo = 0f;
-            ActualizarVisualCarga(false);
-            return;
+            mouseSobreUI = true;
         }
 
-        bool sosteniendo = Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.J) || Input.GetKey(KeyCode.Z);
-        bool solto = Input.GetKeyUp(KeyCode.Mouse0) || Input.GetKeyUp(KeyCode.J) || Input.GetKeyUp(KeyCode.Z);
+        bool presionoTeclado = Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X) ||
+                               Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.F) ||
+                               Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl);
+        bool presionoMouse = !mouseSobreUI && (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetButtonDown("Fire1"));
+        bool disparoPresionado = presionoTeclado || presionoMouse;
 
+        bool sosteniendoTeclado = Input.GetKey(KeyCode.J) || Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.X) ||
+                                  Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.F) ||
+                                  Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl);
+        bool sosteniendoMouse = !mouseSobreUI && (Input.GetKey(KeyCode.Mouse0) || Input.GetButton("Fire1"));
+        bool sosteniendo = sosteniendoTeclado || sosteniendoMouse;
+
+        bool soltoTeclado = Input.GetKeyUp(KeyCode.J) || Input.GetKeyUp(KeyCode.Z) || Input.GetKeyUp(KeyCode.X) ||
+                            Input.GetKeyUp(KeyCode.C) || Input.GetKeyUp(KeyCode.F) ||
+                            Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.RightControl);
+        bool soltoMouse = Input.GetKeyUp(KeyCode.Mouse0) || Input.GetButtonUp("Fire1");
+        bool solto = soltoTeclado || soltoMouse;
+
+        // 1. Disparo inmediato reactivo al pulsar
+        if (disparoPresionado && Time.time >= tiempoProximoDisparo)
+        {
+            tiempoProximoDisparo = Time.time + cadenciaDisparo;
+            DispararProyectil();
+        }
+
+        // 2. Carga y disparo continuo mientras se mantiene presionado
         if (sosteniendo)
         {
             tiempoCargaDisparo += Time.deltaTime;
@@ -331,22 +437,55 @@ public class IllariPlatformer : MonoBehaviour
             {
                 ActualizarVisualCarga(true);
             }
+            else if (Time.time >= tiempoProximoDisparo && tiempoCargaDisparo < TIEMPO_CARGA_MEGA * 0.45f)
+            {
+                tiempoProximoDisparo = Time.time + cadenciaDisparo;
+                DispararProyectil();
+            }
         }
 
+        // 3. Liberación de Mega Disparo
         if (solto)
         {
             if (tiempoCargaDisparo >= TIEMPO_CARGA_MEGA)
             {
                 DispararMegaBala();
             }
-            else if (Time.time >= tiempoProximoDisparo)
-            {
-                tiempoProximoDisparo = Time.time + cadenciaDisparo;
-                DispararProyectil();
-            }
             tiempoCargaDisparo = 0f;
             ActualizarVisualCarga(false);
         }
+    }
+
+    private (Vector2 direccion, bool haciaArriba, bool esDiagonal) CalcularDireccionDisparo()
+    {
+        bool disparoMouse = Input.GetKey(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyUp(KeyCode.Mouse0) || Input.GetButton("Fire1") || Input.GetButtonDown("Fire1");
+        if (disparoMouse && Camera.main != null)
+        {
+            Vector3 mouseMundo = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 deltaMouse = (Vector2)mouseMundo - (Vector2)transform.position;
+
+            if (deltaMouse.x > 0.15f) mirandoDerecha = true;
+            else if (deltaMouse.x < -0.15f) mirandoDerecha = false;
+
+            if (deltaMouse.sqrMagnitude > 0.1f)
+            {
+                bool haciaArriba = deltaMouse.y > 0.35f;
+                bool esDiagonal = haciaArriba && Mathf.Abs(deltaMouse.x) > 0.25f;
+                return (deltaMouse.normalized, haciaArriba, esDiagonal);
+            }
+        }
+
+        bool teclaArribaPresionada = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) || apuntandoArriba;
+        if (teclaArribaPresionada)
+        {
+            if (Mathf.Abs(inputHorizontal) > 0.1f)
+            {
+                return (new Vector2(mirandoDerecha ? 0.707f : -0.707f, 0.707f).normalized, true, true);
+            }
+            return (Vector2.up, true, false);
+        }
+
+        return (mirandoDerecha ? Vector2.right : Vector2.left, false, false);
     }
 
     private Vector2 ObtenerPuntoSpawnDisparo(bool haciaArriba = false, bool esDiagonal = false)
@@ -374,25 +513,10 @@ public class IllariPlatformer : MonoBehaviour
         if (prefabProyectilAgua == null) return;
         AudioManager.Instancia?.ReproducirSFX("disparo");
 
-        bool haciaArriba = apuntandoArriba;
-        bool esDiagonal = haciaArriba && Mathf.Abs(inputHorizontal) > 0.2f;
-
-        Vector2 direccion;
-        if (haciaArriba)
-        {
-            if (esDiagonal)
-            {
-                direccion = new Vector2(mirandoDerecha ? 0.707f : -0.707f, 0.707f).normalized;
-            }
-            else
-            {
-                direccion = Vector2.up;
-            }
-        }
-        else
-        {
-            direccion = mirandoDerecha ? Vector2.right : Vector2.left;
-        }
+        var dirInfo = CalcularDireccionDisparo();
+        bool haciaArriba = dirInfo.haciaArriba;
+        bool esDiagonal = dirInfo.esDiagonal;
+        Vector2 direccion = dirInfo.direccion;
 
         Vector2 puntoSpawn = ObtenerPuntoSpawnDisparo(haciaArriba, esDiagonal);
 
@@ -484,25 +608,10 @@ public class IllariPlatformer : MonoBehaviour
         if (prefabProyectilAgua == null) return;
         AudioManager.Instancia?.ReproducirSFX("disparo");
 
-        bool haciaArriba = apuntandoArriba;
-        bool esDiagonal = haciaArriba && Mathf.Abs(inputHorizontal) > 0.2f;
-
-        Vector2 direccion;
-        if (haciaArriba)
-        {
-            if (esDiagonal)
-            {
-                direccion = new Vector2(mirandoDerecha ? 0.707f : -0.707f, 0.707f).normalized;
-            }
-            else
-            {
-                direccion = Vector2.up;
-            }
-        }
-        else
-        {
-            direccion = mirandoDerecha ? Vector2.right : Vector2.left;
-        }
+        var dirInfo = CalcularDireccionDisparo();
+        Vector2 direccion = dirInfo.direccion;
+        bool haciaArriba = dirInfo.haciaArriba;
+        bool esDiagonal = dirInfo.esDiagonal;
 
         Vector2 puntoSpawn = ObtenerPuntoSpawnDisparo(haciaArriba, esDiagonal);
 
@@ -516,7 +625,7 @@ public class IllariPlatformer : MonoBehaviour
 
         if (GameManagerIyari.Instancia != null)
         {
-            GameManagerIyari.Instancia.MostrarMensajeAviso("🌊 ¡MEGA CHORRO PURIFICADOR DISPARADO!");
+            GameManagerIyari.Instancia.MostrarMensajeAviso("¡MEGA CHORRO PURIFICADOR DISPARADO!");
         }
 
         DispararAnimacion(haciaArriba);
@@ -564,7 +673,8 @@ public class IllariPlatformer : MonoBehaviour
             var sr = objAuraCargaVisual.AddComponent<SpriteRenderer>();
             sr.sprite = Resources.Load<Sprite>("UI/IconoBotellaHUD");
             sr.color = new Color(0f, 1f, 0.95f, 0.85f);
-            sr.sortingOrder = 9;
+            sr.sortingLayerName = "Props_Front";
+            sr.sortingOrder = 106;
         }
 
         objAuraCargaVisual.SetActive(cargado);
@@ -644,7 +754,8 @@ public class IllariPlatformer : MonoBehaviour
             var sr = objEscudoVisual.AddComponent<SpriteRenderer>();
             sr.sprite = Resources.Load<Sprite>("UI/IconoBotellaHUD");
             sr.color = new Color(0.1f, 0.85f, 1f, 0.6f);
-            sr.sortingOrder = 8;
+            sr.sortingLayerName = "Props_Front";
+            sr.sortingOrder = 104;
         }
 
         objEscudoVisual.SetActive(activo);
@@ -692,7 +803,7 @@ public class IllariPlatformer : MonoBehaviour
 
             if (GameManagerIyari.Instancia != null)
             {
-                GameManagerIyari.Instancia.MostrarMensajeAviso("🛡 ¡EL ESCUDO ACUÁTICO ABSORBIÓ EL IMPACTO!");
+                GameManagerIyari.Instancia.MostrarMensajeAviso("¡EL ESCUDO ACUÁTICO ABSORBIÓ EL IMPACTO!");
                 GameManagerIyari.Instancia.ActualizarPoderHUD("NORMAL", 0);
             }
 

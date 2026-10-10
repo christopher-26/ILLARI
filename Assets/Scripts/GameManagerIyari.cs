@@ -427,7 +427,7 @@ public class GameManagerIyari : MonoBehaviour
             }
             if (textoProgresoPausa != null)
             {
-                textoProgresoPausa.text = $"<b>{ObtenerNombreParqueSimple().ToUpper()}</b>\n<color=#00FFE0>♻ {botellasRecolectadas} / {botellasRequeridas} BOTELLAS</color>   •   <color=#FF4560>❤ {vidaActual} / {vidaMaxima} VIDAS</color>";
+                textoProgresoPausa.text = $"<b>{ObtenerNombreParqueSimple().ToUpper()}</b>\n<color=#00FFE0>{botellasRecolectadas} / {botellasRequeridas} BOTELLAS</color>   -   <color=#FF4560>{vidaActual} / {vidaMaxima} VIDAS</color>";
             }
             if (!estaPausado && subpanelAudioPausa != null)
             {
@@ -525,7 +525,7 @@ public class GameManagerIyari : MonoBehaviour
         // 2. Contador de Botellas
         float pctBot = (float)botellasRecolectadas / Mathf.Max(1, botellasRequeridas);
         string txtBot = $"BOTELLAS: {botellasRecolectadas} / {botellasRequeridas}";
-        if (botellasRecolectadas >= botellasRequeridas) txtBot += "  ✓ ¡COMPLETO!";
+        if (botellasRecolectadas >= botellasRequeridas) txtBot += "  ¡COMPLETO!";
         SetTexto(textoBotellasLegacy, textoBotellasTMP, txtBot);
 
         Color colBot = (pctBot >= 1f) ? new Color(0.2f, 1f, 0.5f) : new Color(0f, 1f, 1f); // #00FFFF Cian agua
@@ -585,7 +585,7 @@ public class GameManagerIyari : MonoBehaviour
         // 5. Progreso en menú de pausa si está visible
         if (textoProgresoPausa != null)
         {
-            textoProgresoPausa.text = $"<b>{ObtenerNombreParqueSimple().ToUpper()}</b>\n<color=#00FFE0>♻ {botellasRecolectadas} / {botellasRequeridas} BOTELLAS</color>   •   <color=#FF4560>❤ {vidaActual} / {vidaMaxima} VIDAS</color>";
+            textoProgresoPausa.text = $"<b>{ObtenerNombreParqueSimple().ToUpper()}</b>\n<color=#00FFE0>{botellasRecolectadas} / {botellasRequeridas} BOTELLAS</color>   -   <color=#FF4560>{vidaActual} / {vidaMaxima} VIDAS</color>";
         }
     }
 
@@ -881,14 +881,23 @@ public class GameManagerIyari : MonoBehaviour
     {
         yield return new WaitForSeconds(2.8f);
 
+        int nivelActual = SistemaProgreso.ObtenerIndiceNivelActual();
+        if (nivelActual >= 3)
+        {
+            MostrarMensajeAviso("¡FELICITACIONES!\n¡HAS PURIFICADO LOS 3 PRIMEROS PARQUES DE HUANCAYO!");
+            yield return new WaitForSeconds(3.5f);
+            SceneManager.LoadScene(0); // Menú Principal
+            yield break;
+        }
+
         int sigEscena = SceneManager.GetActiveScene().buildIndex + 1;
-        if (sigEscena < SceneManager.sceneCountInBuildSettings)
+        if (sigEscena <= 3 && sigEscena < SceneManager.sceneCountInBuildSettings)
         {
             SceneManager.LoadScene(sigEscena);
         }
         else
         {
-            MostrarMensajeAviso("¡FELICITACIONES!\n¡TODOS LOS PARQUES DE HUANCAYO HAN SIDO PURIFICADOS!");
+            MostrarMensajeAviso("¡FELICITACIONES!\n¡HAS PURIFICADO LOS 3 PRIMEROS PARQUES DE HUANCAYO!");
             yield return new WaitForSeconds(3f);
             SceneManager.LoadScene(0); // Menú Principal
         }
@@ -1313,15 +1322,15 @@ public class GameManagerIyari : MonoBehaviour
             rtVent.anchorMax = new Vector2(0.5f, 0.5f);
             rtVent.pivot = new Vector2(0.5f, 0.5f);
             rtVent.anchoredPosition = Vector2.zero;
-            rtVent.sizeDelta = new Vector2(580, 740);
+            rtVent.sizeDelta = new Vector2(820, 780);
 
             Image imgVent = ventana.AddComponent<Image>();
-            imgVent.sprite = CargarSpriteUI("PanelMarco");
-            imgVent.type = Image.Type.Simple;
+            imgVent.sprite = CargarSpriteUI("CuadroMensajes-Photoroom");
+            imgVent.type = Image.Type.Sliced;
 
-            // Título y Subtítulo
-            CrearTextoHijo(ventana.transform, "Titulo", new Vector2(0, 275), new Vector2(500, 48), 34, FontStyle.Bold, new Color(0.0f, 1f, 0.88f), TextAnchor.MiddleCenter, "⏸   JUEGO PAUSADO");
-            CrearTextoHijo(ventana.transform, "Subtitulo", new Vector2(0, 235), new Vector2(500, 28), 16, FontStyle.Bold, new Color(0.85f, 0.88f, 0.92f), TextAnchor.MiddleCenter, "MISIÓN ECOLÓGICA HUANCAYO 2026", true);
+            // Título y Subtítulo (centrados dentro del área azul oscura interna del marco)
+            CrearTextoHijo(ventana.transform, "Titulo", new Vector2(0, 200), new Vector2(460, 40), 28, FontStyle.Bold, new Color(1f, 0.88f, 0.25f), TextAnchor.MiddleCenter, "JUEGO PAUSADO", false, null, true);
+            CrearTextoHijo(ventana.transform, "Subtitulo", new Vector2(0, 166), new Vector2(460, 24), 14, FontStyle.Bold, new Color(0.85f, 0.92f, 1f), TextAnchor.MiddleCenter, "MISIÓN ECOLÓGICA HUANCAYO 2026", true);
 
             // Tarjeta de progreso actual en tiempo real
             GameObject cardProg = new GameObject("Card_Progreso", typeof(RectTransform));
@@ -1330,21 +1339,21 @@ public class GameManagerIyari : MonoBehaviour
             rtCp.anchorMin = new Vector2(0.5f, 0.5f);
             rtCp.anchorMax = new Vector2(0.5f, 0.5f);
             rtCp.pivot = new Vector2(0.5f, 0.5f);
-            rtCp.anchoredPosition = new Vector2(0, 180);
-            rtCp.sizeDelta = new Vector2(480, 56);
+            rtCp.anchoredPosition = new Vector2(0, 118);
+            rtCp.sizeDelta = new Vector2(450, 50);
             Image imgCp = cardProg.AddComponent<Image>();
             imgCp.sprite = sprSolido;
-            imgCp.color = new Color(0.03f, 0.08f, 0.14f, 0.88f);
+            imgCp.color = new Color(0.02f, 0.06f, 0.12f, 0.88f);
 
-            GameObject goProg = CrearTextoHijo(cardProg.transform, "Texto_Progreso", Vector2.zero, new Vector2(470, 48), 17, FontStyle.Bold, new Color(1f, 0.92f, 0.35f), TextAnchor.MiddleCenter, $"<b>{ObtenerNombreParqueSimple().ToUpper()}</b>\n<color=#00FFE0>♻ {botellasRecolectadas} / {botellasRequeridas} BOTELLAS</color>   •   <color=#FF4560>❤ {vidaActual} / {vidaMaxima} VIDAS</color>");
+            GameObject goProg = CrearTextoHijo(cardProg.transform, "Texto_Progreso", Vector2.zero, new Vector2(440, 46), 15, FontStyle.Bold, new Color(1f, 0.92f, 0.35f), TextAnchor.MiddleCenter, $"<b>{ObtenerNombreParqueSimple().ToUpper()}</b>\n<color=#00FFE0>{botellasRecolectadas} / {botellasRequeridas} BOTELLAS</color>   -   <color=#FF4560>{vidaActual} / {vidaMaxima} VIDAS</color>");
             textoProgresoPausa = goProg.GetComponent<Text>();
 
-            // Botones de acción arcade requeridos
-            CrearBotonModal(ventana.transform, "Btn_Continuar", new Vector2(0, 105), new Vector2(410, 52), new Color(0.35f, 1f, 0.55f), "▶   CONTINUAR MISIÓN", ReanudarJuego);
-            CrearBotonModal(ventana.transform, "Btn_Reiniciar", new Vector2(0, 45), new Vector2(410, 52), new Color(1f, 0.92f, 0.40f), "↺   REINICIAR PARQUE", ReiniciarNivelActual);
-            CrearBotonModal(ventana.transform, "Btn_Audio", new Vector2(0, -15), new Vector2(410, 52), new Color(0.20f, 0.95f, 1f), "🔊   AJUSTES DE AUDIO", AlternarSubpanelAudioPausa);
-            CrearBotonModal(ventana.transform, "Btn_Menu", new Vector2(0, -75), new Vector2(410, 52), Color.white, "🏠   VOLVER AL MENÚ PRINCIPAL", IrAlMenu);
-            CrearBotonModal(ventana.transform, "Btn_Guardar", new Vector2(0, -135), new Vector2(410, 52), new Color(0.40f, 0.90f, 1f), "💾   GUARDAR PARTIDA", GuardarPartida);
+            // Botones de acción arcade requeridos (alineados dentro del marco y sin invadir las cápsulas azules)
+            CrearBotonModal(ventana.transform, "Btn_Continuar", new Vector2(0, 52), new Vector2(460, 52), new Color(0.35f, 1f, 0.55f), "CONTINUAR MISIÓN", ReanudarJuego);
+            CrearBotonModal(ventana.transform, "Btn_Reiniciar", new Vector2(0, -4), new Vector2(460, 52), new Color(1f, 0.92f, 0.40f), "REINICIAR PARQUE", ReiniciarNivelActual);
+            CrearBotonModal(ventana.transform, "Btn_Audio", new Vector2(0, -60), new Vector2(460, 52), new Color(0.20f, 0.95f, 1f), "AJUSTES DE AUDIO", AlternarSubpanelAudioPausa);
+            CrearBotonModal(ventana.transform, "Btn_Menu", new Vector2(0, -116), new Vector2(460, 52), Color.white, "VOLVER AL MENÚ PRINCIPAL", IrAlMenu);
+            CrearBotonModal(ventana.transform, "Btn_Guardar", new Vector2(0, -172), new Vector2(460, 52), new Color(0.40f, 0.90f, 1f), "GUARDAR PARTIDA", GuardarPartida);
 
             // Subpanel de Audio en Pausa (Sliders Master, Música, SFX)
             GameObject pAudio = new GameObject("Subpanel_Audio_Pausa", typeof(RectTransform));
@@ -1353,27 +1362,27 @@ public class GameManagerIyari : MonoBehaviour
             rtPa.anchorMin = new Vector2(0.5f, 0.5f);
             rtPa.anchorMax = new Vector2(0.5f, 0.5f);
             rtPa.pivot = new Vector2(0.5f, 0.5f);
-            rtPa.anchoredPosition = new Vector2(0, -20);
-            rtPa.sizeDelta = new Vector2(490, 310);
+            rtPa.anchoredPosition = new Vector2(0, -35);
+            rtPa.sizeDelta = new Vector2(460, 300);
             Image imgPa = pAudio.AddComponent<Image>();
             imgPa.sprite = sprSolido;
             imgPa.color = new Color(0.02f, 0.05f, 0.10f, 0.96f);
 
-            CrearTextoHijo(pAudio.transform, "TituloAudio", new Vector2(0, 120), new Vector2(460, 32), 19, FontStyle.Bold, new Color(0.2f, 0.95f, 1f), TextAnchor.MiddleCenter, "🔊   AJUSTES DE VOLUMEN");
+            CrearTextoHijo(pAudio.transform, "TituloAudio", new Vector2(0, 115), new Vector2(440, 32), 18, FontStyle.Bold, new Color(0.2f, 0.95f, 1f), TextAnchor.MiddleCenter, "AJUSTES DE VOLUMEN");
 
             // Slider Master
-            CrearFilaAudioPausa(pAudio.transform, "Master", new Vector2(0, 70), "MASTER", AudioManager.Instancia != null ? AudioManager.Instancia.VolumenMaster : 1f, (v) => { if (AudioManager.Instancia != null) AudioManager.Instancia.SetMasterVolume(v); });
+            CrearFilaAudioPausa(pAudio.transform, "Master", new Vector2(0, 65), "MASTER", AudioManager.Instancia != null ? AudioManager.Instancia.VolumenMaster : 1f, (v) => { if (AudioManager.Instancia != null) AudioManager.Instancia.SetMasterVolume(v); });
             // Slider Música
-            CrearFilaAudioPausa(pAudio.transform, "Musica", new Vector2(0, 15), "MÚSICA", AudioManager.Instancia != null ? AudioManager.Instancia.VolumenMusica : 0.8f, (v) => { if (AudioManager.Instancia != null) AudioManager.Instancia.SetMusicVolume(v); });
+            CrearFilaAudioPausa(pAudio.transform, "Musica", new Vector2(0, 12), "MÚSICA", AudioManager.Instancia != null ? AudioManager.Instancia.VolumenMusica : 0.8f, (v) => { if (AudioManager.Instancia != null) AudioManager.Instancia.SetMusicVolume(v); });
             // Slider SFX
-            CrearFilaAudioPausa(pAudio.transform, "SFX", new Vector2(0, -40), "SFX", AudioManager.Instancia != null ? AudioManager.Instancia.VolumenSFX : 0.9f, (v) => { if (AudioManager.Instancia != null) AudioManager.Instancia.SetSFXVolume(v); });
+            CrearFilaAudioPausa(pAudio.transform, "SFX", new Vector2(0, -41), "SFX", AudioManager.Instancia != null ? AudioManager.Instancia.VolumenSFX : 0.9f, (v) => { if (AudioManager.Instancia != null) AudioManager.Instancia.SetSFXVolume(v); });
 
-            CrearBotonModal(pAudio.transform, "Btn_CerrarAudio", new Vector2(0, -105), new Vector2(260, 44), new Color(0.35f, 1f, 0.55f), "✔   CERRAR", AlternarSubpanelAudioPausa);
+            CrearBotonModal(pAudio.transform, "Btn_CerrarAudio", new Vector2(0, -102), new Vector2(280, 44), new Color(0.35f, 1f, 0.55f), "CERRAR", AlternarSubpanelAudioPausa);
             pAudio.SetActive(false);
             subpanelAudioPausa = pAudio;
 
             // Feedback de guardado
-            GameObject goFeedback = CrearTextoHijo(ventana.transform, "Texto_Feedback", new Vector2(0, -230), new Vector2(480, 32), 17, FontStyle.Bold, new Color(0.2f, 1f, 0.4f), TextAnchor.MiddleCenter, "", true);
+            GameObject goFeedback = CrearTextoHijo(ventana.transform, "Texto_Feedback", new Vector2(0, -216), new Vector2(440, 28), 15, FontStyle.Bold, new Color(0.2f, 1f, 0.4f), TextAnchor.MiddleCenter, "", true);
             textoFeedbackPausa = goFeedback.GetComponent<Text>();
 
             panelPausa = pPausa;
@@ -1385,6 +1394,17 @@ public class GameManagerIyari : MonoBehaviour
             Transform tVentana = tPausa.Find("Ventana_Central");
             if (tVentana != null)
             {
+                Image imgVent = tVentana.GetComponent<Image>();
+                Sprite sprCuadroPausa = CargarSpriteUI("CuadroMensajes-Photoroom");
+                if (imgVent != null && sprCuadroPausa != null)
+                {
+                    imgVent.sprite = sprCuadroPausa;
+                    imgVent.type = Image.Type.Sliced;
+                    imgVent.color = Color.white;
+                }
+                RectTransform rtVent = tVentana.GetComponent<RectTransform>();
+                if (rtVent != null) rtVent.sizeDelta = new Vector2(820, 780);
+
                 Transform tFeed = tVentana.Find("Texto_Feedback");
                 if (tFeed != null) textoFeedbackPausa = tFeed.GetComponent<Text>();
 
@@ -1432,7 +1452,7 @@ public class GameManagerIyari : MonoBehaviour
         rtBs.anchorMin = new Vector2(0f, 1f);
         rtBs.anchorMax = new Vector2(1f, 1f);
         rtBs.pivot = new Vector2(0.5f, 1f);
-        rtBs.anchoredPosition = Vector2.zero;
+        rtBs.anchoredPosition = new Vector2(0f, 0f);
         rtBs.sizeDelta = new Vector2(0f, 3f);
         Image imgBs = goBordeSup.AddComponent<Image>();
         imgBs.sprite = sprSolido;
@@ -1446,7 +1466,7 @@ public class GameManagerIyari : MonoBehaviour
         rtBinf.anchorMin = new Vector2(0f, 0f);
         rtBinf.anchorMax = new Vector2(1f, 0f);
         rtBinf.pivot = new Vector2(0.5f, 0f);
-        rtBinf.anchoredPosition = Vector2.zero;
+        rtBinf.anchoredPosition = new Vector2(0f, 0f);
         rtBinf.sizeDelta = new Vector2(0f, 2f);
         Image imgBinf = goBordeInf.AddComponent<Image>();
         imgBinf.sprite = sprSolido;
@@ -1481,7 +1501,7 @@ public class GameManagerIyari : MonoBehaviour
         imgAd.raycastTarget = false;
 
         // Encabezado
-        CrearTextoHijo(pAviso.transform, "Texto_Aviso_Encabezado", new Vector2(0f, 24f), new Vector2(660f, 26f), 15, FontStyle.Bold, new Color(1f, 0.85f, 0.28f), TextAnchor.MiddleCenter, "🌿   CARTEL ECOLÓGICO ODS 15 — HUANCAYO 2026", false);
+        CrearTextoHijo(pAviso.transform, "Texto_Aviso_Encabezado", new Vector2(0f, 24f), new Vector2(660f, 26f), 15, FontStyle.Bold, new Color(1f, 0.85f, 0.28f), TextAnchor.MiddleCenter, "CARTEL ECOLÓGICO ODS 15 - HUANCAYO 2026", false);
 
         // Texto del Cartel
         GameObject goAvisoTxt = CrearTextoHijo(pAviso.transform, "Texto_Aviso", new Vector2(0f, -14f), new Vector2(660f, 50f), 14, FontStyle.Bold, Color.white, TextAnchor.MiddleCenter, "", true);
@@ -1658,11 +1678,15 @@ public class GameManagerIyari : MonoBehaviour
         RectTransform rtTxt = txtObj.GetComponent<RectTransform>();
         rtTxt.anchorMin = Vector2.zero;
         rtTxt.anchorMax = Vector2.one;
-        rtTxt.sizeDelta = Vector2.zero;
+        rtTxt.offsetMin = new Vector2(92f, 6f);
+        rtTxt.offsetMax = new Vector2(-92f, -6f);
 
         Text txt = txtObj.AddComponent<Text>();
         txt.font = ObtenerFuenteTitulo();
-        txt.fontSize = 21;
+        txt.fontSize = 16;
+        txt.resizeTextForBestFit = true;
+        txt.resizeTextMinSize = 11;
+        txt.resizeTextMaxSize = 16;
         txt.fontStyle = FontStyle.Bold;
         txt.color = colorTexto;
         txt.alignment = TextAnchor.MiddleCenter;

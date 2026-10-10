@@ -69,7 +69,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.9}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -79,7 +79,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.1, y: 1.3}
+  m_Size: {x: 1.45, y: 1.8}
   m_EdgeRadius: 0
 --- !u!50 &1412407676564067768
 Rigidbody2D:
@@ -135,10 +135,40 @@ MonoBehaviour:
     m_Bits: 8
   tagSuelo: Ground
   danioContacto: 1
-  rangoVisionTirador: 8.5
-  cadenciaDisparo: 2.5
+  rangoVisionTirador: 11.5
+  cadenciaDisparo: 2.2
   prefabBalaEnemiga: {fileID: 348905824919756406, guid: 4f618ef5b812bc540b8d88abf90518e0, type: 3}
   puntoDisparo: {fileID: 0}
+  velocidadVuelo: 2.4
+  rangoPicadaX: 4.5
+  velocidadPicada: 6.5
+  cadenciaPicada: 3.8
+  distanciaPatrullaVuelo: 6
+  velocidadEmbestida: 4.8
+  cadenciaEmbestida: 5
+  duracionBloqueo: 1.4
+  spritesCaminar:
+  - {fileID: 21300000, guid: bb4fa1c4c20659041a4efa130b966b03, type: 3}
+  - {fileID: 21300000, guid: 3d25f8def668e174b8d1e49e9165a1be, type: 3}
+  - {fileID: 21300000, guid: 76b54491a38fd114a905d0baec639f4a, type: 3}
+  - {fileID: 21300000, guid: 7aa76760766e05640997b7f50b07d59e, type: 3}
+  - {fileID: 21300000, guid: afdb82ea28e647440924e232706fa78c, type: 3}
+  - {fileID: 21300000, guid: e982dfa0de0ab724baad3209a12315a8, type: 3}
+  spritesReposo:
+  - {fileID: 21300000, guid: 5198956acf51ff2419f44abc56f01a56, type: 3}
+  - {fileID: 21300000, guid: b05c46287983886499c12f6e55735194, type: 3}
+  - {fileID: 21300000, guid: 06acf73dc66052d47b43ad8d3f6dca8d, type: 3}
+  - {fileID: 21300000, guid: 7da936a0e172dc344899d88b3d02e101, type: 3}
+  spritesDisparo: []
+  spritesDanio:
+  - {fileID: 21300000, guid: 2e04d817e68841046a8a466f8619ed45, type: 3}
+  - {fileID: 21300000, guid: c4d2f43f0ed32754297bab62644a93b0, type: 3}
+  spritesMuerte:
+  - {fileID: 21300000, guid: 331f0e11ee235204880a38d59d23c170, type: 3}
+  - {fileID: 21300000, guid: 1ff729c5edef7124f9ab0aa955d4b94c, type: 3}
+  - {fileID: 21300000, guid: aa9209eeacae19a4098a352b40d9b824, type: 3}
+  - {fileID: 21300000, guid: d161552ed93400847888e338a0703ec8, type: 3}
+  - {fileID: 21300000, guid: d203f9d7fa33e1d4c8317bf1dafbb73e, type: 3}
 --- !u!1 &6248244023450941614
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,6 +180,7 @@ GameObject:
   - component: {fileID: 2295046279030966209}
   - component: {fileID: 4300634263034111616}
   - component: {fileID: 5164954335284431521}
+  - component: {fileID: 6723357477533848591}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -166,8 +197,8 @@ Transform:
   m_GameObject: {fileID: 6248244023450941614}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.546875, y: 0.546875, z: 1}
+  m_LocalPosition: {x: 0, y: 0.9, z: 0}
+  m_LocalScale: {x: 1.25, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1992011751327580662}
@@ -217,9 +248,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingLayerID: 200005
+  m_SortingLayer: 4
+  m_SortingOrder: 50
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: bb4fa1c4c20659041a4efa130b966b03, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -253,3 +284,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6723357477533848591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6248244023450941614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a9e34e56994747a98319f6f6345678, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAnimationEvents

@@ -39,9 +39,11 @@ public class Bala : MonoBehaviour
     private bool impactado = false;
     private float timerGota = 0f;
     private int indiceFrameGota = 0;
+    private float tiempoSpawn = 0f;
 
     private void Awake()
     {
+        tiempoSpawn = Time.time;
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<CircleCollider2D>();
         sr = GetComponent<SpriteRenderer>();
@@ -55,7 +57,8 @@ public class Bala : MonoBehaviour
         rb.gravityScale = 0f;
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         col.isTrigger = true;
-        sr.sortingOrder = 10;
+        sr.sortingLayerName = "Props_Front";
+        sr.sortingOrder = esBalaEnemiga ? 95 : 110;
 
         CargarSpritesSiEsNecesario();
         ActualizarVisual();
@@ -109,20 +112,58 @@ public class Bala : MonoBehaviour
     {
         if (sr == null) return;
 
+        sr.sortingLayerName = "Props_Front";
+        sr.sortingOrder = esBalaEnemiga ? 95 : 110;
+
         if (esBalaEnemiga)
         {
-            sr.color = colorBalaEnemiga;
-            transform.localScale = new Vector3(0.18f, 0.18f, 1f);
+            sr.color = (sr.sprite != null) ? Color.white : colorBalaEnemiga;
+            transform.localScale = new Vector3(0.08f, 0.08f, 1f);
         }
         else
         {
             sr.color = Color.white;
-            transform.localScale = new Vector3(1.1f, 1.1f, 1f);
+            transform.localScale = new Vector3(1.35f, 1.35f, 1f);
             if (spritesGotaAgua != null && spritesGotaAgua.Length > 0 && spritesGotaAgua[0] != null)
             {
                 sr.sprite = spritesGotaAgua[0];
             }
+            ConfigurarEstelaAgua();
         }
+    }
+
+    private void ConfigurarEstelaAgua()
+    {
+        TrailRenderer trail = GetComponent<TrailRenderer>();
+        if (trail == null)
+        {
+            trail = gameObject.AddComponent<TrailRenderer>();
+        }
+        trail.sortingLayerName = "Props_Front";
+        trail.sortingOrder = 108;
+        trail.time = 0.16f;
+        trail.startWidth = 0.45f;
+        trail.endWidth = 0.06f;
+        trail.minVertexDistance = 0.05f;
+        trail.autodestruct = false;
+
+        if (sr != null && sr.sharedMaterial != null)
+        {
+            trail.sharedMaterial = sr.sharedMaterial;
+        }
+
+        Gradient grad = new Gradient();
+        grad.SetKeys(
+            new GradientColorKey[] {
+                new GradientColorKey(new Color(0.35f, 0.95f, 1f), 0f),
+                new GradientColorKey(new Color(0.1f, 0.6f, 1f), 1f)
+            },
+            new GradientAlphaKey[] {
+                new GradientAlphaKey(0.85f, 0f),
+                new GradientAlphaKey(0f, 1f)
+            }
+        );
+        trail.colorGradient = grad;
     }
 
     /// <summary>
@@ -131,6 +172,7 @@ public class Bala : MonoBehaviour
     public void Inicializar(Vector2 direccion, bool esEnemigo = false)
     {
         if (rb == null) rb = GetComponent<Rigidbody2D>();
+        tiempoSpawn = Time.time;
 
         esBalaEnemiga = esEnemigo;
         CargarSpritesSiEsNecesario();
@@ -207,14 +249,34 @@ public class Bala : MonoBehaviour
     {
         if (impactado) return;
 
-        // 1. Colisión con Superficies (Ground)
-        if (collision.CompareTag("Ground"))
+        // 1.Proyectil de Enemigo golpea a Illari (Prioridad máxima)
+        if (esBalaEnemiga)
         {
+            IllariPlatformer jugador = collision.GetComponent<IllariPlatformer>();
+            if (jugador == null) jugador = collision.GetComponentInParent<IllariPlatformer>();
+            if (jugador != null || collision.CompareTag("Player"))
+            {
+                if (jugador != null)
+                {
+                    jugador.RecibirDanio(danio);
+                }
+                EjecutarImpacto();
+                return;
+            }
+        }
+
+        // 2. Colisión con Superficies (Ground)
+        if (collision.CompareTag("Ground") && !collision.isTrigger)
+        {
+            if (esBalaEnemiga && (Time.time - tiempoSpawn) < 0.15f)
+            {
+                return;
+            }
             EjecutarImpacto();
             return;
         }
 
-        // 2. Destruir proyectiles de barro enemigos al chocar con agua purificadora
+        // 3. Destruir proyectiles de barro enemigos al chocar con agua purificadora
         if (!esBalaEnemiga)
         {
             Bala balaEnemiga = collision.GetComponent<Bala>();
@@ -229,11 +291,11 @@ public class Bala : MonoBehaviour
             }
         }
 
-        // 3. Proyectil de Illari golpea a Enemigos
+        // 4. Proyectil de Illari golpea a Enemigos
         if (!esBalaEnemiga && collision.CompareTag("Enemy"))
         {
             var enemigo = collision.GetComponent<EnemyManager>();
-            if (enemigo != null) enemigo.RecibirDanio(danio);
+            if (enemigo != null) enemigo.RecibirDanio(danio, rb != null ? rb.linearVelocity.normalized : Vector2.right);
 
             var volador = collision.GetComponent<EnemyFlyingManager>();
             if (volador != null) volador.RecibirDanio(danio);
@@ -266,19 +328,6 @@ public class Bala : MonoBehaviour
                     EjecutarImpacto();
                 }
                 return;
-            }
-
-            EjecutarImpacto();
-            return;
-        }
-
-        // 4. Proyectil de Enemigo golpea a Illari
-        if (esBalaEnemiga && collision.CompareTag("Player"))
-        {
-            IllariPlatformer jugador = collision.GetComponent<IllariPlatformer>();
-            if (jugador != null)
-            {
-                jugador.RecibirDanio(danio);
             }
 
             EjecutarImpacto();
@@ -317,7 +366,7 @@ public class Bala : MonoBehaviour
             if (c.CompareTag("Enemy"))
             {
                 var enemigo = c.GetComponent<EnemyManager>();
-                if (enemigo != null) enemigo.RecibirDanio(danio);
+                if (enemigo != null) enemigo.RecibirDanio(danio, (c.transform.position - transform.position).normalized);
 
                 var volador = c.GetComponent<EnemyFlyingManager>();
                 if (volador != null) volador.RecibirDanio(danio);

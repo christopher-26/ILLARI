@@ -1,0 +1,2262 @@
+fileFormatVersion: 2
+guid: 4e6612bdb20e9e64aa24160502403373
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1452553592365717596
+    second: FangosoVolador-Photoroom_0
+  - first:
+      213: -9086671062360321534
+    second: FangosoVolador-Photoroom_1
+  - first:
+      213: 1993150103957302585
+    second: FangosoVolador-Photoroom_2
+  - first:
+      213: -1462051343318450345
+    second: FangosoVolador-Photoroom_3
+  - first:
+      213: 328919938266324374
+    second: FangosoVolador-Photoroom_4
+  - first:
+      213: 8374336733542043814
+    second: FangosoVolador-Photoroom_5
+  - first:
+      213: 611645238882305286
+    second: FangosoVolador-Photoroom_6
+  - first:
+      213: -3969922482946400424
+    second: FangosoVolador-Photoroom_7
+  - first:
+      213: 3765268130440650241
+    second: FangosoVolador-Photoroom_8
+  - first:
+      213: -6619289994937767752
+    second: FangosoVolador-Photoroom_9
+  - first:
+      213: 4512711819178282790
+    second: FangosoVolador-Photoroom_10
+  - first:
+      213: 5674106517131124008
+    second: FangosoVolador-Photoroom_11
+  - first:
+      213: -749596363264119672
+    second: FangosoVolador-Photoroom_12
+  - first:
+      213: -799728725142124210
+    second: FangosoVolador-Photoroom_13
+  - first:
+      213: 8487532435096790522
+    second: FangosoVolador-Photoroom_14
+  - first:
+      213: -289652803897056961
+    second: FangosoVolador-Photoroom_15
+  - first:
+      213: 2381563333471874659
+    second: FangosoVolador-Photoroom_16
+  - first:
+      213: -281366571728402743
+    second: FangosoVolador-Photoroom_17
+  - first:
+      213: 3637449300421571406
+    second: FangosoVolador-Photoroom_18
+  - first:
+      213: 8981466850629152181
+    second: FangosoVolador-Photoroom_19
+  - first:
+      213: -2868803767682683500
+    second: FangosoVolador-Photoroom_20
+  - first:
+      213: -4759320896352310592
+    second: FangosoVolador-Photoroom_21
+  - first:
+      213: 9081499694848059651
+    second: FangosoVolador-Photoroom_22
+  - first:
+      213: 967929920275290375
+    second: FangosoVolador-Photoroom_23
+  - first:
+      213: -4913684599984940032
+    second: FangosoVolador-Photoroom_24
+  - first:
+      213: -5843712254693168339
+    second: FangosoVolador-Photoroom_25
+  - first:
+      213: 2354816810364670973
+    second: FangosoVolador-Photoroom_26
+  - first:
+      213: -2560309781771450732
+    second: FangosoVolador-Photoroom_27
+  - first:
+      213: -4573737990029242707
+    second: FangosoVolador-Photoroom_28
+  - first:
+      213: -6738309763373552293
+    second: FangosoVolador-Photoroom_29
+  - first:
+      213: -843952182970033174
+    second: FangosoVolador-Photoroom_30
+  - first:
+      213: -7399371546034922394
+    second: FangosoVolador-Photoroom_31
+  - first:
+      213: 7650220708656911597
+    second: FangosoVolador-Photoroom_32
+  - first:
+      213: -1525567235043867471
+    second: FangosoVolador-Photoroom_33
+  - first:
+      213: -8216021341323328048
+    second: FangosoVolador-Photoroom_34
+  - first:
+      213: -276968760713570945
+    second: FangosoVolador-Photoroom_35
+  - first:
+      213: -190316240250054082
+    second: FangosoVolador-Photoroom_36
+  - first:
+      213: 5429170930585574803
+    second: FangosoVolador-Photoroom_37
+  - first:
+      213: 2464641096968515212
+    second: FangosoVolador-Photoroom_38
+  - first:
+      213: 7719144470715263921
+    second: FangosoVolador-Photoroom_39
+  - first:
+      213: 6571628506409980107
+    second: FangosoVolador-Photoroom_40
+  - first:
+      213: -8612888123748525717
+    second: FangosoVolador-Photoroom_41
+  - first:
+      213: -3729473155815434073
+    second: FangosoVolador-Photoroom_42
+  - first:
+      213: 2525857420967906432
+    second: FangosoVolador-Photoroom_43
+  - first:
+      213: -1413521102413184548
+    second: FangosoVolador-Photoroom_44
+  - first:
+      213: 6165085823747470959
+    second: FangosoVolador-Photoroom_45
+  - first:
+      213: -1468596647388629091
+    second: FangosoVolador-Photoroom_46
+  - first:
+      213: 5129519382165753834
+    second: FangosoVolador-Photoroom_47
+  - first:
+      213: 1878302908324122357
+    second: FangosoVolador-Photoroom_48
+  - first:
+      213: 6789062925462222179
+    second: FangosoVolador-Photoroom_49
+  - first:
+      213: 7964673772202458730
+    second: FangosoVolador-Photoroom_50
+  - first:
+      213: -149100021824915023
+    second: FangosoVolador-Photoroom_51
+  - first:
+      213: -3144261136767014242
+    second: FangosoVolador-Photoroom_52
+  - first:
+      213: 2939533537236220283
+    second: FangosoVolador-Photoroom_53
+  - first:
+      213: 3236272806130171676
+    second: FangosoVolador-Photoroom_54
+  - first:
+      213: 303329956575455469
+    second: FangosoVolador-Photoroom_55
+  - first:
+      213: 8786726864451712686
+    second: FangosoVolador-Photoroom_56
+  - first:
+      213: -598413983482164820
+    second: FangosoVolador-Photoroom_57
+  - first:
+      213: -285014007243776729
+    second: FangosoVolador-Photoroom_58
+  - first:
+      213: 5539500876334595435
+    second: FangosoVolador-Photoroom_59
+  - first:
+      213: 6529437050960236005
+    second: FangosoVolador-Photoroom_60
+  - first:
+      213: -7774271449711659660
+    second: FangosoVolador-Photoroom_61
+  - first:
+      213: 397976377617573285
+    second: FangosoVolador-Photoroom_62
+  - first:
+      213: -1575505303187433112
+    second: FangosoVolador-Photoroom_63
+  - first:
+      213: 2099650196156115592
+    second: FangosoVolador-Photoroom_64
+  - first:
+      213: -7387507610373606910
+    second: FangosoVolador-Photoroom_65
+  - first:
+      213: -6234701729439465579
+    second: FangosoVolador-Photoroom_66
+  - first:
+      213: -9219867618264111863
+    second: FangosoVolador-Photoroom_67
+  - first:
+      213: 1934982522560563932
+    second: FangosoVolador-Photoroom_68
+  - first:
+      213: -4474343454505103720
+    second: FangosoVolador-Photoroom_69
+  - first:
+      213: -657448538480723085
+    second: FangosoVolador-Photoroom_70
+  - first:
+      213: -8545031473322440213
+    second: FangosoVolador-Photoroom_71
+  - first:
+      213: -7939173733781982485
+    second: FangosoVolador-Photoroom_72
+  - first:
+      213: -4789862420062570209
+    second: FangosoVolador-Photoroom_73
+  - first:
+      213: -5814761172467549470
+    second: FangosoVolador-Photoroom_74
+  - first:
+      213: -523551857451345722
+    second: FangosoVolador-Photoroom_75
+  - first:
+      213: -2799993692631440245
+    second: FangosoVolador-Photoroom_76
+  - first:
+      213: 1781299186540418389
+    second: FangosoVolador-Photoroom_77
+  - first:
+      213: 865204956487679703
+    second: FangosoVolador-Photoroom_78
+  - first:
+      213: 5788830253329438571
+    second: FangosoVolador-Photoroom_79
+  - first:
+      213: -4803233632717344341
+    second: FangosoVolador-Photoroom_80
+  - first:
+      213: -5838304711338300458
+    second: FangosoVolador-Photoroom_81
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 881
+        width: 315
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a7e2d5243e77dbe0800000000000000
+      internalID: -1452553592365717596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_1
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 705
+        width: 237
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2021131efc8a5e180800000000000000
+      internalID: -9086671062360321534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_2
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 700
+        width: 284
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93d686a957719ab10800000000000000
+      internalID: 1993150103957302585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_3
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 706
+        width: 267
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75ffe1eac00c5bbe0800000000000000
+      internalID: -1462051343318450345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 696
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69d58efe0fe809400800000000000000
+      internalID: 328919938266324374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_5
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 708
+        width: 260
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a05748d3ee973470800000000000000
+      internalID: 8374336733542043814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_6
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 689
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6058328aa100d7800800000000000000
+      internalID: 611645238882305286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_7
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 704
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85f942a098008e8c0800000000000000
+      internalID: -3969922482946400424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_8
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 707
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10e93075a6be04430800000000000000
+      internalID: 3765268130440650241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_9
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 702
+        width: 245
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b8ef62f1de8324a0800000000000000
+      internalID: -6619289994937767752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_10
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 700
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62f04db7d7f50ae30800000000000000
+      internalID: 4512711819178282790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_11
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 702
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82d545b80d97ebe40800000000000000
+      internalID: 5674106517131124008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_12
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 706
+        width: 269
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88ca7b24416e895f0800000000000000
+      internalID: -749596363264119672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_13
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 691
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e494a3d26fac6e4f0800000000000000
+      internalID: -799728725142124210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_14
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 699
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af5ec85e7c5c9c570800000000000000
+      internalID: 8487532435096790522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_15
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 700
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f31258b3f42fafbf0800000000000000
+      internalID: -289652803897056961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_16
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 693
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36eafa5db330d0120800000000000000
+      internalID: 2381563333471874659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_17
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 683
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c685700892681cf0800000000000000
+      internalID: -281366571728402743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_18
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 683
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e43fe10edd0da7230800000000000000
+      internalID: 3637449300421571406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_19
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 696
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bd62b9c38494ac70800000000000000
+      internalID: 8981466850629152181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_20
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 676
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49da8f04c26ff28d0800000000000000
+      internalID: -2868803767682683500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_21
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 684
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0caa3d85cde73fdb0800000000000000
+      internalID: -4759320896352310592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_22
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 697
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 309ac3b4bd7f70e70800000000000000
+      internalID: 9081499694848059651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_23
+      rect:
+        serializedVersion: 2
+        x: 1451
+        y: 684
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7091b795227ce6d00800000000000000
+      internalID: 967929920275290375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_24
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 699
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00c179fd3e51fcbb0800000000000000
+      internalID: -4913684599984940032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_25
+      rect:
+        serializedVersion: 2
+        x: 1505
+        y: 685
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2baa696aa6f6eea0800000000000000
+      internalID: -5843712254693168339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_26
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 683
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df397e4a96dfda020800000000000000
+      internalID: 2354816810364670973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_27
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 684
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4960e8e81d3f77cd0800000000000000
+      internalID: -2560309781771450732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_28
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 630
+        width: 420
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dae0990e781d680c0800000000000000
+      internalID: -4573737990029242707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_29
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 672
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5da297a8f6bc72a0800000000000000
+      internalID: -6738309763373552293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_30
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 466
+        width: 254
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aebd7a606fda944f0800000000000000
+      internalID: -843952182970033174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_31
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 569
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66c947d48c6205990800000000000000
+      internalID: -7399371546034922394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_32
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 434
+        width: 283
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de415d0b33b0b2a60800000000000000
+      internalID: 7650220708656911597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_33
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 437
+        width: 309
+        height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b44c3abea814dae0800000000000000
+      internalID: -1525567235043867471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_34
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 546
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d50563de14dafd80800000000000000
+      internalID: -8216021341323328048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_35
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 538
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7599cb2162082cf0800000000000000
+      internalID: -276968760713570945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_36
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 454
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3a58e8436cdb5df0800000000000000
+      internalID: -190316240250054082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_37
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 451
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39d1e66423a485b40800000000000000
+      internalID: 5429170930585574803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_38
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 394
+        width: 322
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8e23abf40a243220800000000000000
+      internalID: 2464641096968515212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_39
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 259
+        width: 231
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bb67e29ff8ef1b60800000000000000
+      internalID: 7719144470715263921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_40
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 248
+        width: 204
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc0d5600f4d133b50800000000000000
+      internalID: 6571628506409980107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_41
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 360
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b69d9cd62efd87880800000000000000
+      internalID: -8612888123748525717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_42
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 361
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a81444acef3e3cc0800000000000000
+      internalID: -3729473155815434073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_43
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 335
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08c831a11f5ad0320800000000000000
+      internalID: 2525857420967906432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_44
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 291
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd1c428eb0a226ce0800000000000000
+      internalID: -1413521102413184548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 390
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f66b34684e8ce8550800000000000000
+      internalID: 6165085823747470959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_46
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 57
+        width: 139
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d973212512f7e9be0800000000000000
+      internalID: -1468596647388629091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_47
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 203
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aef887263b6bf2740800000000000000
+      internalID: 5129519382165753834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_48
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 219
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fe0e3f1b82111a10800000000000000
+      internalID: 1878302908324122357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_49
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 215
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36533fdb2c8973e50800000000000000
+      internalID: 6789062925462222179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_50
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 185
+        width: 23
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6e7fffd894388e60800000000000000
+      internalID: 7964673772202458730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_51
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 176
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b97f13f15a4eedf0800000000000000
+      internalID: -149100021824915023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_52
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 29
+        width: 143
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9aafe5b7275d54d0800000000000000
+      internalID: -3144261136767014242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_53
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 143
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b79ff448d225bc820800000000000000
+      internalID: 2939533537236220283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_54
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 181
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1f35ad78fc89ec20800000000000000
+      internalID: 3236272806130171676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_55
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 171
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de82a670df4a53400800000000000000
+      internalID: 303329956575455469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_56
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 170
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea6b6067789b0f970800000000000000
+      internalID: 8786726864451712686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_57
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 171
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca94bed07a102b7f0800000000000000
+      internalID: -598413983482164820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_58
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 150
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72d593e354d6b0cf0800000000000000
+      internalID: -285014007243776729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_59
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 168
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6d73ee82b240ec40800000000000000
+      internalID: 5539500876334595435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_60
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 146
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ed42c547683d9a50800000000000000
+      internalID: 6529437050960236005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_61
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 141
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 475b97c6e4d3c1490800000000000000
+      internalID: -7774271449711659660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_62
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 139
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a564e82865e58500800000000000000
+      internalID: 397976377617573285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_63
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 138
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 869d4cd264ea22ae0800000000000000
+      internalID: -1575505303187433112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_64
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 27
+        width: 277
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88ae67e9ab4732d10800000000000000
+      internalID: 2099650196156115592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_65
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 140
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 202bf2418fc4a7990800000000000000
+      internalID: -7387507610373606910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_66
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 118
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59f3f385fc3e979a0800000000000000
+      internalID: -6234701729439465579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_67
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 138
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 905ad3900437c0080800000000000000
+      internalID: -9219867618264111863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_68
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 123
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdacfcf2a507ada10800000000000000
+      internalID: 1934982522560563932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_69
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 119
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89e012f8550f7e1c0800000000000000
+      internalID: -4474343454505103720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_70
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 112
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37bb1cd990640e6f0800000000000000
+      internalID: -657448538480723085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_71
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 125
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be945160623f96980800000000000000
+      internalID: -8545031473322440213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_72
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 129
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be230db7d8362d190800000000000000
+      internalID: -7939173733781982485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_73
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 124
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f197d29b18df68db0800000000000000
+      internalID: -4789862420062570209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_74
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 84
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ea76558581dd4fa0800000000000000
+      internalID: -5814761172467549470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_75
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 0
+        width: 406
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c8dd1b0c58fbb8f0800000000000000
+      internalID: -523551857451345722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_76
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 45
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b846e51529c6429d0800000000000000
+      internalID: -2799993692631440245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_77
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 66
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5551f642c2278b810800000000000000
+      internalID: 1781299186540418389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_78
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 32
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7defa59e253d10c00800000000000000
+      internalID: 865204956487679703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_79
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 53
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b675cb2e17e065050800000000000000
+      internalID: 5788830253329438571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_80
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 40
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba17caca57c775db0800000000000000
+      internalID: -4803233632717344341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FangosoVolador-Photoroom_81
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 32
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dbe0363ccc2afea0800000000000000
+      internalID: -5838304711338300458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FangosoVolador-Photoroom_0: -1452553592365717596
+      FangosoVolador-Photoroom_1: -9086671062360321534
+      FangosoVolador-Photoroom_10: 4512711819178282790
+      FangosoVolador-Photoroom_11: 5674106517131124008
+      FangosoVolador-Photoroom_12: -749596363264119672
+      FangosoVolador-Photoroom_13: -799728725142124210
+      FangosoVolador-Photoroom_14: 8487532435096790522
+      FangosoVolador-Photoroom_15: -289652803897056961
+      FangosoVolador-Photoroom_16: 2381563333471874659
+      FangosoVolador-Photoroom_17: -281366571728402743
+      FangosoVolador-Photoroom_18: 3637449300421571406
+      FangosoVolador-Photoroom_19: 8981466850629152181
+      FangosoVolador-Photoroom_2: 1993150103957302585
+      FangosoVolador-Photoroom_20: -2868803767682683500
+      FangosoVolador-Photoroom_21: -4759320896352310592
+      FangosoVolador-Photoroom_22: 9081499694848059651
+      FangosoVolador-Photoroom_23: 967929920275290375
+      FangosoVolador-Photoroom_24: -4913684599984940032
+      FangosoVolador-Photoroom_25: -5843712254693168339
+      FangosoVolador-Photoroom_26: 2354816810364670973
+      FangosoVolador-Photoroom_27: -2560309781771450732
+      FangosoVolador-Photoroom_28: -4573737990029242707
+      FangosoVolador-Photoroom_29: -6738309763373552293
+      FangosoVolador-Photoroom_3: -1462051343318450345
+      FangosoVolador-Photoroom_30: -843952182970033174
+      FangosoVolador-Photoroom_31: -7399371546034922394
+      FangosoVolador-Photoroom_32: 7650220708656911597
+      FangosoVolador-Photoroom_33: -1525567235043867471
+      FangosoVolador-Photoroom_34: -8216021341323328048
+      FangosoVolador-Photoroom_35: -276968760713570945
+      FangosoVolador-Photoroom_36: -190316240250054082
+      FangosoVolador-Photoroom_37: 5429170930585574803
+      FangosoVolador-Photoroom_38: 2464641096968515212
+      FangosoVolador-Photoroom_39: 7719144470715263921
+      FangosoVolador-Photoroom_4: 328919938266324374
+      FangosoVolador-Photoroom_40: 6571628506409980107
+      FangosoVolador-Photoroom_41: -8612888123748525717
+      FangosoVolador-Photoroom_42: -3729473155815434073
+      FangosoVolador-Photoroom_43: 2525857420967906432
+      FangosoVolador-Photoroom_44: -1413521102413184548
+      FangosoVolador-Photoroom_45: 6165085823747470959
+      FangosoVolador-Photoroom_46: -1468596647388629091
+      FangosoVolador-Photoroom_47: 5129519382165753834
+      FangosoVolador-Photoroom_48: 1878302908324122357
+      FangosoVolador-Photoroom_49: 6789062925462222179
+      FangosoVolador-Photoroom_5: 8374336733542043814
+      FangosoVolador-Photoroom_50: 7964673772202458730
+      FangosoVolador-Photoroom_51: -149100021824915023
+      FangosoVolador-Photoroom_52: -3144261136767014242
+      FangosoVolador-Photoroom_53: 2939533537236220283
+      FangosoVolador-Photoroom_54: 3236272806130171676
+      FangosoVolador-Photoroom_55: 303329956575455469
+      FangosoVolador-Photoroom_56: 8786726864451712686
+      FangosoVolador-Photoroom_57: -598413983482164820
+      FangosoVolador-Photoroom_58: -285014007243776729
+      FangosoVolador-Photoroom_59: 5539500876334595435
+      FangosoVolador-Photoroom_6: 611645238882305286
+      FangosoVolador-Photoroom_60: 6529437050960236005
+      FangosoVolador-Photoroom_61: -7774271449711659660
+      FangosoVolador-Photoroom_62: 397976377617573285
+      FangosoVolador-Photoroom_63: -1575505303187433112
+      FangosoVolador-Photoroom_64: 2099650196156115592
+      FangosoVolador-Photoroom_65: -7387507610373606910
+      FangosoVolador-Photoroom_66: -6234701729439465579
+      FangosoVolador-Photoroom_67: -9219867618264111863
+      FangosoVolador-Photoroom_68: 1934982522560563932
+      FangosoVolador-Photoroom_69: -4474343454505103720
+      FangosoVolador-Photoroom_7: -3969922482946400424
+      FangosoVolador-Photoroom_70: -657448538480723085
+      FangosoVolador-Photoroom_71: -8545031473322440213
+      FangosoVolador-Photoroom_72: -7939173733781982485
+      FangosoVolador-Photoroom_73: -4789862420062570209
+      FangosoVolador-Photoroom_74: -5814761172467549470
+      FangosoVolador-Photoroom_75: -523551857451345722
+      FangosoVolador-Photoroom_76: -2799993692631440245
+      FangosoVolador-Photoroom_77: 1781299186540418389
+      FangosoVolador-Photoroom_78: 865204956487679703
+      FangosoVolador-Photoroom_79: 5788830253329438571
+      FangosoVolador-Photoroom_8: 3765268130440650241
+      FangosoVolador-Photoroom_80: -4803233632717344341
+      FangosoVolador-Photoroom_81: -5838304711338300458
+      FangosoVolador-Photoroom_9: -6619289994937767752
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

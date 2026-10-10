@@ -167,33 +167,73 @@ public class MenuPrincipalIllari : MonoBehaviour
     {
         ReproducirClick();
         if (panelInicio != null) panelInicio.SetActive(false);
-        if (panelSeleccion != null) panelSeleccion.SetActive(true);
+        if (panelSeleccion != null)
+        {
+            panelSeleccion.SetActive(true);
+            ActualizarTarjetasMisiones();
+        }
+    }
+
+    public void ActualizarTarjetasMisiones()
+    {
+        if (panelSeleccion == null) return;
+
+        // Ocultar y desactivar completamente los niveles 4 al 9 para que NO estén en pantalla ni se pueda acceder
+        for (int i = 4; i <= 9; i++)
+        {
+            Transform card = panelSeleccion.transform.Find($"Ventana/Grid_Niveles/Card_Nivel_{i}");
+            if (card != null)
+            {
+                card.gameObject.SetActive(false);
+            }
+        }
+
+        // Configurar niveles 1 al 3: comprobar si están desbloqueados progresivamente
+        for (int i = 1; i <= 3; i++)
+        {
+            Transform card = panelSeleccion.transform.Find($"Ventana/Grid_Niveles/Card_Nivel_{i}");
+            if (card != null)
+            {
+                card.gameObject.SetActive(true);
+                Button btn = card.GetComponent<Button>();
+                bool desbloqueado = SistemaProgreso.EsNivelDesbloqueado(i);
+                if (btn != null)
+                {
+                    btn.interactable = desbloqueado;
+                }
+            }
+        }
     }
 
     public void CargarMision(int numeroNivel)
     {
+        // BLOQUEO TOTAL Y ABSOLUTO: Del 4 al 9 están bloqueados y jamás se permite entrar
+        if (numeroNivel < 1 || numeroNivel > 3)
+        {
+            Debug.LogWarning($"<color=#FF3333><b>[BLOQUEO TOTAL]</b> El nivel {numeroNivel} está bloqueado. Prohibido el ingreso.</color>");
+            return;
+        }
+
+        // Validar que el nivel esté desbloqueado por progreso
+        if (!SistemaProgreso.EsNivelDesbloqueado(numeroNivel))
+        {
+            Debug.LogWarning($"<color=#FF9900><b>[BLOQUEO]</b> El nivel {numeroNivel} aún no está desbloqueado.</color>");
+            return;
+        }
+
         ReproducirClick();
         string[] nombresEscenas = new string[]
         {
             "NivelParqueColonial",
             "Nivel2_CerritoLibertad",
-            "Nivel3_ParqueTupacAmaru",
-            "Nivel4_ParqueSombreros",
-            "Nivel5_PlazaConstitucion",
-            "Nivel6_BosqueDorado",
-            "Nivel7_RioShullcas",
-            "Nivel8_TorreTorre",
-            "Nivel9_NevadoHuaytapallana"
+            "Nivel3_ParqueTupacAmaru"
         };
 
-        if (numeroNivel >= 1 && numeroNivel <= nombresEscenas.Length)
-        {
-            string escena = nombresEscenas[numeroNivel - 1];
-            if (numeroNivel == 1)
-                CargarEscenaSegura(escena, "Nivel1");
-            else
-                SceneManager.LoadScene(escena);
-        }
+        string escena = nombresEscenas[numeroNivel - 1];
+        if (numeroNivel == 1)
+            CargarEscenaSegura(escena, "Nivel1");
+        else
+            SceneManager.LoadScene(escena);
     }
 
     // 3. REGISTRO ODS 12 & 15
